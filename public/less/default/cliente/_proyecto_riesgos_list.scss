@@ -1,0 +1,109 @@
+#tablelistriesgo_wrapper {
+  margin-top: 10px;
+}
+
+.ui.tableriesgolist.table.compact {
+  & > thead {
+    background-color: white;
+    & tr > th {
+      font-size: .8em;
+      &.th-0 {
+        padding-right: 0px;
+        padding-left: 0px;
+      }
+    }
+  }
+
+  & > tbody {
+    .table-cell-riesgo-description {
+      .ui.segment.compact {
+        padding: 5px 10px;
+        border-radius: 5px;
+        border: 1px solid rgba(34, 36, 38, .05);
+      }
+      .editor-preview {
+        font-size: 11px;
+        cursor: pointer;
+      }
+    }
+    .riesgo-code {
+      border-left: 2px solid #4b888d;
+      padding-left: 2px;
+    }
+
+    .cell-block {
+      cursor: pointer;
+      width: 120px;
+      padding: 7px 10px;
+      text-align: center;
+      border-radius: 4px;
+      box-shadow: 1px 2px 1px #999;
+      font-size: 12px;
+      font-weight: 600;
+
+      &.cell-block-value-0 {
+        background-color: #e5e5e5;
+      }
+      &.cell-block-value-1 {
+        background-color: #5cb85c;
+        color: white;
+      }
+      &.cell-block-value-3 {
+        background-color: #ea9600;
+        color: white;
+      }
+      &.cell-block-value-5 {
+        background-color: #ed0648;
+        color: white;
+      }
+
+      &.field-control_valoracion.cell-block-value-1,
+      &.field-control_efectividad.cell-block-value-1 {
+        background-color: #ed0648;
+      }
+      &.field-control_valoracion.cell-block-value-5,
+      &.field-control_efectividad.cell-block-value-5 {
+        background-color: #5cb85c;
+      }
+    }
+    & > tr.filters-row {
+      & > td.collapsing {
+        padding-right: 0;
+        padding-left: 0;
+      }
+      select {
+        width: auto;
+        padding: 2px;
+        font-size: 11px;
+        max-width: 110px;
+        &.active {
+          border-color: #719698;
+          color: #08828a;
+          box-shadow: 1px 0 9px 0 #08828a;
+        }
+        &.rf {
+          width: 45px;
+          padding: 0;
+        }
+      }
+      input {
+        width: 100%;
+        font-size: 11px;
+        margin-bottom: 0;
+        &.active {
+          border-color: #719698;
+          color: #08828a;
+          box-shadow: 1px 0 9px 0 #08828a;
+        }
+      }
+    }
+  }
+
+  .pagination-info {
+    padding-top: 10;
+    .filtered-label {
+      color: red;
+      font-weight: 600;
+    }
+  }
+}

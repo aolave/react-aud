@@ -1,0 +1,117 @@
+@import '_variables.less';
+
+body, body #main, #page {
+  background-color: #FFF;
+}
+
+.lb--primary {
+  color: @projectColor2;
+}
+
+.currency {
+  color: #6D6D6D
+}
+
+#bodycolumn {
+  padding: 10px 40px;
+
+
+  .btn-submit {
+    padding: 15px 35px;
+    border-radius: 32px;
+    color: white;
+    background-color: #B2CD4A;
+    font-size: 14px;
+  }
+
+}
+
+#adscolumn {
+  background-color: @projectColor2;
+}
+
+.nav-wizard-steps {
+  border: 1px solid #EEE;
+
+ li {
+
+    position: relative;
+
+    /* nav-pills: each step */
+    &>a, &>a:hover{
+      color: #DDD;
+      background-color: white;
+    }
+
+    &>a .badge, &>a:hover .badge {
+      color: white;
+      background-color: #DDD ;
+    }
+
+    &.active>a, &.active>a:hover {
+      color: #008088;
+      background-color: white;
+    }
+
+    &.active>a .badge, &.active>a:hover .badge {
+      color: white;
+      background-color: #008088 ;
+    }
+
+    /* Arrows */
+    &::before {
+      content: " ";
+      position: absolute;
+      top: 0;
+      left: -16px;
+      width: 0px;
+      height: 0px;
+      border-top: 19px inset transparent;
+      border-bottom: 19px inset transparent;
+      border-left: 17px solid #DDD;
+    }
+
+    &::after {
+      content: " ";
+      position: absolute;
+      top: 0;
+      right: 0px;
+      width: 0px;
+      height: 0px;
+      border-top: 19px inset transparent;
+      border-bottom: 19px inset transparent;
+      border-left: 17px solid white;
+      z-index: 2;
+    }
+
+    &.first::before {
+      border: none;
+    }
+
+    &.last::after {
+      border: none;
+    }
+  }
+
+}
+
+
+#table-cart-summary {
+
+  width: 100%;
+
+  .tr-1{
+    border-bottom: 1px solid #EEE;
+  }
+  .th {
+    color: @projectColor2;
+  }
+
+  .currency {
+    font-weight: bold;
+    text-align: right;
+    color: #707070;
+    font-size: larger;
+  }
+
+}

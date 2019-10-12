@@ -1,0 +1,188 @@
+@import 'variables';
+
+@import '_proyecto_plan_auditoria';
+
+@mixin uistepbar($heightStep, $heightStepArrow) {
+  .ui.steps .step {
+    height: $heightStep;
+    &.active {
+      background-color: $projectColor2;
+      color: white;
+      font-weight: bold;
+
+      &:after {
+        background-color: $projectColor2;
+      }
+
+      .title {
+        color: white;
+      }
+    }
+
+    &.completed > .icon:before {
+      color: $projectColor1;
+    }
+
+    &:after {
+      width: $heightStepArrow;
+      height: $heightStepArrow;
+    }
+  }
+}
+
+.modal-pasocreate {
+  @include uistepbar(62.21px, 44px);
+
+  .paso-tipo {
+    border-color: $projectColor2;
+    cursor: pointer;
+    padding: 0.5em;
+
+    .big.icon {
+      margin-top: 30px;
+    }
+
+    &.comingsoon .big.icon {
+      margin-top: 5px;
+    }
+
+    .paso-tipo-name {
+      margin-top: 20px;
+      font-size: 16px;
+    }
+
+    &:hover {
+      background-color: #d6eaec;
+    }
+  }
+
+  .ui.right.ribbon.label {
+    left: calc(100%);
+  }
+
+  .step-content {
+    padding: 20px 10px;
+    min-height: 220px;
+
+    form {
+      margin-bottom: 0;
+    }
+  }
+
+  .ui.form .field.field-periodo {
+    margin-bottom: 5px;
+  }
+}
+
+.modal-pasomassassign {
+  @include uistepbar(44px, 31px);
+
+  .stepbar {
+    width: 50%;
+    margin: auto;
+  }
+
+  .step-content {
+    margin-top: 15px;
+    min-height: 160px;
+    .btn-actions {
+      .btn {
+        padding: 8px 16px;
+      }
+    }
+  }
+
+  .step-content-1 {
+    width: 50%;
+    margin: {
+      left: auto;
+      right: auto;
+    }
+    .btn-actions {
+      margin-top: 20px;
+    }
+  }
+
+  .step-content-2 {
+    .selected-user {
+      padding: 5px 10px;
+      color: $projectColor1;
+      font-size: 12px;
+    }
+
+    .ui.header {
+      margin-bottom: 5px;
+    }
+    .filtersbar {
+      margin-bottom: 5px;
+      .filters {
+        display: inline-block;
+        margin-left: 5px;
+        color: #777;
+        label input {
+          margin-right: 3px;
+        }
+      }
+    }
+  }
+
+  .user-dropdown-wrapper {
+    margin: {
+      bottom: 10px;
+      right: auto;
+      left: auto;
+    }
+  }
+  .methodology {
+    .methodology-item.paso > ul {
+      background-color: #f1f1f2;
+      margin-bottom: 5px;
+      border-left: 15px solid #a465ea;
+    }
+    li.methodology-item.visita {
+      display: inline-block;
+      padding: 5px 10px;
+      border-right: 1px solid #e6e6e6;
+
+      &.assigned {
+        background-color: #dce8c9;
+      }
+
+      .item-name {
+        display: inline-block;
+        margin-right: 20px;
+      }
+    }
+
+    .badge-counter {
+      float: right;
+      font-size: 9px;
+      padding-right: 5px;
+      padding-left: 5px;
+      padding-top: 1px;
+      padding-bottom: 1px;
+      margin-right: 5px;
+    }
+  }
+}
+
+.modal-pasocopyfrom {
+  .methodology-item.paso.selected {
+    .item-name {
+      font-weight: 600;
+    }
+  }
+}
+
+.methodology {
+  .checkbox {
+    float: right;
+    box-shadow: none;
+    margin-top: 0;
+    margin-left: 10px;
+  }
+}
+
+.clickable {
+  cursor: pointer;
+}

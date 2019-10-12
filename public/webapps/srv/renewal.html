@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Renovaciones</title>
+  <link href="css/default/app_cliente-global.min.css" rel="stylesheet" type="text/css"  />
+  <link href="css/reset.min.css" rel="stylesheet" type="text/css"  />
+  <link href="css/jquery-ui.bootstrap.min.css" rel="stylesheet" type="text/css"  />
+  <link href="css/bootstrap/bootstrap-app_cliente.min.css" rel="stylesheet" type="text/css"  />
+  <link href="css/plugins/jquery.qtip.min.css" rel="stylesheet" type="text/css"  />
+  <link href="webapps/semantic/dist/semantic.min.css" rel="stylesheet" type="text/css"  />
+  <link href="css/default.min.css" rel="stylesheet" type="text/css"  />
+  <link href="css/default/app_cliente.min.css" rel="stylesheet" type="text/css"  />
+  <link href="css/default/app_cliente-renewal.min.css" rel="stylesheet" type="text/css"  /> <!-- modify -->
+
+</head>
+<body>
+  <div id="main" class="container-fluid page-container">
+    <div class="col-main">
+      <div id="root"></div>
+    </div>
+  </div>
+
+  <script>
+   // extruct -->
+    var app = {
+      vars: {
+        idproyecto: 993
+      }
+    }
+  </script>
+  <script src="proyecto__renewal__data.js"></script>
+  <script src="js/jquery-1.8.3.min.js"></script>
+  <script src="js/sugar.min.js"></script>
+  <script src="js/lodash.min.js"></script>
+  <script src="js/bootstrap/bootstrap.min.js"></script>
+  <script src="js/plugins/jquery.blockUI.min.js"></script>
+  <script src="js/apps/cliente.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react/16.8.6/umd/react.development.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/16.8.6/umd/react-dom.development.js"></script>
+  <script>
+    $.ajaxSetup({
+      beforeSend: function(xhr) {
+        xhr.setRequestHeader('Authorization', 'Basic ' + btoa('usuariodemostracion@yopmail.com:usuariodemostracion') )
+        xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest')
+      }
+    });
+  </script>
+
+<script src="core.js"></script>
+<script src="renewal.js"></script>
+<script src="vendors~renewal.js"></script>
+
+
+</body>
+</html>

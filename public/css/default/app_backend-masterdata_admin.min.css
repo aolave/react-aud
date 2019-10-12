@@ -1,0 +1,161 @@
+ul.methodology {
+  margin-left: 25px
+}
+
+ul.methodology .methodology-item-head {
+  border-left: 15px #0a858d solid;
+  list-style-type: none;
+  margin-bottom: 6px;
+  font-size: 15px;
+  padding: 5px 12px 0;
+  background-color: #f1f1f2 !important;
+  min-height: 40px;
+
+}
+
+.pasolinkdialog ul.methodology .methodology-item-head {
+  min-height: 30px
+}
+
+.pasolinkdialog ul.methodology .methodology-item-head .chk-paso {
+  float: right
+}
+
+ul.methodology .methodology-item-head a.phase-name {
+  color: #373e4a
+}
+
+ul.methodology .methodology-item-head a.phase-name:hover {
+  color: #16191e
+}
+
+ul.methodology .subphase .methodology-item-head {
+  border-left: 15px #f07336 solid
+}
+
+ul.methodology .paso .methodology-item-head {
+  border-left: 0;
+  padding-left: 27px;
+  position: relative
+}
+
+ul.methodology .paso .methodology-item-head .handle {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 15px;
+  background: #95e100
+}
+
+ul.methodology .paso .methodology-item-head .handle-dragdrop {
+  cursor: move
+}
+
+ul.methodology .visita .methodology-item-head {
+  border-left: 15px #f34440 solid
+}
+
+ul.methodology .instruccion-list .methodology-item-head {
+  border-left: 15px #0080c0 solid;
+  padding-left: 12px;
+  font-size: 11px;
+  line-height: 1.3em;
+}
+
+ul.methodology .paso .section-a {
+  display: inline-block;
+  font-size: small;
+  line-height: 1em;
+  text-align: center;
+  vertical-align: top;
+  padding: 0 5px;
+  margin: 0 5px;
+  font-weight: 700
+}
+
+ul.methodology .paso .section-a .title {
+  display: block;
+  font-size: smaller;
+  color: #0a858d;
+  margin-bottom: 3px;
+  margin-top: -4px
+}
+
+ul.methodology .paso .section-a .visita-status {
+  color: #000;
+  display: inline-block;
+  padding: 1px 8px;
+  font-size: 10px;
+  line-height: 1em
+}
+
+ul.methodology .paso .section-a .objetivo-sigla {
+  line-height: 1em;
+  padding: 1px 8px
+}
+
+ul.methodology .divider-vertical {
+  border-right: 1px solid #ccc;
+  display: inline-block;
+  height: 16px
+}
+
+ul.methodology .section-a .divider-vertical {
+  margin-left: 5px
+}
+
+#master_data_filters {
+  padding-right: 20px;
+  margin-right: 20px;
+  border-right: 1px solid #ccc
+}
+
+#master_data_filters select {
+  margin-bottom: 0
+}
+
+#master_data_filters select .lb {
+  display: inline-block;
+  padding-right: 5px;
+  color: #999
+}
+
+#master_data_filters select.active {
+  border-color: #08828a;
+  color: #08828a;
+  box-shadow: 1px 0 9px 0 #08828a
+}
+
+.subphase>.methodology-item-head>a.phase-name {
+  font-weight: 700
+}
+
+.sumaria .visita {
+  vertical-align: top;
+  padding: 2px 6px;
+  text-align: center
+}
+
+#wrap-filters {
+  background: #fff;
+  padding-top: 20px;
+  padding-bottom: 20px
+}
+
+#wrap-filters.fixed {
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, .3);
+  padding-left: 20px;
+  padding-right: 20px;
+  right: 15px;
+  left: 95px
+}
+
+.sidebar-collapse #wrap-filters.fixed {
+  left: 205px
+}
+
+a.phase-name {
+  padding-top: 4px;
+  display: inline-block;
+}

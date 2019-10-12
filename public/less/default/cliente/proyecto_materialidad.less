@@ -1,0 +1,147 @@
+@import "_variables";
+
+@materialidad-bgcolor: #ebebeb;
+@materialidad-bgcolor2: white;
+@materialidad-colheight: 220px;
+
+.materialidad-col {
+  height: @materialidad-colheight;
+}
+
+#materialidad-col1 {
+  background-color: @materialidad-bgcolor;
+  padding-top: 5px;
+
+  &:after {
+    content: "";
+    position: absolute;
+    border-top: @materialidad-colheight/2 solid transparent;
+    border-left: 50px solid @materialidad-bgcolor;
+    border-bottom: @materialidad-colheight/2 solid transparent;
+    margin-left: 7px;
+    height: 0;
+    margin-top: -5px;
+  }
+  label {
+    font-size: 12px;
+    white-space: nowrap
+  }
+
+  .totals-wrapper {
+    margin-top: 10px;
+    padding-left: 10px;
+  }
+}
+
+#materialidad-col2 {
+  text-align: center;
+  padding-left: 60px;
+  &:after {
+    content: "";
+    position: absolute;
+    border-top: @materialidad-colheight/2 solid transparent;
+    border-left: 50px solid @materialidad-bgcolor2;
+    border-bottom: @materialidad-colheight/2 solid transparent;
+    margin-left: 7px;
+    height: 0;
+    z-index: 2;
+  }
+  label {
+    font-size: 12px;
+  }
+  .form-inline label {
+    width: 99px;
+    line-height: 1;
+    vertical-align: middle;
+    margin-bottom: 0;
+  }
+  .input-mini {
+    width: 30px;
+  }
+}
+
+#materialidad-col3 {
+  background-color: @materialidad-bgcolor;
+  text-align: center;
+  .total-cell {
+    background-color: @materialidad-bgcolor2;
+    width: 160px;
+    margin: 5px 20px;
+    vertical-align: top;
+    display: inline-block;
+    padding: 5px 10px;
+    height: 53px;
+    width: 185px;
+
+    .total-icon {
+      display: block;
+      margin-top: 8px;
+      margin-bottom: 5px;
+    }
+    .total-title {
+      line-height: 1em;
+      font-size: 11px;
+    }
+    .total-value {
+      font-weight: bold;
+      font-size: 20px;
+      margin-top: 5px;
+      color: #08828A
+    }
+  }
+
+  .totals-wrapper {
+    margin-top: 15px;
+    margin-left: 27px;
+  }
+}
+
+#materialidad_scroll {
+  height: 300px;
+  overflow-y: scroll;
+  margin-bottom: 10px;
+}
+
+.t-mat {
+  width: 100%;
+  thead th {
+    background-color: #efefef;
+  }
+  td {
+    height: 42px;
+  }
+  tr:nth-child(even) {
+    background: #f9f9f9
+  }
+  input {
+    margin-bottom: 0;
+  }
+
+  .uneditable-input, .page-proyecto_materialidad input[type=text], .page-proyecto_materialidad textarea {
+    text-align: center;
+    margin-bottom: 0
+  }
+
+}
+
+.title-ab {
+  color: @projectColor2;
+  text-align: center;
+}
+
+
+.input-xxlarge {
+  width: 100%
+}
+
+.divisor {
+  margin-top: 30px;
+  margin-bottom: 5px;
+  width: 100%;
+  height: 1px;
+  background: #e4e4e4
+}
+
+.fix-fw {
+  padding: 0 15px
+}

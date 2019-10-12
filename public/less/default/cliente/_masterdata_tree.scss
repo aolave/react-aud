@@ -1,0 +1,154 @@
+@import 'variables';
+
+ul.methodology {
+  margin-left: 15px;
+
+  &.methodology-all {
+    margin-left: 0;
+  }
+
+  .sortable_placeholder {
+    min-height: 48px;
+    border: 4px dashed #e5ef52;
+    background-color: #f1f1f2;
+  }
+  .methodology-item-head {
+    border-left: 15px $projectColor2 solid;
+    position: relative;
+    list-style-type: none;
+    margin-bottom: 6px;
+    font-size: 15px;
+    padding: 5px 12px 0px 12px;
+    background-color: $projectColor3 !important;
+    min-height: 40px;
+    & > .handle {
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 15px;
+      background: $projectColor2;
+    }
+
+    a.phase-name,
+    a.paso-name {
+      color: #373e4a;
+      &:hover {
+        color: #16191e;
+      }
+    }
+
+    a.paso-name {
+      float: left;
+      height: 100%;
+      margin-top: 4px;
+    }
+  }
+
+  .phase.no-rubros {
+    & > .methodology-item-head {
+      background-color: rgba(241, 241, 242, 0.6) !important;
+      a.phase-name {
+        color: rgba(55, 62, 74, 0.6);
+      }
+      & > .handle {
+        background: rgba(10, 133, 141, 0.6);
+      }
+    }
+  }
+
+  .subphase {
+    &.no-pasos {
+      .methodology-item-head {
+        background-color: rgba(241, 241, 242, 0.6) !important;
+        a.phase-name {
+          color: rgba(55, 62, 74, 0.6);
+        }
+        & > .handle {
+          background: rgba(240, 115, 54, 0.6);
+        }
+      }
+    }
+
+    .methodology-item-head {
+      border-left: 15px #f07336 solid;
+      position: relative;
+      & > .handle {
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: 15px;
+        background: #f07336;
+      }
+    }
+  }
+
+  .paso .methodology-item-head {
+    border-left: 15px #95e100 solid;
+    position: relative;
+    & > .handle {
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 15px;
+      background: #95e100;
+    }
+    .visita {
+      display: inline-block;
+    }
+  }
+
+  .visita .methodology-item-head {
+    border-left: 15px #f34440 solid;
+  }
+
+  .paso .section-a {
+    display: inline-block;
+    font-size: small;
+    line-height: 1em;
+    text-align: center;
+    vertical-align: top;
+    padding: 0px 5px;
+    margin: 0 5px;
+    font-weight: bold;
+
+    .header {
+      display: block;
+      .title {
+        display: inline-block;
+        font-size: smaller;
+        color: $projectColor2;
+        margin-bottom: 0px;
+        margin-top: -4px;
+      }
+
+      .title + .ui.inline.dropdown {
+        margin-left: 5px;
+      }
+    }
+
+    .visita-status {
+      color: black;
+      display: inline-block;
+      padding: 1px 8px;
+      font-size: 10px;
+      line-height: 1em;
+    }
+    .objetivo-sigla {
+      line-height: 1em;
+      padding: 1px 8px;
+    }
+  }
+
+  .divider-vertical {
+    border-right: 1px solid #ccc;
+    display: inline-block;
+    height: 16px;
+  }
+
+  .section-a .divider-vertical {
+    margin-left: 5px;
+  }
+}

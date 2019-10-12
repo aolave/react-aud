@@ -1,0 +1,105 @@
+.b1 {
+  background-color: #eee;
+  padding: 10px;
+  &.bb1 {
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+  }
+}
+
+.w1 {
+  text-align: center;
+  min-height: 170px;
+  .t {
+    font-size: 1.3em;
+  }
+  .icon img {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    height: 40px;
+  }
+  .controls {
+    margin-top: 8px;
+    .errors {
+      display: inline-block;
+      margin-left: 2px;
+    }
+  }
+
+  .btn.control {
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .14), 0 1px 2px 0 rgba(0, 0, 0, .12), 0 1px 2px -1px rgba(0, 0, 0, .2);
+  }
+}
+
+.t1-gray {
+  color: #aaa;
+  font-size: 14px;
+  margin-left: 8px;
+  margin-bottom: 6px;
+}
+
+.table-tiempoitem {
+  tfoot {
+    font-weight: bold;
+    td {
+      text-align: right;
+    }
+  }
+}
+
+#tiempo_week_selected {
+  font-size: smaller;
+}
+
+.ui-datepicker .ui-datepicker-header,
+.ui-datepicker .ui-state-hover,
+.ui-datepicker td .ui-state-default:hover,
+.ui-datepicker td.ui-datepicker-current-day .ui-state-default {
+  background: #0a858d;
+}
+
+#weekpicker {
+  .ui-datepicker .ui-datepicker-header {
+    margin-bottom: 1em;
+  }
+
+  .ui-datepicker .ui-datepicker-title {
+    height: 44px;
+    padding: 12px 0;
+    color: white;
+  }
+
+  .ui-datepicker .ui-datepicker-month {
+    display: inline-block;
+    font-size: 18px;
+    margin-bottom: 0;
+  }
+
+  .ui-datepicker .ui-datepicker-year {
+    color: #fff;
+    font-size: 18px;
+    float: right;
+  }
+
+  .ui-datepicker .ui-datepicker-next,
+  .ui-datepicker .ui-datepicker-prev {
+    margin-top: -12px;
+  }
+
+  .ui-datepicker .ui-datepicker-next {
+    right: 4px;
+    background: url(../../images/icon_arrow2_calendar.png) center center no-repeat;
+    background-size: cover;
+  }
+
+  .ui-datepicker .ui-datepicker-next .ui-icon,
+  .ui-datepicker .ui-datepicker-prev .ui-icon {
+    display: none;
+  }
+
+  .ui-datepicker .ui-datepicker-prev {
+    left: 4px;
+    background: url(../../images/icon_arrow1_calendar.png) center center no-repeat;
+    background-size: cover;
+  }
+}

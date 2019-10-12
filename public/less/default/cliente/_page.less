@@ -1,0 +1,141 @@
+/* */
+  /*
+    Flaticon icon font: Flaticon
+    Creation date: 07/12/2017 22:43
+    */
+
+@font-face {
+  font-family: "Flaticon";
+  src: url("../../webfonts/fontsmenu/Flaticon.eot");
+  src: url("../../webfonts/fontsmenu/Flaticon.eot?#iefix") format("embedded-opentype"),
+       url("../../webfonts/fontsmenu/Flaticon.woff") format("woff"),
+       url("../../webfonts/fontsmenu/Flaticon.ttf") format("truetype"),
+       url("../../webfonts/fontsmenu/Flaticon.svg#Flaticon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: "Flaticon";
+    src: url("../../webfonts/fontsmenu/Flaticon.svg#Flaticon") format("svg");
+  }
+}
+
+[class^="flaticon-"]:before, [class*=" flaticon-"]:before,
+[class^="flaticon-"]:after, [class*=" flaticon-"]:after {   
+  font-family: Flaticon;
+        font-size: 20px;
+font-style: normal;
+}
+
+.flaticon-profile:before { content: "\f100"; }
+.flaticon-clock:before { content: "\f101"; }
+.flaticon-check:before { content: "\f102"; }
+.flaticon-people:before { content: "\f103"; }
+.flaticon-shapes:before { content: "\f104"; }
+.flaticon-interface:before { content: "\f105"; }
+
+.btn {
+  -webkit-box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
+  -moz-box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
+  border: none;
+  text-shadow: none;
+  background-image: none;
+}
+
+.btn-primary {
+  .button-variant(#FFF, @projectColor2, @projectColor2);
+}
+.btn-gray {
+  .button-variant(#000, #CCC, #CCC);
+}
+
+.btn-green {
+  .button-variant(#FFF, #8caf2f, #8caf2f);
+}
+
+.btn-group>.btn, .btn.btn-link {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+
+.btn.btn-new {
+  padding: 4px 36px;
+}
+
+.btn-help {
+  background-image: none;
+  background-color: @projectColor2;
+  color: @projectColor1Text;
+  float: right;
+  margin-right: 5%;
+  margin-top: 11px;
+  padding: 4px 18px;
+  &:hover {
+    background-color: darken(@projectColor2, 10%);
+    color: white;
+  }
+}
+
+#main, footer {
+  padding-left: 90px;
+}
+
+.nav-tabs a.title {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.user-info-menu .user-profile {
+  padding-bottom: 2px
+}
+
+.panel-h {
+  margin-top: 4px;
+  margin-bottom: 5px;
+  padding: 10px;
+  text-align: center;
+  background-color: #ebebeb;
+  .rounded(4px);
+}
+
+.title--primary {
+  color: @projectColor2;
+  text-align: center;
+}
+
+.form-body form {
+  margin-bottom: 5px;
+}
+
+.tabs-ab.nav-tabs>li>a {
+  background: #f1f1f1;
+  color: #08828a;
+  min-width: 120px;
+  text-align: center;
+  border-color: #e1e1e1;
+}
+
+.tabs-ab.nav-tabs>li.active>a {
+  color: white;
+  background-color: #08828a;
+}
+
+
+ul#button-style-inline{
+  li{
+    padding: 6px 10px;
+    border: 1px solid #ccc;
+    input[type=radio] {
+        display: none;
+    }
+  }
+  li:has( input[type="radio"]:checked){
+      background: #000;
+  }
+
+}
+

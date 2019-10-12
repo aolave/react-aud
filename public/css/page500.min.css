@@ -1,0 +1,28 @@
+#page500 {
+  width: 700px;
+  margin: auto;
+  padding: 40px 0;
+}
+
+#page500 h1{
+  font-size: 18px;
+  text-align: center;
+  line-height: 20px;
+  font-weight: bold;
+  color: #666;
+  margin-bottom: 25px;
+}
+
+#page500 h1 small {
+  font-size: 36px;
+  display: block;
+  text-align: left;
+  width: 180px;
+  margin: 10px auto;
+}
+
+#page500 .sf_admin_actions_block{
+  text-align: center;
+  margin-top: 30px;
+  font-size: 14px;
+}

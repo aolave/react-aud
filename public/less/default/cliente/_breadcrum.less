@@ -1,0 +1,31 @@
+
+.breadcrum{
+    color: @primario !important;
+    font-weight: 600 !important;
+    padding: 0 !important;
+    margin-left: 5px;
+    a{
+        color: @primario !important;
+        opacity: 1 !important;
+        font-weight: 400;
+        padding: 0 !important;
+        &:first-child{
+            color: #404040 !important;
+            opacity: .59 !important;
+            font-weight: 400;
+            padding: 0 !important;
+        }
+    }
+    .icon-arrow{
+        mask-image: url(../../images/arrow.svg);
+        mask-repeat: no-repeat;
+        mask-position: center center;
+        mask-size: cover;
+        background: #010002;
+        opacity: .49;
+        display: inline-block;
+        width: 5px;
+        height: 9px;
+        margin: 0 2px;
+    }
+}

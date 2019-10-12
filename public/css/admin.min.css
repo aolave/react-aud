@@ -1,0 +1,30 @@
+ .acl-perm-value {
+  font-size: 11px;
+  padding: 4px;
+  height: 25px;
+  margin: 0;
+ }
+
+ #group-permissions-grid {
+    font-size: 11px;
+  }
+
+#group-permissions-grid select[disabled] {
+  opacity: .4;
+  -moz-opacity: .4;
+}
+
+#group-permissions-grid td.perm-on {
+  background: rgb(156, 250, 152);
+}
+#group-permissions-grid td.perm-on[data-permval="2"] {
+  background: rgb(255, 163, 0);
+}
+#group-permissions-grid td.perm-on select{
+  border: 1px solid;
+}
+
+.btn-copyas {
+  margin-top: 10px;
+  float: right;
+}

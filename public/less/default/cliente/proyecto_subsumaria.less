@@ -1,0 +1,61 @@
+@import './_variables.less';
+
+#cifraitem-table {
+  border-collapse: collapse;
+  font-size: 11px;
+
+  tbody td {
+    line-height: 1em;
+  }
+
+  tbody tr:hover td {
+    background-color: #faffd5;
+  }
+
+  tbody td.pending {
+    background-color: pink;
+  }
+
+  tr.nivel-4 {
+    color: #333;
+    font-weight: bold;
+  }
+
+  td .icon-warning-sign{
+    color: red;
+  }
+}
+
+.th-clase-last, .td-clase-last {
+  border-right: 3px solid #ccc;
+}
+
+.th-clase, .th-paso {
+  position: relative;
+  padding: 2px;
+
+  span {
+    transform-origin: 0 50%;
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    display: inline-block;
+    font-size: 10px;
+    white-space: nowrap;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+  }
+}
+
+#cifraitemtable-topbar {
+  .val {
+    font-weight: bold;
+  }
+
+  .selected .materialidad .val,
+  .selected .materialidad .icon-moon-checkmark-7{
+    color: @projectColor2;
+  }
+
+}

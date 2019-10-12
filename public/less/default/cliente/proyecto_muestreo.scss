@@ -1,0 +1,197 @@
+@import 'variables';
+
+header.main-content-header {
+  padding: 10px 5px 20px 5px;
+  h3 {
+    margin-top: 0;
+  }
+
+  .muestreo-title-name {
+    font-weight: 600;
+    font-size: 1.07142857rem;
+    display: inline-block;
+  }
+  .lb-status-wrapper {
+    margin-right: 20px;
+    margin-left: 20px;
+  }
+}
+
+#welcometip {
+  border: 1px solid #0d868e;
+  border-radius: 8px;
+  width: 80%;
+  margin: 30px auto;
+
+  #welcometip-header {
+    font-size: 16px;
+    color: #0a858d;
+    line-height: 1em;
+    margin: 2px 0 12px;
+    padding: 4px 16px 2px;
+  }
+  #welcometip-body {
+    vertical-align: top;
+    margin-left: 20px;
+
+    .welcometip-subtitle {
+      margin-bottom: 2px;
+      line-height: 1em;
+    }
+    p {
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.ui.ordered.steps .step {
+  height: 62.21px;
+  background-color: #f7f7f7;
+  color: #c7c7c7;
+
+  &:not(.last):after {
+    display: block;
+    background-color: #f7f7f7;
+  }
+
+  &.active {
+    background-color: $projectColor2;
+    color: white;
+    font-weight: bold;
+
+    &:hover {
+      background-color: darken($color: $projectColor2, $amount: 10);
+      &:after {
+        background-color: darken($color: $projectColor2, $amount: 10);
+      }
+    }
+
+    &:before {
+      color: white;
+    }
+    &:after {
+      background-color: $projectColor2;
+    }
+
+    .title {
+      color: white;
+    }
+  }
+
+  &.completed > .icon:before {
+    color: $projectColor1;
+  }
+
+  &:after {
+    width: 44px;
+    height: 44px;
+  }
+}
+
+#mainpane-mum {
+  select.input-mini.e2--1 {
+    width: auto;
+  }
+}
+
+.b3 {
+  text-align: center;
+  padding: 30px 10px;
+  vertical-align: top;
+  font-size: 20px;
+  .math-equation {
+    margin-right: 30px;
+  }
+  & > * {
+    vertical-align: middle;
+  }
+}
+
+.math-equation {
+  border: 1px solid #666;
+  margin-left: 20px;
+  width: 190px;
+  display: inline-block;
+  padding: 2px 2px;
+  font-style: italic;
+
+  table td {
+    border: none;
+  }
+
+  table {
+    width: 100%;
+    border: none;
+  }
+
+  .math-eq-var {
+    font-style: italic;
+    font-family: serif;
+    text-align: center;
+    vertical-align: middle;
+    padding: 0;
+  }
+}
+
+.nav-actions {
+  border-top: 1px solid #e6e6e6;
+  padding-top: 10px;
+  margin-top: 10px;
+}
+
+.table-muestras {
+  input {
+    margin-bottom: 0;
+    text-align: right;
+  }
+  tfoot td {
+    font-weight: bold;
+  }
+}
+
+#fichatecnicaform {
+  margin: 5px auto 5px;
+  text-align: center;
+}
+
+#table-muestreo-mas {
+  .col-numeric {
+    padding-right: 25px;
+  }
+}
+
+.table-condensed {
+  input {
+    margin-bottom: 0;
+    text-align: right;
+  }
+}
+
+.table {
+  tr.totals td,
+  tr.strong td {
+    font-weight: bold;
+  }
+}
+
+.rs-SI {
+  color: red;
+  font-weight: bold;
+}
+
+.input-mini {
+  width: 68px;
+}
+
+#table-muestreo-mum tbody tr td {
+  vertical-align: middle;
+}
+
+#table-mum-muestraserradas tr.g2 td {
+  background-color: #ffffdd;
+}
+
+.footnote,
+.footnotes {
+  font-size: 9px;
+}

@@ -1,0 +1,107 @@
+@import "_variables";
+
+a {
+  color: @projectColor2;
+}
+
+#main {
+  padding: 0 !important;
+}
+
+#form-col {
+  padding: 15px;
+  text-align: center;
+  background-color: @projectColor3;
+
+  .form-horizontal {
+    text-align: left;
+    label {
+      text-align: right;
+    }
+  }
+
+  .horizontal-controls-block {
+
+    .control-group + .control-group label  {
+      width: 100px;
+      margin-left: 30px;
+    }
+    .control-group:first-child .controls {
+      margin-left: 180px;
+    }
+    .control-group .controls {
+      margin-left: 160px;
+    }
+  }
+
+  #agreement-text {
+    text-align: center;
+    font-style: italic;
+    font-size: 13px;
+    a {
+      border-bottom: 1px dotted @projectColor2;
+    }
+  }
+}
+
+.col-bg1 {
+  background-color: @projectColor1;
+  color: white;
+}
+
+.col-bg2 {
+  background-color: @projectColor3;
+}
+
+.btn-w {
+  background-color: rgba(0, 0, 0, 0);
+  background-image: none;
+  outline: 0;
+  border: 1px solid transparent;
+  margin-top: 6px;
+  margin-bottom: 6px;
+  border-color: white;
+  border-radius: 3px;
+  font-size: 17px;
+  padding: 1% 14%;
+  color: @projectColor1Text;
+  display: inline-block;
+  box-shadow: none;
+  &:hover {
+    color: white;
+  }
+}
+
+#confirm-alert {
+  text-shadow: none;
+  margin: 10px 15%;
+  .username {
+    font-size: larger;
+  }
+}
+
+form.cart {
+  text-align: right;
+  .control-group {
+    display: block;
+    .controls {
+      display: inline-block;
+      width: 100px;
+    }
+
+    color: @projectColor2;
+    font-weight: bold;
+    label {
+      font-weight: bold;
+    }
+
+    select {
+      color: @projectColor2;
+      text-align: right;
+    }
+
+    .currency::before {
+      content: "$ "
+    }
+  }
+}

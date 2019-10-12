@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Hoja de Trabajo</title>
+  <link href="css/default/app_cliente-global.min.css" rel="stylesheet" type="text/css"  />
+  <link href="css/reset.min.css" rel="stylesheet" type="text/css"  />
+  <link href="css/jquery-ui.bootstrap.min.css" rel="stylesheet" type="text/css"  />
+  <link href="css/bootstrap/bootstrap-app_cliente.min.css" rel="stylesheet" type="text/css"  />
+  <link href="css/plugins/jquery.qtip.min.css" rel="stylesheet" type="text/css"  />
+  <link href="webapps/semantic/dist/semantic.min.css" rel="stylesheet" type="text/css"  />
+  <link href="css/default.min.css" rel="stylesheet" type="text/css"  />
+  <link href="css/default/app_cliente.min.css" rel="stylesheet" type="text/css"  />
+  <link href="css/default/app_cliente-proyecto_hoja_trabajo.min.css" rel="stylesheet" type="text/css"  />
+  <link href="css/plugins/react-datepicker.min.css" rel="stylesheet" type="text/css"  />
+</head>
+<body>
+
+  <div id="main" class="container-fluid page-container">
+    <div class="col-main">
+      <div id="root"></div>
+    </div>
+  </div>
+
+  <script>
+    var app = {
+      vars: {
+        idproyecto: 993
+      }
+    }
+  </script>
+  <script src="proyecto__hoja_trabajo__data.js"></script>
+  <script src="js/jquery-1.8.3.min.js"></script>
+  <script src="js/sugar.min.js"></script>
+  <script src="js/lodash.min.js"></script>
+  <script src="js/bootstrap/bootstrap.min.js"></script>
+  <script src="js/plugins/jquery.blockUI.min.js"></script>
+  <script src="js/ckeditor/ckeditor.js"></script>
+  <script src="js/plugins/accounting.min.js"></script>
+  <script src="sfDoctrineGuardPlugin/js/plugins/jquery.floatThead-slim.min.js"></script>
+  <script src="js/plugins/jquery.tablednd.min.js"></script>
+  <script src="js/apps/cliente.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react/16.8.6/umd/react.development.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/16.8.6/umd/react-dom.development.js"></script>
+
+  <script>
+    $.ajaxSetup({
+      beforeSend: function(xhr) {
+        xhr.setRequestHeader('Authorization', 'Basic ' + btoa('usuariodemostracion@yopmail.com:usuariodemostracion') )
+        xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest')
+      }
+    })
+  </script>
+
+  <script src="core.js"></script>
+
+  <script src="proyecto__hoja_trabajo.js"></script>
+  <script src="vendors~proyecto__hoja_trabajo.js"></script>
+
+</body>
+</html>

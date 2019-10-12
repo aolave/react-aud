@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "noImplicitAny": true,
+    "removeComments": true,
+    "sourceMap": true,
+    "jsx": "preserve",
+    "target": "es6",
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "noUnusedLocals": true
+  },
+  "awesomeTypescriptLoaderOptions" : {
+    "useBabel": true,
+    "useCache": true,
+    "babelCore": "@babel/core"
+  }
+}

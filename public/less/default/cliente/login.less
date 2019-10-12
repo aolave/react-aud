@@ -1,0 +1,98 @@
+@import "_variables";
+@import "../login";
+
+footer {
+  display: block;
+  background: transparent;
+}
+
+.signin-page {
+  background-color: #eee;
+  color: #000;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.main-wrapper, .signin {
+  height: 100%;
+}
+
+
+.wrap-auth {
+  max-width: 520px;
+  label {
+    text-align: left;
+  }
+  &.box {
+    input[type=text], input[type=password]{
+      height: 1.5em
+    }
+    input[type=password] {
+      margin-bottom: 2px;
+    }
+    .controls {
+      margin-left: 140px
+    }
+  }
+
+  .buttons {
+    text-align: right;
+
+    .btn-save {
+      padding: 5px 32px;
+    }
+    .btn-remember {
+      border-color: @projectColor1;
+      background-image: none;
+      background-color: @projectColor1;
+      label {
+        color: white;
+        text-shadow: none;
+      }
+    }
+  }
+
+  #sf_guard_forgot_password {
+    margin-top: 2px;
+    font-size: 11px;
+    border-bottom: 1px dotted @projectColor2;
+    float: right;
+    font-style: italic;
+  }
+}
+
+.offers-audit-brain {
+  background-color: @projectColor1;
+  color: @projectColor1Text;
+  height: 100%;
+
+  h2 {
+    margin-top: 30%;
+    font-weight: bold;
+  }
+
+  p {
+    color: @projectColor1Text;
+    font-size: 17px;
+  }
+}
+
+.btn {
+  text-shadow: none;
+}
+
+.btn-more {
+  background-color: rgba(0, 0, 0, 0);
+  background-image: none;
+  outline: 0;
+  border: 1px solid transparent;
+  margin-bottom: 10px;
+  border-color: white;
+  border-radius: 3px;
+  font-size: 17px;
+  padding: 1% 14%;
+  color: @projectColor1Text;
+  box-shadow: none;
+}

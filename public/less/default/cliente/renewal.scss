@@ -1,0 +1,47 @@
+@import 'variables';
+$colorw: white;
+form {
+	&.renewal {
+		margin-bottom: 30px;
+		width: 96%;
+		margin: 0 auto;
+		margin-top: 16%;
+		div {
+			margin: 7% 0 1%;
+			display: inline-block;
+			text-align: center;
+			width: 100%;
+		}
+		input {
+			&.ui {
+				&.button {
+					margin: 0 auto;
+					display: block;
+				}
+			}
+		}
+		.ui {
+			&.table {
+				max-width: 900px;
+				margin: 30px auto;
+				thead {
+					tr {
+						th {
+							background-color: $projectColor1;
+							color: $colorw;
+						}
+					}
+				}
+			}
+		}
+		.ui.red.message {
+			background-color: #da4f49;
+			color: $colorw;
+			height: auto;
+			padding: 3px;
+			width: 100%;
+			display: block;
+			border-radius: 2px;
+		}
+	}
+}

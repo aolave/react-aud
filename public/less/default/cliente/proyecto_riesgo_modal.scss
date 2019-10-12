@@ -1,0 +1,381 @@
+@import 'variables';
+
+$scaleColor0: #e5e5e5;
+$scaleColor1: #5cb85c;
+$scaleColor2: #ea9600;
+$scaleColor3: #ed0648;
+
+.ui.modal.proyecto-riesgo-modal {
+  .cell-block {
+    width: 120px;
+    padding: 7px 10px;
+    text-align: center;
+    border-radius: 4px;
+    box-shadow: 1px 2px 1px #999;
+    font-size: 12px;
+    font-weight: 600;
+    &.cell-block-value-0 {
+      background-color: $scaleColor0;
+    }
+    &.cell-block-value-1 {
+      background-color: $scaleColor1;
+      color: white;
+    }
+    &.cell-block-value-3 {
+      background-color: $scaleColor2;
+      color: white;
+    }
+    &.cell-block-value-5 {
+      background-color: $scaleColor3;
+      color: white;
+    }
+
+    &.field-control_valoracion.cell-block-value-1,
+    &.field-control_efectividad.cell-block-value-1 {
+      background-color: $scaleColor3;
+    }
+    &.field-control_valoracion.cell-block-value-5,
+    &.field-control_efectividad.cell-block-value-5 {
+      background-color: $scaleColor1;
+    }
+  }
+
+  header.modal-section-header {
+    padding: 10px 20px;
+    background-color: #f2f2f2;
+    box-shadow: 1px 1px 1px #ddd;
+    margin-bottom: 1px;
+    & > .ui.grid {
+      margin: 0;
+      & > .row {
+        padding-top: 0;
+        padding-bottom: 0;
+      }
+    }
+    .cell-block {
+      display: inline-block;
+    }
+    .toggle-collapse {
+      font-size: 11px;
+    }
+  }
+
+  .section-body {
+    padding: 10px 20px;
+    margin: 0;
+    font-size: 0.9em;
+
+    & > .row {
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem;
+    }
+
+    .ui.segment {
+      border-radius: 5px;
+    }
+
+    .zone-g {
+      padding: 7px 15px;
+      border-radius: 4px;
+      display: inline-block;
+      background: #e0e0e0;
+      strong {
+        margin-top: 8px;
+        display: inline-block;
+      }
+    }
+  }
+
+  .row.n1 .field {
+    min-height: 85.3px;
+  }
+
+  .field {
+    header {
+      vertical-align: top;
+      margin-bottom: 5px;
+      .title {
+        font-weight: bold;
+        background-color: white;
+        display: inline-block;
+        position: relative;
+        padding-left: 5px;
+        padding-right: 5px;
+        z-index: 2;
+        margin: {
+          top: 5px;
+          bottom: 5px;
+          right: auto;
+          left: auto;
+        }
+      }
+      .bordertopline {
+        border-top: 1px solid #999;
+        border-right: 1px solid #999;
+        border-left: 1px solid #999;
+        height: 10px;
+        width: 70%;
+        position: absolute;
+        top: 10px;
+        left: 15%;
+      }
+    }
+  }
+
+  .descripcion-field {
+    font-size: 11px;
+    line-height: 1.2em;
+
+    strong.editor-preview-title {
+      padding-left: 4px;
+      border-left: 2px solid $projectColor2;
+    }
+  }
+
+  .bma-checkboxgroup {
+    .bma-checkbox-wrap {
+      display: inline-block;
+      vertical-align: top;
+      width: 33.3%;
+
+      .bma-checkbox {
+        width: 30px;
+        display: inline-block;
+        height: 30px;
+        border: 3px solid #c7c7c7;
+        border-radius: 30px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+      }
+      .checkbox-label {
+        color: #ccc;
+      }
+      &.active {
+        .checkbox-label {
+          color: #333;
+          font-weight: 600;
+        }
+      }
+    }
+
+    &.bma-value-1 .active .bma-checkbox {
+      background-color: $scaleColor1;
+    }
+
+    &.bma-value-3 .active .bma-checkbox {
+      background-color: $scaleColor2;
+    }
+
+    &.bma-value-5 .active .bma-checkbox {
+      background-color: $scaleColor3;
+    }
+  }
+
+  .riesgo-fraude-checkboxgroup {
+    display: inline-block;
+    vertical-align: top;
+    width: 150px;
+
+    & > label {
+      display: inline-block;
+      vertical-align: top;
+      margin-bottom: 0;
+      margin-left: 10px;
+      cursor: pointer;
+
+      span.lb-title {
+        display: inline-block;
+        margin-right: 8px;
+        margin-top: 4px;
+        margin-left: 10px;
+      }
+      .riesgofraudechk {
+        width: 30px;
+        display: inline-block;
+        height: 30px;
+        vertical-align: top;
+        border: 3px solid #c7c7c7;
+        border-radius: 30px;
+      }
+      &.active .riesgofraudechk {
+        background-color: #b0cf4d;
+      }
+    }
+    &.disabled > label {
+      cursor: default;
+    }
+  }
+
+  .rangeslider {
+    margin: 20px 0;
+    position: relative;
+    background: #e6e6e6;
+    -ms-touch-action: none;
+    touch-action: none;
+    display: block;
+    .rangeslider__handle {
+      border: 3px solid #c7c7c7;
+      cursor: pointer;
+      display: inline-block;
+      position: absolute;
+    }
+    &.disabled {
+      .rangeslider__handle {
+        cursor: default;
+      }
+    }
+    .rangeslider__handle .rangeslider__active {
+      opacity: 1;
+    }
+
+    &.rangeslider-horizontal {
+      height: 12px;
+      border-radius: 10px;
+      width: 90%;
+      margin-left: 5%;
+      .rangeslider__fill {
+        display: block;
+        height: 100%;
+        border-radius: 10px;
+        top: 0;
+      }
+      .rangeslider__handle {
+        width: 30px;
+        height: 30px;
+        border-radius: 30px;
+        top: 50%;
+        transform: translate3d(-50%, -50%, 0);
+      }
+      &.slider-value-1 .rangeslider__fill,
+      &.slider-value-1 .rangeslider__handle,
+      &.slider-value-3.inverted .rangeslider__fill,
+      &.slider-value-3.inverted .rangeslider__handle {
+        background-color: $scaleColor1;
+      }
+      &.slider-value-2 .rangeslider__fill,
+      &.slider-value-2 .rangeslider__handle {
+        background-color: $scaleColor2;
+      }
+      &.slider-value-3 .rangeslider__fill,
+      &.slider-value-3 .rangeslider__handle,
+      &.slider-value-1.inverted .rangeslider__fill,
+      &.slider-value-1.inverted .rangeslider__handle {
+        background-color: $scaleColor3;
+      }
+
+      &.slider-value-0 .rangeslider__handle {
+        background-color: $scaleColor0;
+      }
+    }
+
+    .rangeslider__labels {
+      position: relative;
+      margin-top: 5px;
+      .rangeslider__label-item {
+        position: absolute;
+        font-size: 14px;
+        cursor: pointer;
+        display: inline-block;
+        top: 10px;
+        line-height: 1em;
+        transform: translate3d(-50%, 0, 0);
+
+        &::after {
+          content: ' ';
+          height: 0.5em;
+          width: 1px;
+          background: #ccc;
+          position: absolute;
+          top: -50%;
+          left: 50%;
+        }
+      }
+    }
+
+    &.disabled .rangeslider__labels .rangeslider__label-item {
+      cursor: default;
+    }
+  }
+
+  .ui.table {
+    thead {
+      background: white;
+    }
+    &.table-riesgo-criterios {
+      & > tbody > tr:nth-child(2n) {
+        background-color: rgba(0, 0, 0, .03);
+      }
+      .criterio-name {
+        padding-left: 40px;
+      }
+      tbody .criterio-name {
+        font-weight: 600;
+      }
+    }
+  }
+
+  .ui.segment {
+    &.nopad {
+      padding: 0;
+    }
+    &.noborder {
+      border: none;
+    }
+    strong.title-field {
+      font-size: 0.9em;
+    }
+  }
+
+  strong.title-field {
+    font-size: 0.9em;
+  }
+
+  .riesgo-control-dimmer {
+    .ui.red.label {
+      display: none;
+      border-radius: 4px;
+      white-space: normal;
+    }
+    &:hover .ui.red.label {
+      display: block;
+    }
+  }
+
+  .ui.button.inline {
+    margin-left: 5px;
+  }
+}
+
+.riesgo-field-dropdown {
+  .ui.multiple.selection.dropdown {
+    width: 100%;
+    .dropdown.icon:before {
+      font-family: Icons;
+      content: "\f067";
+      color: #aaa;
+    }
+  }
+}
+
+.riesgo-dropdown-selectedlist {
+  margin-top: 8px;
+  .dropdown-selectedlist-item {
+    text-align: left;
+    padding: 5px;
+    .icon.delete {
+      cursor: pointer;
+      &::before {
+        color: #cccccc;
+      }
+    }
+  }
+  .disabled & {
+    padding: 1px 10px;
+    border: .1em solid #eee;
+    border-radius: 8px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+  }
+}
+
+@import 'masterdata_tree';

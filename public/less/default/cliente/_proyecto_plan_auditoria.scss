@@ -1,0 +1,64 @@
+@import 'variables';
+
+#root {
+  min-height: 300px;
+}
+
+.topbar {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+#filteralerts {
+  margin-bottom: 0;
+}
+
+a.expandall {
+  margin-right: 20px;
+}
+
+a.collapseall {
+  margin-left: 20px;
+}
+
+#master_data_filters {
+  padding-right: 20px;
+  margin-right: 20px;
+  border-right: 1px solid #ccc;
+
+  select {
+    margin-bottom: 0;
+    margin-right: 2px;
+
+    &.active {
+      border-color: #08828a;
+      color: #08828a;
+      box-shadow: 1px 0px 9px 0px #08828a;
+    }
+  }
+
+  .lb {
+    display: inline-block;
+    padding-right: 5px;
+    color: #999;
+  }
+}
+
+#visitas-adminlist {
+  .sortable_placeholder {
+    min-height: 30px;
+    border: 2px dashed $projectColor1;
+    background-color: #f1f1f2;
+  }
+  .btnedit {
+    margin-right: 10px !important;
+    border-right: 1px solid #ccc;
+  }
+}
+
+.contextmenu.dropdown .item a {
+  color: rgba(0, 0, 0, .87);
+  &:hover {
+    color: rgba(0, 0, 0, .95);
+  }
+}
