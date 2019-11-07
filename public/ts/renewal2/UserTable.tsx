@@ -17,7 +17,6 @@ type TableCustomState = {
 export class TableCustom extends PureComponent<props, TableCustomState> {
 	constructor(props: props, tableCustomState: TableCustomState) {
 		super(props);
-		this.getKeys = this.getKeys.bind(this);
 		this.state = {
 			checked: false,
 			totalAmount: Number(this.props.data.totalAmount),
@@ -59,16 +58,17 @@ export class TableCustom extends PureComponent<props, TableCustomState> {
 
 	/*
 	* @returns retorna los kery para generar la tabla
-    */
+  */
 	getKeys = () => {
 		return Object.keys(this.props.data.content[0]);
 	};
 
 	/*
-    * Recibe parametros tipo json, para creer la cabecera del la tabla
+  * Recibe parametros tipo json, para creer la cabecera del la tabla
 	* El parametro custom: 0 o 1,  define los nombres de acuerdo la confguracion del json.
 	* @returns crea el emcabezado de la tabla.
-    */
+  */
+
 	renderHeader = (data: any) => {
 		let custom = data.custom;
 		let keys = this.getKeys();

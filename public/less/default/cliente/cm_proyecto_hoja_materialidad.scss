@@ -1,0 +1,83 @@
+@import 'variables';
+
+/*cambia el ancho del contenido de acuerdo a las margenes*/
+.page-container {
+	#materialidadformwrapper {
+		padding: 0;
+		.hoja-trabajo-objetivo {
+			width: 100%;
+		}
+	}
+
+	.editor-preview-wrapper {
+		border: 1px solid $borderColor;
+		padding: $padding-y;
+	}
+
+	.form {
+		.segment {
+			.editor-preview-wrapper {
+				border: 0;
+			}
+			.sixteen {
+				&.column {
+					padding-left: 0;
+					padding-right: 0;
+				}
+			}
+		}
+	}
+
+	#materialidadform {
+		margin: 10px 0;
+		border: 1px solid $borderColor;
+		padding: $padding-y 5px 3px;
+		margin-top: $padding-y;
+		.fields {
+			margin-bottom: $padding-y;
+			width: 100%;
+		}
+
+		.box-input-inner {
+			width: 100px;
+			min-width: 65px;
+			display: table-cell;
+			padding: 0px 5px;
+			vertical-align: middle;
+			input.percent {
+				text-align: right;
+				display: inline-block;
+				vertical-align: middle;
+			}
+			input.percent {
+				margin-top: 0;
+			}
+
+			label {
+				display: initial;
+				margin-top: 0;
+			}
+		}
+
+		.grid {
+			.box-input {
+				max-width: 100px;
+				min-width: 100px;
+				padding-left: 0;
+				padding-right: 0;
+			}
+			.box-total {
+				padding-left: 0;
+				padding-right: 0;
+			}
+		}
+		#segment-materialidad-observaciones {
+			margin: auto 0.5em;
+		}
+	}
+}
+
+#visita-tabs .ui.menu.tabular .tab-nav-item .tabname,
+.ab-tabs .ui.menu.tabular .tab-nav-item .tabname {
+	vertical-align: text-bottom;
+}

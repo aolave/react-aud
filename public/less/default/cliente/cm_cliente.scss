@@ -1,0 +1,508 @@
+@import 'variables';
+//@import 'breadcrum.less';
+//@import 'tabs.less';
+//@import 'alert.less';
+//@import 'iconsvg.less';
+
+/*mixin*/
+@mixin iconsize($size, $color) {
+	font-size: $size;
+	color: $color;
+}
+
+@mixin menuLinkDisplay($display, $margin, $padding) {
+	display: $display;
+	margin: $margin;
+	padding: $padding;
+}
+
+@mixin on-event-a($context,$url, $eventParent: false) {
+	&.active,
+	&:hover,
+	&:active,
+	&:focus {
+		@if $eventParent {
+			i {
+				&.icon-svg {
+					&.#{$context} {
+						background-image: $url;
+					}
+				}
+			}
+		} @else {
+			background-image: $url;
+		}
+	}
+}
+
+@mixin icon-size($size) {
+	&.icon,
+	&.icons,
+	&.far,
+	&.fa,
+	&.fas {
+		font-size: $size;
+		width: $size;
+		height: $size;
+		text-align: center;
+		float: none;
+		margin: 0;
+	}
+}
+
+@mixin icon-svg($ize) {
+	background-repeat: no-repeat;
+	display: block;
+	width: $ize;
+	height: $ize;
+	margin: 0 auto;
+}
+
+.menu_principal {
+	.nav-container {
+		.nav {
+			li {
+				a {
+					color: $colorIcons;
+				}
+			}
+		}
+	}
+}
+
+/*** cambia estado del menu principal cuando esta cerrado **/
+
+@mixin menuLeft() {
+	#main {
+		/*** cambia el lado izquierdo y derecho a 40px cuando el menu princpal izquierdo esta cerrado*/
+		padding-left: $menusizeSmall;
+		padding-right: $menusizeSmall;
+	}
+
+	.nav {
+		li {
+			float: left;
+			a {
+				display: block;
+				margin: 0 0 0 -.2em;
+				padding: 10px 0;
+			}
+		}
+	}
+
+	.menu_principal {
+		width: $menusizeSmall;
+		&.sidebar-collapse {
+			width: $menusizeSmall;
+		}
+		.nav {
+			li {
+				a {
+					i {
+						margin: 0 auto;
+					}
+				}
+				.dropdown {
+					> .dropdown-toggle {
+						.caret {
+							display: none;
+						}
+					}
+				}
+			}
+			.menuitem-label {
+				display: none;
+			}
+			.nav-menu-item {
+				text-align: center;
+				.menuitem-label {
+					display: none;
+				}
+			}
+		}
+		.large-logo {
+			display: none;
+		}
+		.small-logo {
+			display: block;
+		}
+
+		.nav-container {
+			.nav {
+				> li {
+					> a:after {
+						display: none;
+					}
+				}
+			}
+		}
+	}
+
+	#main-menu {
+		.nav {
+			li {
+				a {
+					@include menuLinkDisplay(block, 0 0 0 -0.2em, 10px 0);
+					span {
+						line-height: $sizeMedium;
+					}
+				}
+				i {
+					margin: 0 auto;
+				}
+			}
+		}
+		#collapse-button {
+			padding: 2px;
+			.switch {
+				margin: 10px 0 0;
+				float: none;
+			}
+		}
+	}
+}
+
+#main-menu {
+	@include menuLeft();
+	#collapse-button {
+		height: 40px;
+		.switch {
+			margin: 10px 0 0;
+		}
+	}
+	.nav {
+		li {
+			a {
+				@include menuLinkDisplay(block, 0 0 0 -0.2em, 10px 0);
+				span {
+					line-height: $sizeMedium;
+				}
+				i {
+					/*** deja iconos con medida estándar barra lateral izquierda */
+					@include icon-size($sizeMedium);
+					margin: 0 auto;
+					/*** icono customizado en svg, con medida 30x30 estándar barra lateral izquierda */
+					&.icon-svg {
+						margin: 0 auto;
+						@include icon-svg($sizeMedium);
+						&.project {
+							background-image: url(../../images/icons/project.svg);
+						}
+						&.history {
+							background-image: url(../../images/icons/history.svg);
+						}
+					}
+				}
+			}
+			/*** icono customizado en svg, se realiza el over desde el padre li */
+			@include on-event-a ('project', url(../../images/icons/project_hover.svg), $eventParent: true);
+			@include on-event-a ('history', url(../../images/icons/history_hover.svg), $eventParent: true);
+		}
+	}
+}
+
+/*** cambia principal iquierdo, cuando esta abierto  **/
+.sidebar-collapse {
+	#main-menu {
+		#collapse-button {
+			.switch {
+				margin: 4.1px 0 0;
+			}
+		}
+		.nav {
+			li {
+				a {
+					@include menuLinkDisplay(flex, 0, 10px 20px 10px 10px);
+					i {
+						margin: initial;
+					}
+				}
+				.menuitem-label {
+					margin-left: 0.4em;
+				}
+				&.menuesconder {
+					.menuitem-label {
+						margin-left: 0;
+					}
+				}
+			}
+		}
+	}
+}
+
+#main {
+	padding-right: $menusizeSmall;
+	padding-left: $menusizeSmall;
+
+	.breadcrum {
+		margin: 5px $padding 0px $padding;
+		display: block;
+		min-height: 20px;
+	}
+
+	#sf_main_top_block .breadcrum {
+		font-size: $fontSize;
+	}
+
+	.ui {
+		&.menu {
+			/*** cliente hoja de trabajo **/
+			&.visita-sidebar {
+				padding-top: 25px;
+				& > .menu {
+					& > .item {
+						width: $menusizeSmall;
+						&:hover {
+							background-color: $backgroundHover;
+						}
+					}
+				}
+			}
+			/*** end cliente hoja de trabajo **/
+		}
+	}
+
+	.dropdown {
+		&.icon {
+			border: solid $colorIcons;
+			border-width: 0 2px 2px 0;
+			display: inline-block;
+			padding: .4em;
+			transform: rotate(45deg);
+			-webkit-transform: rotate(45deg);
+			top: 1.49em;
+			right: 2.2em;
+			margin: -.78571429em;
+			&:before {
+				display: none;
+			}
+		}
+	}
+
+	&.selection {
+		&.dropdown {
+			border-radius: 4px;
+			color: $colorIcons;
+			& > .dropdown {
+				&.icon {
+					@extend .dropdown;
+				}
+			}
+			&:not(.button) {
+				& > .default.text {
+					color: $colorIcons;
+				}
+			}
+		}
+	}
+}
+
+.author-icon-log,
+.lb-status-wrapper {
+	margin: 0 3px 1px 3px;
+	.lb-status {
+		&.lb-status-nuevo {
+			vertical-align: middle;
+			padding: 3px;
+			border-radius: 0;
+		}
+	}
+}
+
+/*** sobrepone el footer  y Quita del footer el padding de 40px cuando el menu esta cerrado*/
+
+.navbar {
+	&.user-info-navbar {
+		padding-left: $menusize;
+	}
+}
+
+footer {
+	padding-left: $menusize;
+	z-index: 1003;
+	padding-left: 0;
+	.content-footer {
+		padding: 0 $padding;
+	}
+}
+
+.sidebar-collapse {
+	#main {
+		/*** cambia el lado izquierdo del main a 190 de ancho cuando el menu esta abierto*/
+		padding-left: $menusize;
+		padding-right: $menusizeSmall;
+
+		.col-main {
+			background: transparent;
+			box-shadow: none;
+			padding: 10px 15px $padding !important;
+			width: 100%;
+		}
+
+		.ui {
+			&.menu {
+				/*** cliente hoja de trabajo **/
+				&.visita-sidebar {
+					padding-top: 25px;
+
+					& > .menu {
+						& > .item {
+							width: $menusizeSmall;
+						}
+					}
+				}
+				/*** end cliente hoja de trabajo **/
+			}
+		}
+
+		i.icons,
+		i.icons {
+			@include iconsize($sizeMedium, $projectColor2);
+		}
+
+		button {
+			i.icons,
+			i.icons {
+				@include iconsize($sizeMedium, #ffffff);
+			}
+		}
+	}
+
+	/*** Quita del footer el 190 cuando el menu esta abierto*/
+	footer {
+		@extend footer;
+	}
+}
+
+/*** corrige el resposive de la barra de progreso*/
+.visita-progress-container {
+	.progress.visita-progress {
+		max-width: 100%;
+		margin-right: 34px;
+	}
+}
+
+/**** styles semantic */
+.menu_principal {
+	overflow-y: auto;
+	-webkit-box-shadow: 0 0 0;
+	box-shadow: 0 0 0;
+	border: 1px solid $borderColor;
+	width: $menusizeSmall;
+	&.sidebar-collapse {
+		width: $menusize;
+	}
+}
+.ui.vertical.menu {
+	border: 1px solid $borderColor;
+	-webkit-box-shadow: 0 0 0;
+	box-shadow: 0 0 0;
+}
+
+/*** cambia los inconos del menu de la barra lateral izquierda */
+
+.user-profile {
+	i {
+		@include icon-size($sizeMedium);
+		color: $colorIcons;
+		&:hover {
+			color: $buttonHover;
+		}
+	}
+	.dropdown-menu {
+		padding: $padding2;
+		i {
+			@include icon-size($sizeSmall);
+		}
+		li {
+			> a {
+				padding: 5px;
+				span {
+					vertical-align: top;
+					margin-left: .2em;
+				}
+			}
+		}
+	}
+}
+
+@mixin right-menu-icons($name) {
+	&.#{$name} {
+		background-image: url(../../images/sidebar_right/new/#{$name}.svg);
+		@include on-event-a ($name, url(../../images/sidebar_right/new/#{$name}_hover.svg));
+	}
+}
+
+@mixin content-icons($name) {
+	&.#{$name} {
+		background-image: url(../../images/icons/#{$name}.svg);
+		@include on-event-a ($name, url(../../images/icons/#{$name}_hover.svg));
+	}
+}
+
+.right-sidebar {
+	.menu {
+		i {
+			&.icon-svg {
+				@include icon-svg($sizeMedium + 1);
+				@include right-menu-icons('ajustes');
+				@include right-menu-icons('hallazgos');
+				@include right-menu-icons('muestreo');
+				@include right-menu-icons('notas_de_revision');
+				@include right-menu-icons('asignar_usuario');
+			}
+		}
+	}
+}
+
+i {
+	&.icon-svg {
+		@include icon-svg($sizeSmall);
+		@include content-icons('editar');
+	}
+}
+
+$break-small: 320px;
+$break-medium: 980px;
+$break-large: 1200px;
+
+@media screen and (max-width: $break-medium) {
+	body {
+		.navbar {
+			.btn-navbar {
+				display: none;
+			}
+		}
+		&.sidebar-collapse {
+			@include menuLeft();
+			.navbar {
+				.btn-navbar {
+					display: none;
+				}
+			}
+		}
+		.nav-collapse {
+			&.collapse {
+				height: auto !important;
+			}
+		}
+		.nav-collapse,
+		.nav-collapse.collapse {
+			overflow: visible;
+			height: auto;
+		}
+		.navbar-fixed-bottom,
+		.navbar-fixed-top {
+			position: fixed;
+		}
+	}
+}
+
+.description-text {
+	font-size: 12px;
+}
+
+.btn-group > .btn-large,
+.panel-title {
+	font-size: 1em;
+}

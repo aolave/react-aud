@@ -1,0 +1,673 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="es"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8 ie7" lang="es"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9 ie8" lang="es"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="es">
+<!--<![endif]-->
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-Ua-Compatible" content="IE=edge,chrome=1" />
+  <meta name="title" content="Hoja de Trabajo" />
+  <meta name="charset" content="utf-8" />
+  <meta name="viewport"
+    content="minimum-scale=1, initial-scale=1, shrink-to-fit=no, width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+  <link rel="shortcut icon" href="https://app.auditbrain.com/favicon.ico" />
+  <title>Audit Brain | Hoja de Trabajo</title>
+  <link rel="stylesheet" type="text/css" media="all" href="/css/default/app_cliente-global.min.css" />
+  <link rel="stylesheet" type="text/css" media="all" href="/css/reset.min.css?v=20191104023741" data-file="app-reset" />
+  <link rel="stylesheet" type="text/css" media="all" href="/css/jquery-ui.bootstrap.min.css?v=20191104023741"
+    data-file="app-jquery-ui.bootstrap" />
+  <link rel="stylesheet" type="text/css" media="all"
+    href="/css/bootstrap/bootstrap-app_cliente.min.css?v=20191104023741" data-file="bootstrap-bootstrap-app_cliente" />
+  <link rel="stylesheet" type="text/css" media="all" href="/css/bootstrap/bootstrap-responsive.min.css?v=20191104023741"
+    data-file="bootstrap-bootstrap-responsive" />
+  <link rel="stylesheet" type="text/css" media="all" href="/css/bootstrap/font-awesome.min.css?v=20191104023741"
+    data-file="bootstrap-font-awesome" />
+  <!--[if IE 7]><link rel="stylesheet" type="text/css" media="all" href="/css/bootstrap/font-awesome-ie7.min.css?v=20191104023741" data-file="bootstrap-font-awesome-ie7" /><![endif]-->
+  <link rel="stylesheet" type="text/css" media="all" href="/css/plugins/jquery.qtip.min.css?v=20191104023741"
+    data-file="plugins-jquery.qtip" />
+  <link rel="stylesheet" type="text/css" media="all" href="/css/animate.min.css?v=20191104023741"
+    data-file="app-animate" />
+  <link rel="stylesheet" type="text/css" media="all" href="/css/default/app_cliente_ext.min.css?v=20191104023741"
+    data-file="default-app_cliente_ext" />
+  <link rel="stylesheet" type="text/css" media="all"
+    href="/css/../webapps/semantic/dist/semantic.min.css?v=20191104023741"
+    data-file="../webapps/semantic/dist-semantic" />
+  <link rel="stylesheet" type="text/css" media="all" href="/css/plugins/react-dual-listbox.css?v=20191104023741"
+    data-file="plugins-react-dual-listbox" />
+  <link rel="stylesheet" type="text/css" media="all" href="/css/plugins/react-datepicker.min.css?v=20191104023741"
+    data-file="plugins-react-datepicker" />
+  <link rel="stylesheet" type="text/css" media="all"
+    href="/css/default/app_cliente-masterdata_admin.min.css?v=20191104023741"
+    data-file="default-app_cliente-masterdata_admin" />
+  <link rel="stylesheet" type="text/css" media="all" href="/css/default.min.css?v=20191104023741"
+    data-file="app-default" />
+  <link rel="stylesheet" type="text/css" media="all" href="/css/default/app_cliente.min.css?v=20191104023741"
+    data-file="default-app_cliente" />
+  <!--[if ie]><link rel="stylesheet" type="text/css" media="all" href="/css/default/app_cliente-ie.min.css?v=20191104023741" data-file="default-app_cliente-ie" /><![endif]-->
+  <link rel="stylesheet" type="text/css" media="all"
+    href="/css/default/app_cliente-proyecto_hoja_trabajo.min.css?v=20191104023741"
+    data-file="default-app_cliente-proyecto_hoja_trabajo" />
+
+  <!--[if IE]><link rel="stylesheet" type="text/css" media="all" href="/css/ie-fix.min.css?v=20191104023741" /><![endif]-->
+
+  <!-- change add  library fontawesome -->
+  <script src="https://kit.fontawesome.com/92e66407b8.js" crossorigin="anonymous"></script>
+
+  <!-- change add  styles custom -->
+  <link href="css/default/app_cliente-cm_cliente.min.css" rel="stylesheet" type="text/css" />
+  <link href="css/default/app_cliente-cm_semantic.min.css" rel="stylesheet" type="text/css" />
+  <link href="css/default/app_cliente-cm_proyecto_hoja_trabajo.min.css" rel="stylesheet" type="text/css" />
+
+
+  <script type="text/javascript" src="/js/jquery-1.8.3.min.js"></script>
+  <script type="text/javascript" src="/js/modernizr.min.js?v="></script>
+  <script type="text/javascript" src="/js/plugins/jquery.blockUI.min.js?v="></script>
+  <script type="text/javascript" src="/js/plugins/pace.min.js?v="></script>
+  <script type="text/javascript">
+    //<![CDATA[
+    var app = app || {};
+    app.vars = app.vars || {};
+//]]>
+  </script> <!-- start Mixpanel -->
+  <script type="text/javascript">(function (e, a) {
+      if (!a.__SV) {
+        var b = window; try {var c, l, i, j = b.location, g = j.hash; c = function (a, b) {return (l = a.match(RegExp(b + "=([^&]*)"))) ? l[1] : null}; g && c(g, "state") && (i = JSON.parse(decodeURIComponent(c(g, "state"))), "mpeditor" === i.action && (b.sessionStorage.setItem("_mpcehash", g), history.replaceState(i.desiredHash || "", e.title, j.pathname + j.search)))} catch (m) {} var k, h; window.mixpanel = a; a._i = []; a.init = function (b, c, f) {
+          function e(b, a) {
+            var c = a.split("."); 2 == c.length && (b = b[c[0]], a = c[1]); b[a] = function () {
+              b.push([a].concat(Array.prototype.slice.call(arguments,
+                0)))
+            }
+          } var d = a; "undefined" !== typeof f ? d = a[f] = [] : f = "mixpanel"; d.people = d.people || []; d.toString = function (b) {var a = "mixpanel"; "mixpanel" !== f && (a += "." + f); b || (a += " (stub)"); return a}; d.people.toString = function () {return d.toString(1) + ".people (stub)"}; k = "disable time_event track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config reset opt_in_tracking opt_out_tracking has_opted_in_tracking has_opted_out_tracking clear_opt_in_out_tracking people.set people.set_once people.unset people.increment people.append people.union people.track_charge people.clear_charges people.delete_user".split(" ");
+          for (h = 0; h < k.length; h++)e(d, k[h]); a._i.push([b, c, f])
+        }; a.__SV = 1.2; b = e.createElement("script"); b.type = "text/javascript"; b.async = !0; b.src = "undefined" !== typeof MIXPANEL_CUSTOM_LIB_URL ? MIXPANEL_CUSTOM_LIB_URL : "file:" === e.location.protocol && "//cdn4.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//) ? "https://cdn4.mxpnl.com/libs/mixpanel-2-latest.min.js" : "//cdn4.mxpnl.com/libs/mixpanel-2-latest.min.js"; c = e.getElementsByTagName("script")[0]; c.parentNode.insertBefore(b, c)
+      }
+    })(document, window.mixpanel || []);
+    mixpanel.init('e939f3ba801e7fcdae80bba1bf611840');
+    mixpanel.identify(806);
+    mixpanel.track('Pagina visitada', {'App ModuleName': 'Proyecto:HojaTrabajo', 'App ActionName': 'index', 'Proyecto ID': '2288'});
+  </script><!-- end Mixpanel -->
+
+  <script src="https://wchat.freshchat.com/js/widget.js"></script>
+</head>
+
+<body class="theme-default page-proyecto-hoja_trabajo-index page-proyecto_hoja_trabajo    ">
+  <style type="text/css">
+  </style>
+  <script type="text/javascript">
+    jQuery.blockUI({'message': '<div class="ajax-loader-snake-32 _a-center" style="padding: 5px"></div>', 'overlayCSS': {'backgroundColor': '#fff', 'opacity': 0.2}});
+  </script>
+
+  <div id="page">
+
+
+    <header class="header main-header" id="pageheader">
+    </header>
+
+    <nav role="menu" id="main-menu" class="navbar menu menu_principal navbar-fixed-top">
+
+      <div class="nav-container">
+        <div class='navbar-inner'>
+          <div class='container-fluid'>
+
+
+            <a class='btn btn-navbar' data-toggle='collapse' data-target='.nav-collapse'>
+
+              <span class='icon-bar'></span>
+              <span class='icon-bar'></span>
+              <span class='icon-bar'></span>
+            </a>
+            <img src="/images/logo.png?v=20191104023741" class="large-logo">
+            <img src="/images/logo1.png?v=20191104023741" class="small-logo">
+            <div class='nav-collapse pull-left'>
+              <ul id='main-menuitems' class='nav '>
+                <li class='divider-vertical brand-divider'></li>
+                <li class='menuesconder  nav-menu-item'><span id="collapse-button">
+                    <span class="menuitem-label">Contraer menú</span>
+                    <label class="switch">
+                      <input type="checkbox">
+                      <span class="slider round"></span>
+                    </label>
+                  </span>
+
+                  <script type="text/javascript">
+                    $('body').addClass('sidebar-collapse')
+                  </script>
+                </li>
+                <li class='  nav-menu-item'>
+                  <a title="Dashboard" class="menu-link-module-home" href="/index.php/">
+                      <!-- change icon:  <span class="menu-icon icon- flaticon-interface"></span>  -->
+                     <i class="fas fa-indent"></i>
+                      <span class="menuitem-label">Dashboard</span>
+
+                  </a>
+                </li>
+                <li class='  nav-menu-item'><a title="CRM" class="menu-link-module-cliente_prospecto"
+                    href="/index.php/cliente_prospecto">
+                    
+                    <!-- change icon: <span class="menu-icon icon- flaticon-shapes"></span> -->
+                     <i class="far fa-building"></i>
+
+                    <span class="menuitem-label">CRM</span> </a>
+                    </li>
+                <li class=' active nav-menu-item'><a title="Proyectos" class="menu-link-module-proyecto_admin"
+                    href="/index.php/proyecto">
+                    
+                      <!-- change icon: <span class="menu-icon icon- flaticon-people"></span> -->
+                     <i class="icon-svg project"></i>
+                      <span class="menuitem-label">Proyectos</span> </a>
+                    
+                    </li>
+                <li class='  nav-menu-item'><a title="Tareas" class="menu-link-module-usuario_tarea_admin"
+                    href="/index.php/usuario_tarea">
+                    
+                      <!-- change icon: <span class="menu-icon icon- flaticon-check"></span> -->
+                       <i class="fas fa-tasks"></i>
+
+                    <span class="menuitem-label">Tareas</span> </a>
+                </li>
+
+                <li class='  nav-menu-item'><a title="Informe de Tiempo" class="menu-link-module-tiempo_admin"
+                    href="/index.php/informe-tiempo">
+                    
+                    <!-- change icon:  <span class="menu-icon icon- flaticon-clock"></span> -->
+                     <!--   <i class="fas fa-history"></i>  -->
+					 <i class="icon-svg history"></i>
+                    <span class="menuitem-label">Informe de Tiempo</span> </a></li>
+
+
+                <li class="  nav-menu-item"><a class="menu-link-module-config" href="#Config" oldtitle="Configuración" title="" aria-describedby="ui-tooltip-4">
+                        <!-- add icon: -->
+                        <i class="fas fa-cog"></i>
+                       <span class="menuitem-label"> Configuración </span> </a>
+                </li>
+
+              </ul><!-- //#main-menuitems -->
+
+            </div><!-- //.nav-collapse -->
+            <!-- RIGHT ITEMS -->
+            <div class='btn-toolbar pull-right nav-user-toolbar'>
+            </div><!-- //RIGHT ITEMS -->
+          </div><!-- //container-->
+        </div><!-- //navbar-inner-->
+
+        <div>
+          <div class="_clear"></div>
+    </nav>
+
+
+
+    <div class="user-profile floating pull-right">
+      <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true" title="Adrian Robledo Olave">
+        
+      <!-- change icon<img class="img-circle" src="/images/avatar_default.jpg" />  -->  
+      <i class="fas fa-user-circle">   </i>
+
+      </a>
+      <ul class="dropdown-menu user-profile-menu pull-right">
+        <li>  
+          <a href="/index.php/my/edit">
+            <!-- change icon:  <span class='link-icon icon-moon-user'></span>  -->
+            <i class="far fa-user-circle"></i>
+            
+            <span class='link-text'>Mi perfil</span>
+          </a> 
+          </li>
+        <li class="last">
+          <a href="/index.php/guard/logout">
+            
+             <!-- change icon:  <span class='link-icon icon-moon-logout'></span>  -->
+             <i class="far fa-arrow-alt-circle-right"></i>
+
+            <span class='link-text'>Cerrar sesión</span></a> 
+
+            </li>
+      </ul>
+    </div>
+
+    <script>
+
+      $(document).ready(function () {
+        $("#sidebar-menu > li.embed-item").on("click", function () {
+          $("#sidebar-menu > li.embed-item").removeClass("item-active")
+          $(this).toggleClass("item-active")
+
+          $("#sidebar-right").addClass("sidebar-open")
+
+          $('#sidebar-content').html('<div class="ajax-loader"><div class="ajax-loader-snake-32"></div></div>')
+          $('#sidebar-content').load($(this).children('a').attr("href"))
+        })
+        $(".sidebar-close").on("click", function () {
+          $("#sidebar-menu > li").removeClass("item-active")
+          $("#sidebar-right").removeClass("sidebar-open")
+        })
+
+        $("#sidebar-menu > li.embed-item a").on('click', function (ev) {
+          ev.preventDefault()
+        })
+      })
+
+    </script>
+
+
+    <div id="main" class="container-fluid page-container" role="main">
+
+      <div class="row-fluid" id="sf_main_top_block">
+
+        <div class="ab-breadcrumb breadcrum"><a href="/index.php/">Dashboard</a> <span class="icon-arrow"></span> <a
+            href="/index.php/proyecto">Proyectos</a> <span class="icon-arrow"></span> <a class="project-name"
+            title="&lt;b&gt;Cliente:&lt;/b&gt; diseño &lt;br&gt;&lt;b&gt;Proyecto:&lt;/b&gt; diseño2"
+            href="/index.php/proyecto/2288">diseño2</a> <span class="icon-arrow"></span> <a
+            href="/index.php/proyecto/2288/master_data?id_paso=205375">Plan de Auditoría</a> <span
+            class="icon-arrow"></span> Aceptación y Continuación del encargo (NIA 210)</div>
+      </div>
+
+      <div class="row-fluid">
+
+
+
+        <div class="col-main">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          <div class="info-paso">
+            <div class="info-col paso" style="text-align: left; margin-top: 3px">
+              <div class="info-title">Paso:</div>
+              <div class="info-value">
+                Trabajo requerido (NIA 210)
+              </div>
+            </div>
+            <div class="info-col">
+              <div class="info-title">Aserciones:</div>
+              <div class="info-value">
+                <ul class="list-badge">
+                </ul>
+              </div>
+            </div>
+            <div class="info-col">
+              <div class="info-title">Riesgos:</div>
+              <div class="info-value">
+                <ul class="list-badge">
+                </ul>
+              </div>
+            </div>
+          </div>
+
+
+
+
+
+          <div id="root"></div>
+
+          <script>
+            app.vars.hoja_trabajo = {"proyecto": {"id": "2288", "name": "dise\u00f1o2", "isOpen": true, "status": "ABIERTO", "id_parent": null}, "paso": {"id": "205375", "name": "Trabajo requerido (NIA 210)", "code": "1A1", "tipo": null, "objetivo": null, "rubro": {"id": "55481", "name": "Aceptaci\u00f3n y Continuaci\u00f3n del encargo (NIA 210)"}, "objetivos": [], "riesgos": []}, "id_visita": "8182", "visitas": {"8182": {"index": 0, "id": "275502", "id_visita": "8182", "label": "Planeacion", "progress": 0, "position": 1, "status": "Notas Revisi\u00f3n", "status_color": "#a87e51", "id_usuario_asignado": "803", "id_status": "6", "fecha_completado": "2019-10-24 11:45:50", "fecha_revision": null, "updated_at": "2019-10-24 11:45:09", "UpdateLog": [{"ts": "2019-10-24 11:47:10", "User": {"id": "806", "name": "Adrian Robledo Olave", "sigla": "AR"}}, {"ts": "2019-10-24 11:45:09", "User": {"id": "803", "name": "Maria Paula Riveros", "sigla": "MR"}}], "RevisionLog": null, "instructions": [{"id": "1451471", "id_proyecto_instruccion_item": "1451471", "id_master_data_paso_has_proyecto_visita": "275502", "id_master_data_paso": "205375", "id_proyecto_visita": "8182", "id_master_data_instruccion": "80580", "code": "aa31b79ac4dd4b9cd5ab279d70a507cd", "local_id": "c0741111-6f08-449a-acaa-cb5e6a4d3bb6", "position": "1", "category": null, "description": "\u00bfCu\u00e1l es la naturaleza y alcance de la auditor\u00eda?", "is_done": true, "answer": "S\u00ed", "observations": null, "created_at": "2019-10-16 14:06:34", "updated_at": "2019-10-18 16:49:31", "created_by": "803", "updated_by": "803", "Attachments": []}, {"id": "1451472", "id_proyecto_instruccion_item": "1451472", "id_master_data_paso_has_proyecto_visita": "275502", "id_master_data_paso": "205375", "id_proyecto_visita": "8182", "id_master_data_instruccion": "80581", "code": "489a8ff378a9717ca9ef1f21e2403d90", "local_id": "a4869c9e-41c9-446f-bc18-225796beaf9c", "position": "2", "category": null, "description": "\u00bfQu\u00e9 plan contable se va a utilizar?", "is_done": true, "answer": "S\u00ed", "observations": null, "created_at": "2019-10-16 14:06:34", "updated_at": "2019-10-24 11:45:01", "created_by": "803", "updated_by": "806", "Attachments": []}, {"id": "1451474", "id_proyecto_instruccion_item": "1451474", "id_master_data_paso_has_proyecto_visita": "275502", "id_master_data_paso": "205375", "id_proyecto_visita": "8182", "id_master_data_instruccion": "80583", "code": "aa4e158fe64e07d8ce88c7d83f1efbcf", "local_id": "106c155b-cf45-4bfc-a519-81b42edc4e58", "position": "3", "category": null, "description": "\u00bfCual es la fecha l\u00edmite (si la hay) para terminar la auditor\u00eda?", "is_done": true, "answer": "S\u00ed", "observations": null, "created_at": "2019-10-16 14:06:34", "updated_at": "2019-10-24 11:47:08", "created_by": "803", "updated_by": "806", "Attachments": []}, {"id": "1451473", "id_proyecto_instruccion_item": "1451473", "id_master_data_paso_has_proyecto_visita": "275502", "id_master_data_paso": "205375", "id_proyecto_visita": "8182", "id_master_data_instruccion": "80582", "code": "74c12bbaa74d13c2b891cd7673d61370", "local_id": "72b6832c-1b43-4a4b-a054-51585e60ee16", "position": "4", "category": null, "description": "\u00bfC\u00f3mo se utilizar\u00e1n el informe de auditor\u00eda y los estados financieros?", "is_done": true, "answer": "S\u00ed", "observations": null, "created_at": "2019-10-16 14:06:34", "updated_at": "2019-10-24 11:45:04", "created_by": "803", "updated_by": "806", "Attachments": []}], "additionals": {"ajustes": 0, "revisiones": 2, "hallazgos": 0, "muestreos": 0}, "is_current": true}, "8183": {"index": 1, "id": null, "id_visita": "8183", "label": "Prefinal", "progress": 0, "position": 2, "status": null, "status_color": null, "id_usuario_asignado": null, "id_status": null, "fecha_completado": null, "fecha_revision": null, "updated_at": null, "UpdateLog": null, "RevisionLog": null, "instructions": [], "additionals": {"ajustes": 0, "revisiones": 0, "hallazgos": 0, "muestreos": 0}}, "8184": {"index": 2, "id": null, "id_visita": "8184", "label": "Final", "progress": 0, "position": 3, "status": null, "status_color": null, "id_usuario_asignado": null, "id_status": null, "fecha_completado": null, "fecha_revision": null, "updated_at": null, "UpdateLog": null, "RevisionLog": null, "instructions": [], "additionals": {"ajustes": 0, "revisiones": 0, "hallazgos": 0, "muestreos": 0}}}, "muestreos": {"8182": [], "8183": [], "8184": []}, "equipo": [{"name": "Maria Paula Riveros", "sigla": "MR", "id": "5614", "user_id": "803", "rol": {"name": "Gerente", "tipo": "PM", "is_assignable": true}}, {"name": "Adrian Robledo Olave", "sigla": "AR", "id": "5969", "user_id": "806", "rol": {"name": "Gerente", "tipo": "PM", "is_assignable": true}}], "masterdatatree": {"55477": {"id": "55477", "id_master_data_fase": "55477", "id_parent": null, "descripcion": "COMPROMISO PREVIO", "Subfases": {"55481": {"id": "55481", "id_master_data_fase": "55481", "id_parent": "55477", "descripcion": "Aceptaci\u00f3n y Continuaci\u00f3n del encargo (NIA 210)", "Pasos": [{"id": "205375", "id_master_data_paso": "205375", "descripcion": "Trabajo requerido (NIA 210)", "code": "1A1", "id_master_data_fase": "55481"}, {"id": "205393", "id_master_data_paso": "205393", "descripcion": "Capacidad de la firma para prestar el servicio (NIA 210)", "code": "1A2", "id_master_data_fase": "55481"}, {"id": "205409", "id_master_data_paso": "205409", "descripcion": "Independencia de la firma (NIA 200, 220)", "code": "1A3", "id_master_data_fase": "55481"}, {"id": "205422", "id_master_data_paso": "205422", "descripcion": "Aceptacion de los riesgos (NIA 210)", "code": "1A4", "id_master_data_fase": "55481"}, {"id": "205434", "id_master_data_paso": "205434", "descripcion": "Confianza en el cliente (NIA 210)", "code": "1A5", "id_master_data_fase": "55481"}, {"id": "205444", "id_master_data_paso": "205444", "descripcion": "Condiciones previas de la auditoria (NIA 210)", "code": "1A6", "id_master_data_fase": "55481"}, {"id": "205452", "id_master_data_paso": "205452", "descripcion": "Continuaci\u00f3n del cliente (NIA 210)", "code": "1A7", "id_master_data_fase": "55481"}, {"id": "205456", "id_master_data_paso": "205456", "descripcion": "Condiciones del compromiso (NIA 210)", "code": "1A8", "id_master_data_fase": "55481"}, {"id": "205459", "id_master_data_paso": "205459", "descripcion": "Contratos y cartas del encargo (NIA 210)", "code": "1A9", "id_master_data_fase": "55481"}, {"id": "205462", "id_master_data_paso": "205462", "descripcion": "Aceptaci\u00f3n del cliente (NIA 220)", "code": "1A10", "id_master_data_fase": "55481"}]}}}, "55478": {"id": "55478", "id_master_data_fase": "55478", "id_parent": null, "descripcion": "PLANEACION", "Subfases": {"55482": {"id": "55482", "id_master_data_fase": "55482", "id_parent": "55478", "descripcion": "Estrategia de Auditoria y Planeaci\u00f3n", "Pasos": [{"id": "205376", "id_master_data_paso": "205376", "descripcion": "Conocimiento del negocio (NIA 300, 315)", "code": "2A1", "id_master_data_fase": "55482"}, {"id": "205394", "id_master_data_paso": "205394", "descripcion": "Leyes y regulaciones (NIA 250)", "code": "2A2", "id_master_data_fase": "55482"}, {"id": "205410", "id_master_data_paso": "205410", "descripcion": "Componentes del Control interno  (NIA 315)", "code": "2A3", "id_master_data_fase": "55482"}, {"id": "205423", "id_master_data_paso": "205423", "descripcion": "Fraude en informacion financiera (NIA 240)", "code": "2A4", "id_master_data_fase": "55482"}, {"id": "205435", "id_master_data_paso": "205435", "descripcion": "Complejidad del ambiente de Tecnolog\u00eda de la Informaci\u00f3n (NIA 315)", "code": "2A5", "id_master_data_fase": "55482"}, {"id": "205445", "id_master_data_paso": "205445", "descripcion": "Revisiones anal\u00edticas iniciales (NIA 315, 520)", "code": "2A6", "id_master_data_fase": "55482"}, {"id": "205453", "id_master_data_paso": "205453", "descripcion": "Reuniones con miembros claves del cliente", "code": "2A7", "id_master_data_fase": "55482"}, {"id": "205457", "id_master_data_paso": "205457", "descripcion": "Actas y contratos (NIA 501)", "code": "2A8", "id_master_data_fase": "55482"}, {"id": "205460", "id_master_data_paso": "205460", "descripcion": "Importancia relativa, Materialidad  (NIA 320)", "code": "2A9", "id_master_data_fase": "55482"}, {"id": "205463", "id_master_data_paso": "205463", "descripcion": "Uso del trabajo de Auditores Internos (NIA 610)", "code": "2A10", "id_master_data_fase": "55482"}, {"id": "205464", "id_master_data_paso": "205464", "descripcion": "Uso del trabajo de un experto (NIA 620)", "code": "2A11", "id_master_data_fase": "55482"}, {"id": "205465", "id_master_data_paso": "205465", "descripcion": "Uso de las Organizaciones de Servicios (NIA 402)", "code": "2A12", "id_master_data_fase": "55482"}, {"id": "205466", "id_master_data_paso": "205466", "descripcion": "Memorando de estrategia de auditoria (NIA 300)", "code": "2A13", "id_master_data_fase": "55482"}]}}}, "55479": {"id": "55479", "id_master_data_fase": "55479", "id_parent": null, "descripcion": "EJECUCION", "Subfases": {"55483": {"id": "55483", "id_master_data_fase": "55483", "id_parent": "55479", "descripcion": "Efectivo y Equivalentes", "Pasos": [{"id": "205377", "id_master_data_paso": "205377", "descripcion": "Procedimientos primordiales de efectivo", "code": "3A1", "id_master_data_fase": "55483"}, {"id": "205395", "id_master_data_paso": "205395", "descripcion": "Conciliaciones bancarias", "code": "3A2", "id_master_data_fase": "55483"}, {"id": "205411", "id_master_data_paso": "205411", "descripcion": "Confirmaci\u00f3n de bancos (NIA 505)", "code": "3A3", "id_master_data_fase": "55483"}, {"id": "205424", "id_master_data_paso": "205424", "descripcion": "Seguimiento confirmaci\u00f3n de bancos", "code": "3A4", "id_master_data_fase": "55483"}, {"id": "205436", "id_master_data_paso": "205436", "descripcion": "Arqueo de caja", "code": "3A5", "id_master_data_fase": "55483"}, {"id": "205446", "id_master_data_paso": "205446", "descripcion": "Corte de efectivo", "code": "3A6", "id_master_data_fase": "55483"}]}, "55484": {"id": "55484", "id_master_data_fase": "55484", "id_parent": "55479", "descripcion": "Inversiones", "Pasos": [{"id": "205378", "id_master_data_paso": "205378", "descripcion": "Procedimientos primordiales de inversiones", "code": "3B1", "id_master_data_fase": "55484"}, {"id": "205396", "id_master_data_paso": "205396", "descripcion": "Arqueo de inversiones", "code": "3B2", "id_master_data_fase": "55484"}, {"id": "205412", "id_master_data_paso": "205412", "descripcion": "Adiciones y retiros de inversiones", "code": "3B3", "id_master_data_fase": "55484"}, {"id": "205425", "id_master_data_paso": "205425", "descripcion": "Valoraci\u00f3n de inversiones", "code": "3B4", "id_master_data_fase": "55484"}, {"id": "205437", "id_master_data_paso": "205437", "descripcion": "Confirmaci\u00f3n de inversiones", "code": "3B5", "id_master_data_fase": "55484"}, {"id": "205447", "id_master_data_paso": "205447", "descripcion": "Seguimiento confirmaci\u00f3n de inversiones", "code": "3B6", "id_master_data_fase": "55484"}]}, "55485": {"id": "55485", "id_master_data_fase": "55485", "id_parent": "55479", "descripcion": "Deudores Comerciales y otras Cuentas por Cobrar", "Pasos": [{"id": "205379", "id_master_data_paso": "205379", "descripcion": "Procedimientos primordiales de deudores", "code": "3C1", "id_master_data_fase": "55485"}, {"id": "205397", "id_master_data_paso": "205397", "descripcion": "Deterioro de cartera", "code": "3C2", "id_master_data_fase": "55485"}, {"id": "205413", "id_master_data_paso": "205413", "descripcion": "Confirmaci\u00f3n de deudores (NIA 505)", "code": "3C3", "id_master_data_fase": "55485"}, {"id": "205426", "id_master_data_paso": "205426", "descripcion": "Seguimiento confirmaci\u00f3n de deudores (NIA 505)", "code": "3C4", "id_master_data_fase": "55485"}, {"id": "205438", "id_master_data_paso": "205438", "descripcion": "Corte de documentos deudores", "code": "3D7", "id_master_data_fase": "55485"}]}, "55486": {"id": "55486", "id_master_data_fase": "55486", "id_parent": "55479", "descripcion": "Inventarios", "Pasos": [{"id": "205380", "id_master_data_paso": "205380", "descripcion": "Procedimientos primordiales de inventarios", "code": "3D1", "id_master_data_fase": "55486"}, {"id": "205398", "id_master_data_paso": "205398", "descripcion": "Valuacion de inventarios", "code": "3D2", "id_master_data_fase": "55486"}, {"id": "205414", "id_master_data_paso": "205414", "descripcion": "Provision de inventarios obsoletos, da\u00f1ados o baja rotaci\u00f3n", "code": "3D3", "id_master_data_fase": "55486"}, {"id": "205427", "id_master_data_paso": "205427", "descripcion": "Toma fisica de inventarios (NIA 501)", "code": "3D4", "id_master_data_fase": "55486"}, {"id": "205439", "id_master_data_paso": "205439", "descripcion": "Confirmaci\u00f3n de inventarios en poder de terceros (NIA 505)", "code": "3D5", "id_master_data_fase": "55486"}, {"id": "205448", "id_master_data_paso": "205448", "descripcion": "Seguimiento a confirmaci\u00f3n de inventarios", "code": "3D6", "id_master_data_fase": "55486"}, {"id": "205454", "id_master_data_paso": "205454", "descripcion": "Corte de documentos", "code": "3D7", "id_master_data_fase": "55486"}]}, "55487": {"id": "55487", "id_master_data_fase": "55487", "id_parent": "55479", "descripcion": "Propiedad Planta y Equipos", "Pasos": [{"id": "205381", "id_master_data_paso": "205381", "descripcion": "Procedimientos primordiales de PPE", "code": "3E1", "id_master_data_fase": "55487"}, {"id": "205399", "id_master_data_paso": "205399", "descripcion": "Revisi\u00f3n de adiciones y retiros", "code": "3E2", "id_master_data_fase": "55487"}, {"id": "205415", "id_master_data_paso": "205415", "descripcion": "Calculo global de depreciaci\u00f3n", "code": "3E3", "id_master_data_fase": "55487"}, {"id": "205428", "id_master_data_paso": "205428", "descripcion": "Deterioro propiedad planta y equipos", "code": "3E4", "id_master_data_fase": "55487"}, {"id": "205440", "id_master_data_paso": "205440", "descripcion": "\u00a0Confirmaci\u00f3n compa\u00f1\u00edas de seguros", "code": "3E5", "id_master_data_fase": "55487"}, {"id": "205449", "id_master_data_paso": "205449", "descripcion": "Seguimiento confirmaci\u00f3n de seguros", "code": "3E6", "id_master_data_fase": "55487"}]}, "55488": {"id": "55488", "id_master_data_fase": "55488", "id_parent": "55479", "descripcion": "Cargos Diferidos y Activos Intangibles", "Pasos": [{"id": "205382", "id_master_data_paso": "205382", "descripcion": "Procedimientos primordiales de intangibles", "code": "3F1", "id_master_data_fase": "55488"}, {"id": "205400", "id_master_data_paso": "205400", "descripcion": "Adiciones y retiros", "code": "3F2", "id_master_data_fase": "55488"}, {"id": "205416", "id_master_data_paso": "205416", "descripcion": "Calculo global de amortizaci\u00f3n", "code": "3F3", "id_master_data_fase": "55488"}, {"id": "205429", "id_master_data_paso": "205429", "descripcion": "Deterioro de activos intangibles", "code": "3F4", "id_master_data_fase": "55488"}]}, "55489": {"id": "55489", "id_master_data_fase": "55489", "id_parent": "55479", "descripcion": "Prestamos Bancarios", "Pasos": [{"id": "205383", "id_master_data_paso": "205383", "descripcion": "Procedimientos primordiales de prestamos bancarios", "code": "3G1", "id_master_data_fase": "55489"}, {"id": "205401", "id_master_data_paso": "205401", "descripcion": "C\u00e1lculo global de la razonabilidad del gasto por intereses.", "code": "3G2", "id_master_data_fase": "55489"}, {"id": "205417", "id_master_data_paso": "205417", "descripcion": "Inspecci\u00f3n de contratos", "code": "3G3", "id_master_data_fase": "55489"}, {"id": "205430", "id_master_data_paso": "205430", "descripcion": "Confirmaci\u00f3n de prestamos bancarios", "code": "3G4", "id_master_data_fase": "55489"}, {"id": "205441", "id_master_data_paso": "205441", "descripcion": "Seguimiento confirmaci\u00f3n de prestamos bancarios", "code": "3G5", "id_master_data_fase": "55489"}]}, "55490": {"id": "55490", "id_master_data_fase": "55490", "id_parent": "55479", "descripcion": "Cuentas por Pagar Comerciales y Otras Cuentas por Pagar", "Pasos": [{"id": "205384", "id_master_data_paso": "205384", "descripcion": "Procedimientos primordiales de cuentas por pagar y otras cuentas por pagar", "code": "3H1", "id_master_data_fase": "55490"}, {"id": "205402", "id_master_data_paso": "205402", "descripcion": "Prueba de desembolsos", "code": "3H2", "id_master_data_fase": "55490"}, {"id": "205418", "id_master_data_paso": "205418", "descripcion": "Pasivos no registrados y pagos posteriores", "code": "3H3", "id_master_data_fase": "55490"}, {"id": "205431", "id_master_data_paso": "205431", "descripcion": "Confirmarci\u00f3n de cuentas por pagar", "code": "3H4", "id_master_data_fase": "55490"}, {"id": "205442", "id_master_data_paso": "205442", "descripcion": "Seguimiento a la confirmaci\u00f2n", "code": "3H5", "id_master_data_fase": "55490"}, {"id": "205450", "id_master_data_paso": "205450", "descripcion": "Corte de cuentas por pagar", "code": "3H6", "id_master_data_fase": "55490"}]}, "55491": {"id": "55491", "id_master_data_fase": "55491", "id_parent": "55479", "descripcion": "Obligaciones por Beneficios a Empleados", "Pasos": [{"id": "205385", "id_master_data_paso": "205385", "descripcion": "Procedimientos primordiales beneficios a empleados", "code": "3I1", "id_master_data_fase": "55491"}, {"id": "205403", "id_master_data_paso": "205403", "descripcion": "Prueba de n\u00f3mina", "code": "3I2", "id_master_data_fase": "55491"}]}, "55492": {"id": "55492", "id_master_data_fase": "55492", "id_parent": "55479", "descripcion": "Impuestos", "Pasos": [{"id": "205386", "id_master_data_paso": "205386", "descripcion": "Impuestos sobre utilidades", "code": "3J1", "id_master_data_fase": "55492"}, {"id": "205404", "id_master_data_paso": "205404", "descripcion": "Impuesto diferido", "code": "3J2", "id_master_data_fase": "55492"}]}, "55493": {"id": "55493", "id_master_data_fase": "55493", "id_parent": "55479", "descripcion": "Provisiones y Contingencias", "Pasos": [{"id": "205387", "id_master_data_paso": "205387", "descripcion": "Procedimientos primordiales Provisiones", "code": "3K1", "id_master_data_fase": "55493"}, {"id": "205405", "id_master_data_paso": "205405", "descripcion": "Procedimientos primordiales Contingencias", "code": "3K2", "id_master_data_fase": "55493"}, {"id": "205419", "id_master_data_paso": "205419", "descripcion": "Cartas a los abogados", "code": "3K3", "id_master_data_fase": "55493"}, {"id": "205432", "id_master_data_paso": "205432", "descripcion": "Seguimiento a confirmaci\u00f3n de abogados", "code": "3K4", "id_master_data_fase": "55493"}]}, "55494": {"id": "55494", "id_master_data_fase": "55494", "id_parent": "55479", "descripcion": "Patrimonio", "Pasos": [{"id": "205388", "id_master_data_paso": "205388", "descripcion": "Procedimientos primordiales Patrimonio", "code": "3L1", "id_master_data_fase": "55494"}]}, "55495": {"id": "55495", "id_master_data_fase": "55495", "id_parent": "55479", "descripcion": "Ingresos", "Pasos": [{"id": "205389", "id_master_data_paso": "205389", "descripcion": "Procedimientos primordiales Ingresos por Ventas", "code": "3M1", "id_master_data_fase": "55495"}, {"id": "205406", "id_master_data_paso": "205406", "descripcion": "Prueba de facturaci\u00f3n", "code": "3M2", "id_master_data_fase": "55495"}, {"id": "205420", "id_master_data_paso": "205420", "descripcion": "Revisi\u00f3n anal\u00edtica de ingresos", "code": "3M3", "id_master_data_fase": "55495"}]}, "55496": {"id": "55496", "id_master_data_fase": "55496", "id_parent": "55479", "descripcion": "Gastos y Costos", "Pasos": [{"id": "205390", "id_master_data_paso": "205390", "descripcion": "Procedimientos primordiales de Gastos", "code": "3N1", "id_master_data_fase": "55496"}, {"id": "205407", "id_master_data_paso": "205407", "descripcion": "Procedimientos primordiales Costos", "code": "3N2", "id_master_data_fase": "55496"}]}, "55497": {"id": "55497", "id_master_data_fase": "55497", "id_parent": "55479", "descripcion": "Vinculados Economicos (NIA 550)", "Pasos": [{"id": "205391", "id_master_data_paso": "205391", "descripcion": "Vinculados economicos (NIA 550)", "code": "3O1", "id_master_data_fase": "55497"}]}}}, "55480": {"id": "55480", "id_master_data_fase": "55480", "id_parent": null, "descripcion": "FINALIZACION", "Subfases": {"55498": {"id": "55498", "id_master_data_fase": "55498", "id_parent": "55480", "descripcion": "Procedimientos de finalizacion", "Pasos": [{"id": "205392", "id_master_data_paso": "205392", "descripcion": "Empresa en marcha (NIA 570)", "code": "4A1", "id_master_data_fase": "55498"}, {"id": "205408", "id_master_data_paso": "205408", "descripcion": "\u00a0Hechos posteriores (NIA 560)", "code": "4A2", "id_master_data_fase": "55498"}, {"id": "205421", "id_master_data_paso": "205421", "descripcion": "Cartas de recomendaciones y otras comunicaciones (NIA 260, 265)", "code": "4A3", "id_master_data_fase": "55498"}, {"id": "205433", "id_master_data_paso": "205433", "descripcion": "Procedimientos anal\u00edticos finales (NIA 520)", "code": "4A4", "id_master_data_fase": "55498"}, {"id": "205443", "id_master_data_paso": "205443", "descripcion": "Resumen de diferencias no ajustadas (NIA 450)", "code": "4A5", "id_master_data_fase": "55498"}, {"id": "205451", "id_master_data_paso": "205451", "descripcion": "Carta de manifestaciones de la Gerencia (NIA 580)", "code": "4A7", "id_master_data_fase": "55498"}, {"id": "205455", "id_master_data_paso": "205455", "descripcion": "Opini\u00f3n del auditor (NIA 700,701,705,706, 710)", "code": "4A9", "id_master_data_fase": "55498"}, {"id": "205458", "id_master_data_paso": "205458", "descripcion": "Revelaciones de estados financieros finales (NIA 720)", "code": "4A6", "id_master_data_fase": "55498"}, {"id": "205461", "id_master_data_paso": "205461", "descripcion": "Estados Financieros (NIA 720)", "code": "4A8", "id_master_data_fase": "55498"}]}}}}};
+            app.vars.proyecto_equipo = app.vars.hoja_trabajo.equipo;
+            app.vars.masterdatatree = app.vars.hoja_trabajo.masterdatatree;
+            app.vars.muestreostree = app.vars.hoja_trabajo.muestreos;
+            app.vars.idproyecto = app.vars.hoja_trabajo.proyecto.id;
+            app.vars.idpaso = app.vars.hoja_trabajo.paso.id;
+            app.vars.error_tolerable = {}
+
+            function public_path(url, relative) {
+              var public_path = relative ? '/' :  window.location.origin + '/' ;
+              return public_path + url
+            }
+
+            function es_proyecto_editable() {
+              return app.vars.hoja_trabajo.proyecto.isOpen
+            }
+          </script>
+          <script>
+            app.vars.user = {"id": "806", "name": "Adrian Robledo Olave", "sigla": "AR", "email": "desarrollo1@auditbrain.com", "is_admin": false, "role": {"name": "Gerente", "type": "PM"}};
+
+            function user_has_role(roles) {
+              if (!$.isArray(roles)) {
+                return user_has_role([roles])
+              }
+
+              return _.includes(roles, app.vars.user.role.type)
+            }
+
+
+            function user_has_role_permission(permissions) {
+              if (permissions === true || permissions === null || typeof permissions === 'undefined') {
+                return true
+              }
+
+
+              if (!$.isArray(permissions)) {
+                return user_has_role_permission([permissions])
+              }
+
+              var roles_permissions = {"edit": ["PM"], "close": ["PM"], "cancel": ["PM"], "diagnostico": ["PM", "SR"], "equipo_asignar": ["PM", "SR"], "equipo_add": ["PM", "SR"], "equipo_edit": ["PM", "SR"], "equipo_delete": ["PM", "SR"], "fase_create": ["PM", "SR"], "fase_edit": ["PM", "SR"], "fase_delete": ["PM", "SR"], "subfase_create": ["PM", "SR", "JR"], "subfase_edit": ["PM", "SR", "JR"], "subfase_delete": ["PM", "SR"], "paso_edit": ["PM", "SR", "JR"], "paso_delete": ["PM", "SR"], "paso_objetivo_edit": ["PM", "SR", "JR"], "visita_create": ["PM", "SR"], "visita_edit": ["PM", "SR"], "visita_delete": ["PM", "SR"], "visita_unlink": ["PM", "SR"], "paso_asignar_usuario": ["PM", "SR"], "paso_asociar_visita": ["PM", "SR", "JR"], "paso_completado": ["PM", "SR", "JR"], "paso_revisado": ["PM", "SR"], "instruccion_create": ["PM", "SR"], "instruccion_edit": ["PM", "SR"], "instruccion_delete": ["PM", "SR"], "hoja_trabajo_edit": ["PM", "SR", "JR"], "hoja_trabajo_export": ["PM", "SR", "JR", "RO"], "adjunto_revisado": ["PM", "SR"], "ajustes_edit": ["PM", "SR", "JR"], "ajustes_revisado": ["PM", "SR"], "ajustes_reporte": ["PM", "SR", "JR"], "revision": ["PM", "SR", "JR", "RO"], "revision_revisado": ["PM", "SR"], "revision_edit": ["PM", "SR", "JR"], "revision_delete": ["PM", "SR"], "hallazgo_create": ["PM", "SR", "JR"], "hallazgo_edit": ["PM", "SR", "JR"], "hallazgo_delete": ["PM", "SR"], "hallazgo_completado": ["PM", "SR", "JR"], "hallazgo_revisado": ["PM", "SR"], "hallazgo_reporte": ["PM", "SR", "JR"], "reporte_financiero": ["PM", "SR"], "cifras_edit": ["PM", "SR", "JR"], "cifras_revision": ["PM", "SR", "JR", "RO"], "cifras_revision_revisado": ["PM", "SR"], "cifras_settings": ["PM", "SR"], "materialidad_edit": ["PM", "SR", "JR"], "riesgos_edit": ["PM", "SR", "JR"], "riesgos_delete": ["PM", "SR", "JR"], "riesgos_revision": ["PM", "SR", "JR", "RO"], "riesgos_revision_edit": ["PM", "SR", "JR"], "riesgo_revision_revisado": ["PM", "SR"], "riesgos_settings": ["PM", "SR"], "riesgos_hallazgo_edit": ["PM", "SR", "JR"], "riesgo_proceso_create": ["PM", "SR", "JR"], "riesgo_proceso_edit": ["PM", "SR", "JR"], "riesgo_proceso_delete": ["PM", "SR", "JR"]};
+
+              var roles = []
+              _.forEach(permissions, function (permission) {
+                if (typeof roles_permissions[permission] == 'undefined') {
+                  return false;
+                }
+
+                roles = _.union(roles, roles_permissions[permission])
+              })
+
+              if (roles.length == 0) {
+                return true
+              }
+
+              return user_has_role(roles);
+            }
+          </script>
+
+        </div>
+
+
+        <script type="text/javascript">
+          var _3Creatives = {"current_user": {"id": "806", "email": "desarrollo1@auditbrain.com"}, "app": {"module": "Proyecto:HojaTrabajo", "action": "index"}, "ROOT_URL": "\/index.php\/", "UPDATE_USER_PREFERENCE_URL": "https:\/\/app.auditbrain.com\/index.php\/guard\/sfGuardUserPreferences\/updatePreference", "CSRF_TOKEN": "617544cd95663c757e27d7bd6eb77b0c"};
+          var App = App || {}
+        </script>
+        <script type="text/javascript">
+
+        </script>
+        <style type="text/css">
+          #ie-message.active {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 9999999999;
+            background: url(https://app.auditbrain.com/images/obsolete_bg.png)
+          }
+
+          #ie-message.active .mjs {
+            border: 2px solid #FCECDD;
+            background: #FCFAEC;
+            margin: 100px auto;
+            padding: 15px;
+            color: #757575;
+            width: 600px;
+            text-align: center;
+            font-family: helvetica;
+            font-size: 16px
+          }
+        </style>
+
+        <div id="ie-message" style="display: none">
+          <div class="mjs">
+            <a href="#" class="close-ie-message" style="float: right">Cerrar</a><br>
+            <img src="/images/obsolete_navegadores.png" /><br>
+            Para una mejor experiencia en este sitio web, <br>por favor utilice Google Chrome o Firefox como navegador.
+          </div>
+        </div>
+
+        <script>
+          var isValidBrowser = (typeof window.chrome === "object" && navigator.appVersion.indexOf('Edge') === -1) || (navigator.userAgent.toString().toLowerCase().indexOf("firefox") != -1);
+
+          if (!isValidBrowser) {
+            $('html,body').css({'position': 'relative', 'margin': 0, 'overflow': 'hidden'});
+            $('#ie-message').addClass('active').show();
+            console.log('TEXT')
+          }
+
+
+          $('.close-ie-message').on('click', function (ev) {
+            ev.preventDefault()
+            $('#ie-message').remove()
+          });
+        </script>
+
+
+      </div>
+    </div>
+
+
+    <footer>
+
+      <div style="text-align: right; color: #999; padding-right: 210px; float:right;">
+        0B (0%) ocupados de 5GB.
+      </div>
+
+
+      <script async data-cfasync="false"
+        src="https://d29l98y0pmei9d.cloudfront.net/js/widget.min.js?k=Y2xpZW50SWQ9Mjc2MCZob3N0TmFtZT1jaWIuc3VwcG9ydGhlcm8uaW8="></script>
+
+      <script async>
+        (function () {
+
+          class FreshChat {
+            restoreId = null;
+
+            constructor() {
+              var restoreId = localStorage.getItem("freshchat__restoreid")
+              if (restoreId) {
+                var restoreIdParts = restoreId.split(":");
+                if (new Date().toDateString() == new Date(restoreIdParts[0]).toDateString()) {
+                  this.restoreId = restoreIdParts[1];
+                } else {
+                  localStorage.removeItem("freshchat__restoreid")
+                }
+              }
+            }
+
+            chat() {
+              window.fcWidget.init({
+                token: "0d472d89-9d33-4f38-8850-2c2ec6c60b33",
+                host: "https://wchat.freshchat.com",
+                externalId: "desarrollo1@auditbrain.com",
+                locale: "es",
+                restoreId: this.restoreId ? this.restoreId : null, //Have the widget open on load by default by setting the below value to true
+                open: localStorage.getItem("freshchat__open") ? true : false,
+                config: {
+                  //Disable Events Tracking
+                  disableEvents: false,
+                  cssNames: {
+                    widget: 'fc_frame', open: 'fc_open', expanded: 'fc_expanded'
+                  },
+                  showFAQOnOpen: false,
+                  hideFAQ: true,
+                  agent: {
+                    hideName: true,
+                    hidePic: true,
+                    hideBio: true
+                  },
+                  headerProperty: {
+                    appName: "AuditBrain",
+                    appLogo: "https://app.auditbrain.com/images/logo1.png",
+                    backgroundColor: '#0a858d',
+                    foregroundColor: '#ffffff',
+                    hideChatButton: false, //Set Widget to be left to right.
+                    //direction: 'ltr'
+                  },
+                  content: {
+                    placeholders: {
+                      search_field: 'Buscar',
+                      reply_field: 'Escriba aquí',
+                      csat_reply: 'Escriba sus comentarios aquí'
+                    },
+                    headers: {
+                      chat: 'Chat de Soporte',
+                      chat_help: 'Reach out to us if you have any questions'
+                    }
+                  }
+                }
+              })
+
+              window.fcWidget.user.get(function (resp) {
+                let status = resp.status;
+                if (status !== 200) {
+                  window.fcWidget.user.setProperties({
+                    firstName: "Adrian",
+                    lastName: "Robledo Olave",
+                    email: "desarrollo1@auditbrain.com",
+                    plan: "usuariodemostracion2"
+                  });
+
+                  window.fcWidget.on('user:created', function (resp) {
+                    let status = resp.status;
+                    let data = resp.data;
+                    if (status === 200) {
+                      if (data.restoreId) {
+                        localStorage.setItem("freshchat__restoreid", new Date().getTime() + ":" + data.restoreId)
+                      }
+                    }
+                  });
+                }
+              });
+
+              window.fcWidget.on("widget:opened", function (resp) {
+                localStorage.setItem("freshchat__open", 1)
+              });
+
+              window.fcWidget.on("widget:closed", function (resp) {
+                localStorage.removeItem("freshchat__open")
+              });
+
+              window.fcWidget.track("app_page__visit", {
+                "module": "Proyecto:HojaTrabajo",
+                "action": "index",
+                "url": location.href
+              })
+            }
+          }
+
+          var initpreshchat = new FreshChat();
+          initpreshchat.chat();
+
+        })()
+
+      </script>
+
+      <div class="container-fluid">
+        <div class="row-fluid">
+          <div class="content-footer">
+            <p class="">
+              &copy; Todos los derechos reservados - 2019 </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+
+    <script type="text/javascript" src="/js/sugar.min.js?v=20191104023741" data-file="app-sugar"></script>
+    <script type="text/javascript" src="/js/lodash.min.js?v=20191104023741" data-file="app-lodash"></script>
+    <script type="text/javascript" src="/js/3c/commons.min.js?v=20191104023741" data-file="3c-commons"></script>
+    <script type="text/javascript" src="/js/3c/default.min.js?v=20191104023741" data-file="3c-default"></script>
+    <!--[if (gte IE 6)&(lte IE 8)]><script type="text/javascript" src="/js/selectivizr.min.js?v=20191104023741" data-file="app-selectivizr"></script><![endif]-->
+    <!--[if IE]><script type="text/javascript" src="/js/respond.min.js?v=20191104023741" data-file="app-respond"></script><![endif]-->
+    <script type="text/javascript" src="/js/plugins/jquery.pnotify.min.js?v=20191104023741"
+      data-file="plugins-jquery.pnotify"></script>
+    <script type="text/javascript" src="/js/plugins/jquery.uitotop.min.js?v=20191104023741"
+      data-file="plugins-jquery.uitotop"></script>
+    <script type="text/javascript" src="/js/plugins/jquery.select2.min.js?v=20191104023741"
+      data-file="plugins-jquery.select2"></script>
+    <script type="text/javascript" src="/js/plugins/jquery.validate.min.js?v=20191104023741"
+      data-file="plugins-jquery.validate"></script>
+    <script type="text/javascript" src="/js/plugins/jquery.qtip.min.js?v=20191104023741"
+      data-file="plugins-jquery.qtip"></script>
+    <script type="text/javascript" src="/js/bootstrap/bootstrap.min.js?v=20191104023741"
+      data-file="bootstrap-bootstrap"></script>
+    <script type="text/javascript" src="/js/i18n/base-es.min.js?v=20191104023741" data-file="i18n-base-es"></script>
+    <script type="text/javascript" src="/js/plugins/jquery.ui.widget.min.js?v=20191104023741"
+      data-file="plugins-jquery.ui.widget"></script>
+    <script type="text/javascript" src="/js/ckeditor/ckeditor.js?v=20191104023741"
+      data-file="ckeditor-ckeditor"></script>
+    <script type="text/javascript" src="/js/react.min.js?v=20191104023741" data-file="app-react"></script>
+    <script type="text/javascript" src="/js/react-dom.min.js?v=20191104023741" data-file="app-react-dom"></script>
+    <script type="text/javascript"
+      src="/sfDoctrineGuardPlugin/js/plugins/jquery.floatThead-slim.min.js?v=20191104023741"
+      data-file="/sfDoctrineGuardPlugin/js/plugins-jquery.floatThead-slim"></script>
+    <script type="text/javascript" src="/js/plugins/jquery.tablednd.min.js?v=20191104023741"
+      data-file="plugins-jquery.tablednd"></script>
+    <script type="text/javascript" src="/js/plugins/accounting.min.js?v=20191104023741"
+      data-file="plugins-accounting"></script>
+    <script type="text/javascript" src="/js/plugins/autoNumeric.min.js?v=20191104023741"
+      data-file="plugins-autoNumeric"></script>
+    <script type="text/javascript" src="/js/plugins/epilgrim.sessionTimeoutHandler.min.js?v=20191104023741"
+      data-file="plugins-epilgrim.sessionTimeoutHandler"></script>
+    <script type="text/javascript" src="/js/3c/main.min.js?v=20191104023741" data-file="3c-main"></script>
+    <script type="text/javascript" src="/js/apps/main.js?v=20191104023741" data-file="apps-main"></script>
+    <script type="text/javascript" src="/js/apps/cliente.min.js?v=20191104023741" data-file="apps-cliente"></script>
+    <script type="text/javascript" src="/js/../webapps/dist/vendors~proyecto__hoja_trabajo.js?v=20191104023741"
+      data-file="../webapps/dist-vendors~proyecto__hoja_trabajo"></script>
+    <script type="text/javascript" src="/js/../webapps/dist/proyecto__hoja_trabajo.js?v=20191104023741"
+      data-file="../webapps/dist-proyecto__hoja_trabajo"></script>
+    <script type="text/javascript">
+      //<![CDATA[
+      if (typeof jQuery.fn.block != 'undefined') {
+        if (navigator.userAgent.toLowerCase().indexOf('msie') != -1) {
+          $(function () {jQuery.unblockUI();});
+        } else {
+          jQuery(window).on('load', function () {jQuery.unblockUI()});
+        }
+      }
+
+      jQuery(function () {
+        $('body').sessionTimeoutHandler({
+          title: 'Caducidad de la sesión',
+          message: 'Su sesión está a punto de expirar.',
+          keepAliveUrl: '/index.php/guard/ping',
+          retrieveTimeLeftUrl: '/index.php/guard/sessionLeft',
+          redirUrl: '/index.php/guard/login',
+          logoutUrl: '/index.php/guard/logout',
+          defaultSessionTime: 36000000,
+          warnWhenLeft: 60000,
+          checkTimeBeforeRedirect: true,
+          errorGettingSessionTimeLeft: __tr('There was an error retrieving session information from the server. Session could be timed out'),
+          modalId: 'sessionTimeout-dialog',
+        });
+      });
+//]]>
+    </script>
+  </div>
+
+</body>
+
+</html>
+
+
+
+<style type="text/css">
+  /* quita css cuando se mande a produccion*/
+  .modal-backdrop,
+  .modal-backdrop.fade.in,
+  .modal-scrollable,
+  .alert-danger, .alert-error {
+    display: none;
+  }
+  </style>
+  
+  
+  <script>
+    // A $( document ).ready() block.
+    /* quita css cuando se mande a produccion*/
+  $( document ).ready(function() {
+      console.log( "ready!" );
+      $('body').find('#main').each(function() {
+          $( ".fa-user-circle" ).removeClass( "icon" );
+          $( ".icon-svg" ).removeClass( "icon" );
+      });
+    
+  });
+  
+  </script>
+  
