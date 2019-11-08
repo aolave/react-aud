@@ -1,4 +1,5 @@
 @import 'variables';
+$tablistName: 'visita' !default;
 //@import 'breadcrum.less';
 //@import 'tabs.less';
 //@import 'alert.less';
@@ -63,7 +64,7 @@
 		.nav {
 			li {
 				a {
-					color: $colorIcons;
+					color: $colorIcon;
 				}
 			}
 		}
@@ -85,7 +86,7 @@
 			a {
 				display: block;
 				margin: 0 0 0 -.2em;
-				padding: 10px 0;
+				padding: $padding2 0;
 			}
 		}
 	}
@@ -142,7 +143,7 @@
 		.nav {
 			li {
 				a {
-					@include menuLinkDisplay(block, 0 0 0 -0.2em, 10px 0);
+					@include menuLinkDisplay(block, 0 0 0 -0.2em, $padding2 0);
 					span {
 						line-height: $sizeMedium;
 					}
@@ -155,7 +156,7 @@
 		#collapse-button {
 			padding: 2px;
 			.switch {
-				margin: 10px 0 0;
+				margin: $padding2 0 0;
 				float: none;
 			}
 		}
@@ -167,13 +168,13 @@
 	#collapse-button {
 		height: 40px;
 		.switch {
-			margin: 10px 0 0;
+			margin: $padding2 0 0;
 		}
 	}
 	.nav {
 		li {
 			a {
-				@include menuLinkDisplay(block, 0 0 0 -0.2em, 10px 0);
+				@include menuLinkDisplay(block, 0 0 0 -0.2em, $padding2 0);
 				span {
 					line-height: $sizeMedium;
 				}
@@ -212,7 +213,7 @@
 		.nav {
 			li {
 				a {
-					@include menuLinkDisplay(flex, 0, 10px 20px 10px 10px);
+					@include menuLinkDisplay(flex, 0, $padding2 20px $padding2 $padding2);
 					i {
 						margin: initial;
 					}
@@ -264,7 +265,7 @@
 
 	.dropdown {
 		&.icon {
-			border: solid $colorIcons;
+			border: solid $colorIcon;
 			border-width: 0 2px 2px 0;
 			display: inline-block;
 			padding: .4em;
@@ -282,7 +283,7 @@
 	&.selection {
 		&.dropdown {
 			border-radius: 4px;
-			color: $colorIcons;
+			color: $colorIcon;
 			& > .dropdown {
 				&.icon {
 					@extend .dropdown;
@@ -290,10 +291,25 @@
 			}
 			&:not(.button) {
 				& > .default.text {
-					color: $colorIcons;
+					color: $colorIcon;
 				}
 			}
 		}
+	}
+
+	.raw-select {
+		padding: 5px;
+		font-size: 12px;
+		line-height: 1;
+		border-radius: 0;
+		height: 35px;
+		background: url(http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png) no-repeat right;
+		-webkit-appearance: none;
+		background-position-x: 92%;
+		border: 1px solid rgba(34, 36, 38, .15);
+		font-size: 1rem;
+		margin: 3px;
+		padding-right: 33px;
 	}
 }
 
@@ -335,7 +351,7 @@ footer {
 		.col-main {
 			background: transparent;
 			box-shadow: none;
-			padding: 10px 15px $padding !important;
+			padding: $padding2 $padding $padding !important;
 			width: 100%;
 		}
 
@@ -357,7 +373,10 @@ footer {
 
 		i.icons,
 		i.icons {
-			@include iconsize($sizeMedium, $projectColor2);
+			@include iconsize($sizeMedium, $colorIcon);
+			:hover {
+				color: $colorIconHover;
+			}
 		}
 
 		button {
@@ -400,11 +419,10 @@ footer {
 }
 
 /*** cambia los inconos del menu de la barra lateral izquierda */
-
 .user-profile {
 	i {
 		@include icon-size($sizeMedium);
-		color: $colorIcons;
+		color: $colorIcon;
 		&:hover {
 			color: $buttonHover;
 		}
@@ -462,6 +480,26 @@ i {
 	}
 }
 
+/*** end cambia los inconos del menu de la barra lateral izquierda */
+
+.description-text {
+	font-size: 12px;
+}
+
+.btn-group > .btn-large,
+.panel-title {
+	font-size: 1em;
+}
+
+.editor-preview-modal {
+	.loading {
+		height: 5px;
+		text-align: right;
+		font-size: 9px;
+	}
+}
+
+/*** pediente crear responsive.scss responsive menu */
 $break-small: 320px;
 $break-medium: 980px;
 $break-large: 1200px;
@@ -498,11 +536,123 @@ $break-large: 1200px;
 	}
 }
 
-.description-text {
-	font-size: 12px;
+.ui.orange.button,
+.ui.orange.buttons .button {
+	font-size: 1rem;
+	border-radius: 4px;
+	padding: 10px 20px;
 }
 
-.btn-group > .btn-large,
-.panel-title {
-	font-size: 1em;
+/*** icon user profile */
+#page {
+	.user-profile.floating {
+		z-index: 1003;
+		margin: 0;
+		right: 7px;
+		top: 5px;
+		position: fixed;
+	}
 }
+
+/*** barra lateral, menu derecho.*/
+.ui.menu.visita-sidebar {
+	& > .menu {
+		& > .item {
+			padding: 9px 0;
+			margin: 0 0 0;
+			&.badged {
+				padding: $padding2 0;
+				margin: $padding2 0 0;
+				.label {
+					right: 35%;
+					top: -0.1em;
+				}
+			}
+			img.ui.image {
+				width: $sizeMedium + 1;
+				height: $sizeMedium + 1;
+				margin: 0 auto;
+			}
+		}
+	}
+}
+
+.info-paso {
+	background: $background2;
+	border: 0;
+	font-size: $fontSize;
+	margin: 0 0 $padding2 0;
+	justify-content: space-around;
+	padding: $padding3 $padding2;
+	min-height: 30px;
+}
+
+##{$tablistName}-tabs,
+.ab-tabs {
+	.ui.menu {
+		&.tabular {
+			.tab-nav-item {
+				.label.visita-status {
+					margin-left: .5em;
+					padding: 0.5em .44em 0.2em .44em;
+					display: inline-block;
+					font-size: .9em;
+					border-radius: .3em .3em 0 0;
+				}
+				i.icon,
+				i.far,
+				i.icons {
+					font-size: $sizeSmall;
+				}
+			}
+		}
+		.active {
+			&.item {
+				color: $colorText;
+				&:hover {
+					color: $projectColor2;
+				}
+			}
+		}
+	}
+
+	.ui.tab {
+		padding: 0;
+		border: 0;
+	}
+	.ui.menu.tabular {
+		justify-content: inherit;
+		position: relative;
+		overflow: hidden;
+		.tab-nav-item {
+			@extend .info-paso;
+			margin: 0;
+			padding: .4em;
+			min-height: auto;
+			border: 0px solid $borderColor;
+			background: transparent;
+			border-radius: 4px 4px 0 0;
+			&:hover {
+				background: $background2Hover;
+				border-bottom: 2px solid $borderColor;
+			}
+
+			&.tab-add {
+				right: 50px;
+			}
+			&.active {
+				border-bottom: 2px solid $projectColor2;
+			}
+			&.tab-add {
+				right: $padding3;
+				background: $background2;
+				border: 0;
+				margin: 0;
+				width: 30px;
+				position: absolute;
+				height: 100%;
+			}
+		}
+	}
+}
+/*** End barra lateral, menu derecho.*/

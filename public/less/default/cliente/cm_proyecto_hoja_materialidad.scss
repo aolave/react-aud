@@ -31,7 +31,7 @@
 	#materialidadform {
 		margin: 10px 0;
 		border: 1px solid $borderColor;
-		padding: $padding-y 5px 3px;
+		padding: $padding2 $padding3 3px;
 		margin-top: $padding-y;
 		.fields {
 			margin-bottom: $padding-y;
@@ -42,7 +42,7 @@
 			width: 100px;
 			min-width: 65px;
 			display: table-cell;
-			padding: 0px 5px;
+			padding: 0px $padding3;
 			vertical-align: middle;
 			input.percent {
 				text-align: right;

@@ -8709,7 +8709,8 @@ function (_PureComponent2) {
           textAlign: 'center'
         }
       }, React.createElement("button", {
-        className: "ui button primary mini compact",
+        // chnage button' className: "ui button primary mini compact",
+		className: "ui button primary compact",
         onClick: this.onClickNew
       }, "Crear Nota")) : React.createElement("div", null, React.createElement(_reactTextareaAutosize["default"], {
         minRows: 2,

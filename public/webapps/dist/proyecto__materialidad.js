@@ -6612,7 +6612,9 @@ var webpackLibs = (function(e) {
 											{ style: { textAlign: 'center' } },
 											React.createElement(
 												'button',
-												{ className: 'ui button primary mini compact', onClick: this.onClickNew },
+												{ 
+												// change button: className: 'ui button primary mini compact', onClick: this.onClickNew }, */
+												   className: 'ui button primary compact', onClick: this.onClickNew },
 												'Crear Nota'
 											)
 										)
@@ -7242,7 +7244,8 @@ var webpackLibs = (function(e) {
 										React.createElement(
 											'button',
 											{
-												className: 'ui button icon primary mini compact',
+												//change button: className: 'ui button icon primary mini compact',
+												className: 'ui button icon primary compact',
 												onClick: function() {
 													return e.onSubmit('COMPLETADO');
 												}
@@ -8789,9 +8792,12 @@ var webpackLibs = (function(e) {
 									title: this.props.title,
 									onClick: this.props.onClick
 								},
-								React.createElement('img', {
-									src: ''.concat(e).concat(this.props.image, '.svg'),
-									className: 'ui large image'
+								//change icon to tag img: React.createElement('img', {
+								React.createElement('i', {
+									//change iconos
+									//src: ''.concat(e).concat(this.props.image, '.svg'),
+									//className: 'ui large image'
+									className: "icon-svg "+this.props.image+""
 								}),
 								' ',
 								' ',

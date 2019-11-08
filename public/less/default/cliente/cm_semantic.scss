@@ -19,13 +19,6 @@
 }
 
 #main {
-	.ab-actions-group.compact-actions {
-		.ui.button.compact {
-			border-radius: 4px;
-			padding: 10px 20px 10px 20px;
-		}
-	}
-
 	/*** Estandariza font:12 para el previw editor en el sistema*/
 	#root {
 		.editor-preview {
@@ -39,14 +32,35 @@
 	}
 }
 
+.button {
+	font-size: 1rem;
+	border-radius: 4px;
+	padding: $padding2 20px;
+}
+
+.ab-actions-group.compact-actions {
+	.ui.button.compact {
+		@extend .button;
+	}
+}
+.ab-status-actions {
+	.ui.button.compact.icon {
+		@extend .button;
+	}
+}
+
 .ui {
 	/*** Estandariza botones para todo el sistema*/
 	&.button,
 	&.buttons .button,
 	&.buttons .or {
-		font-size: 1rem;
-		border-radius: 4px;
-		padding: 10px 20px;
+		@extend .button;
+	}
+
+	&.tiny.buttons .button,
+	&.tiny.buttons .or,
+	&.ui.ui.ui.tiny.button {
+		@extend .button;
 	}
 
 	&.primary {
@@ -66,6 +80,21 @@
 		&.menu {
 			box-shadow: 0 0 0 0;
 			-webkit-box-shadow: 0 0 0;
+		}
+	}
+
+	/*** cambio el fondo del modal*/
+	&.modals {
+		&.inverted {
+			&.dimmer {
+				background-color: rgba(0, 0, 0, .5);
+				> .ui {
+					.modal {
+						-webkit-box-shadow: 0 0 0 0;
+						box-shadow: 0 0 0 0;
+					}
+				}
+			}
 		}
 	}
 
@@ -155,8 +184,8 @@
 
 i.small.small.small.icon,
 i.small.small.small.icons {
-	line-height: 1.3;
-	font-size: 18px;
+	line-height: 1;
+	font-size: $sizeSMini;
 }
 
 .author-icon-log.small {
@@ -167,7 +196,7 @@ i.small.small.small.icons {
 
 i.icon,
 i.icons {
-	font-size: 18px;
+	font-size: $sizeSmall;
 }
 
 .ui.modal {
@@ -201,12 +230,19 @@ i.icons {
 	.ui.segment {
 		-webkit-box-shadow: 0 0 0 0;
 		box-shadow: 0 0 0 0;
-		margin: 10px 0;
-		padding: 10px 10px;
+		margin: $padding2 0;
+		padding: $padding2 $padding2;
 		border: 1px solid $borderColor;
 	}
 
 	.cke_chrome {
 		box-shadow: 0 0 0 0;
 	}
+}
+
+/**** Moficacion css de bootstrap */
+blockquote {
+	padding: 0 0 0 5px;
+	margin: 0 0 $padding2;
+	border-left: 3px solid #eee;
 }

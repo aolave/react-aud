@@ -9,7 +9,8 @@ $projectColor4: #424242; //#f1f1f2; -> negro
 $borderColor: #eeeeee;
 $hoverColor: #eeeeee;
 $colorText: #5f6368;
-$colorIcons: #5f6368;
+$colorIcon: #5f6368;
+$colorIconHover: $projectColor2;
 
 $buttonHover: $projectColor2;
 
@@ -28,10 +29,12 @@ $menusizeSmall: 40px;
 /** ref size material design */
 $padding: 15px;
 $padding2: 10px;
+$padding3: 5px;
 $padding-y: 10px;
 $padding-x: 10px;
 
 /** iconos and elments*/
+$sizeSMini: 14px;
 $sizeSmall: 18px;
 $sizeMedium: 24px;
 $sizeLarge: 36px;

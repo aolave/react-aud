@@ -1,11 +1,10 @@
 @import 'variables';
-$tablistName: 'visita' !default;
 
 #main {
 	.col-main {
 		background: transparent !important;
 		box-shadow: none !important;
-		padding: 10px 15px 20px !important;
+		padding: $padding2 $padding 20px !important;
 		width: 100%;
 	}
 
@@ -13,9 +12,9 @@ $tablistName: 'visita' !default;
 		background: $background2;
 		border: 0;
 		font-size: $fontSize;
-		margin: 0 0 10px 0;
+		margin: 0 0 $padding2 0;
 		justify-content: space-around;
-		padding: 5px 10px;
+		padding: $padding3 $padding2;
 		min-height: 30px;
 	}
 
@@ -55,98 +54,8 @@ $tablistName: 'visita' !default;
 						}
 					}
 				}
-			}
-		}
-	}
-
-	##{$tablistName}-tabs,
-	.ab-tabs {
-		.ui.menu {
-			&.tabular {
-				.tab-nav-item {
-					.label.visita-status {
-						margin-left: .5em;
-						padding: 0.5em .44em 0.2em .44em;
-						display: inline-block;
-						font-size: .9em;
-						border-radius: .3em .3em 0 0;
-					}
-					i.icon,
-					i.far,
-					i.icons {
-						font-size: $sizeSmall;
-					}
-				}
-			}
-			.active {
-				&.item {
-					color: $colorText;
-					&:hover {
-						color: $projectColor2;
-					}
-				}
-			}
-		}
-
-		.ui.tab {
-			padding: 0;
-			border: 0;
-		}
-		.ui.menu.tabular {
-			justify-content: inherit;
-			position: relative;
-			overflow: hidden;
-			.tab-nav-item {
-				@extend .info-paso;
-				margin: 0;
-				padding: .4em;
-				min-height: auto;
-				border: 0px solid $borderColor;
-				background: transparent;
-				border-radius: 4px 4px 0 0;
-				/* max-width: 33.5%; */
-				/* width: 33.5%!important;*/
-				&:hover {
-					background: $background2Hover;
-					border-bottom: 2px solid $borderColor;
-				}
-
-				&.tab-add {
-					right: 50px;
-				}
-				&.active {
-					border-bottom: 2px solid $projectColor2;
-				}
-				&.tab-add {
-					right: 5px;
-					background: $background2;
-					border: 0;
-					margin: 0;
-					width: 30px;
-					position: absolute;
-					height: 100%;
-				}
-			}
-		}
-	}
-
-	.ui.menu.visita-sidebar {
-		& > .menu {
-			& > .item {
-				padding: 9px 0;
-				margin: 0 0 0;
-				&.badged {
-					padding: 10px 0;
-					margin: 10px 0 0;
-					.label {
-						right: 35%;
-						top: -0.1em;
-					}
-				}
-				img.ui.image {
-					width: $sizeMedium + 1;
-					height: $sizeMedium + 1;
-					margin: 0 auto;
+				.ui.selection.instruccion-action {
+					min-width: 10em;
 				}
 			}
 		}
@@ -186,7 +95,7 @@ $tablistName: 'visita' !default;
 			&.vertical {
 				&.menu {
 					width: 32rem;
-					padding: 10px;
+					padding: $padding2;
 				}
 			}
 		}
@@ -194,7 +103,7 @@ $tablistName: 'visita' !default;
 			.title {
 				font-size: 14px;
 				margin: 0;
-				padding: 0 5px 0 5px;
+				padding: 0 $padding3 0 $padding3;
 				font-weight: 600;
 				border-left: 0;
 			}
@@ -205,16 +114,16 @@ $tablistName: 'visita' !default;
 .main-list {
 	margin-top: 20px;
 	overflow-y: auto;
-	padding: 0 10px 0 0;
+	padding: 0 $padding2 0 0;
 
 	.listitem {
 		&.revision-listitem {
 			border: 1px solid $borderColor;
 			.header-item {
 				border-bottom: 0;
-				margin-bottom: 10px;
+				margin-bottom: $padding2;
 				background-color: $background2;
-				padding: 5px 10px;
+				padding: $padding3 $padding2;
 			}
 			.title-h1 {
 				vertical-align: text-top;
@@ -224,7 +133,7 @@ $tablistName: 'visita' !default;
 				> i {
 					&.icon {
 						&.user {
-							margin-right: 5px;
+							margin-right: $padding3;
 							font-size: $sizeSmall;
 						}
 					}
@@ -249,8 +158,8 @@ $tablistName: 'visita' !default;
 			}
 		}
 		.sf_admin_td_actions {
-			margin-left: 5px;
-			margin-top: 5px;
+			margin-left: $padding3;
+			margin-top: $padding3;
 		}
 	}
 }
