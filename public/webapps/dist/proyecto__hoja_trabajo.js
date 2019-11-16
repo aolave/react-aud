@@ -1650,7 +1650,7 @@ function (_Component) {
     key: "componentDidMount",
     value: function componentDidMount() {
       //change Width : var tabWidth = 90 / (0, _size2["default"])((0, _filter2["default"])(this.panes, {
-      var tabWidth = 96 / (0, _size2["default"])((0, _filter2["default"])(this.panes, {
+      var tabWidth = 94 / (0, _size2["default"])((0, _filter2["default"])(this.panes, {
         type: 'sheet'
       }));
       $('#visita-tabs').find('.menu>a.visita-tab').css({
@@ -3585,14 +3585,27 @@ function (_Component) {
             openAsignarUsuarioModal: true
           });
         }
-      }, React.createElement(_Icon["default"].Group, {
-        size: "large"
-      }, React.createElement(_Icon["default"], {
-        name: "user outline"
-      }), React.createElement(_Icon["default"], {
-        corner: true,
-        name: "plus"
-      }))), this.renderAsignUserModal(), has_parent && this.isActionItemEnabled('history') && React.createElement(_TabPaneVisitaModals.HojaTrabajoHistoryModal, {
+      }, 
+	  
+	  //change icon
+	  //React.createElement(_Icon["default"].Group, {
+      //  size: "large"
+     // }, React.createElement(_Icon["default"], {
+     //  
+      //change icon /*
+	 //  name: "user outline"
+    //  }), React.createElement(_Icon["default"], {
+    //    corner: true,
+    //    name: "plus"
+    //  }
+	  
+	  
+	   React.createElement(_Icon["default"].Group, {
+        size: "icon-svg asignar_usuario"
+      }
+	  
+	  
+	  )), this.renderAsignUserModal(), has_parent && this.isActionItemEnabled('history') && React.createElement(_TabPaneVisitaModals.HojaTrabajoHistoryModal, {
         trigger: React.createElement(_Menu["default"].Item, {
           title: "Hoja Trabajo A\xF1o Anterior ",
           icon: {

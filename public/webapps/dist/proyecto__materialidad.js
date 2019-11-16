@@ -4579,12 +4579,20 @@ var webpackLibs = (function(e) {
 														e.closeAllPanel(), e.setState({ openAsignarUsuarioModal: !0 });
 													}
 												},
-												React.createElement(
+
+                      //change icon
+										  //	React.createElement(
+											//		c.default.Group,
+											//		{ size: 'large' },
+											//		React.createElement(c.default, { name: 'user outline' }),
+											//		React.createElement(c.default, { corner: !0, name: 'plus' })
+										  //		)
+
+													React.createElement(
 													c.default.Group,
-													{ size: 'large' },
-													React.createElement(c.default, { name: 'user outline' }),
-													React.createElement(c.default, { corner: !0, name: 'plus' })
-												)
+													{ size: 'icon-svg asignar_usuario' })
+
+
 											),
 										this.renderAsignUserModal(),
 										u &&

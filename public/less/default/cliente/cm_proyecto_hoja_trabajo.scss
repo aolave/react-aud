@@ -4,7 +4,7 @@
 	.col-main {
 		background: transparent !important;
 		box-shadow: none !important;
-		padding: $padding2 $padding 20px !important;
+		padding: $padding10 $padding15 20px !important;
 		width: 100%;
 	}
 
@@ -12,9 +12,9 @@
 		background: $background2;
 		border: 0;
 		font-size: $fontSize;
-		margin: 0 0 $padding2 0;
+		margin: 0 0 $padding10 0;
 		justify-content: space-around;
-		padding: $padding3 $padding2;
+		padding: 0;
 		min-height: 30px;
 	}
 
@@ -95,7 +95,7 @@
 			&.vertical {
 				&.menu {
 					width: 32rem;
-					padding: $padding2;
+					padding: $padding10;
 				}
 			}
 		}
@@ -103,7 +103,7 @@
 			.title {
 				font-size: 14px;
 				margin: 0;
-				padding: 0 $padding3 0 $padding3;
+				padding: 0 $padding5 0 $padding5;
 				font-weight: 600;
 				border-left: 0;
 			}
@@ -114,16 +114,16 @@
 .main-list {
 	margin-top: 20px;
 	overflow-y: auto;
-	padding: 0 $padding2 0 0;
+	padding: 0 $padding10 0 0;
 
 	.listitem {
 		&.revision-listitem {
 			border: 1px solid $borderColor;
 			.header-item {
 				border-bottom: 0;
-				margin-bottom: $padding2;
+				margin-bottom: $padding10;
 				background-color: $background2;
-				padding: $padding3 $padding2;
+				padding: $padding5 $padding10;
 			}
 			.title-h1 {
 				vertical-align: text-top;
@@ -133,7 +133,7 @@
 				> i {
 					&.icon {
 						&.user {
-							margin-right: $padding3;
+							margin-right: $padding5;
 							font-size: $sizeSmall;
 						}
 					}
@@ -145,7 +145,7 @@
 				#welcometip {
 					#welcometip-body {
 						p {
-							margin: $padding2 0;
+							margin: $padding10 0;
 							min-height: $sizeSmall;
 							vertical-align: middle;
 							display: list-item;
@@ -158,8 +158,8 @@
 			}
 		}
 		.sf_admin_td_actions {
-			margin-left: $padding3;
-			margin-top: $padding3;
+			margin-left: $padding5;
+			margin-top: $padding5;
 		}
 	}
 }

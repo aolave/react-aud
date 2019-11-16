@@ -1,0 +1,221 @@
+@import 'variables';
+//@import 'breadcrum.less';
+//@import 'tabs.less';
+//@import 'alert.less';
+//@import 'iconsvg.less';
+
+/*******************************************
+Moficacion css de bootstrap 
+*******************************************
+*/
+
+@mixin icon-size($size) {
+	&.icon,
+	&.icons,
+	&.far,
+	&.fa,
+	&.fas {
+		font-size: $size;
+		width: $size;
+		height: $size;
+		text-align: center;
+		float: none;
+		margin: 0;
+	}
+}
+
+body {
+	h1,
+	h2,
+	h3,
+	h4,
+	h5 {
+		font-family: $fontFamily;
+	}
+}
+
+blockquote {
+	padding: 0 0 0 $padding5;
+	margin: 0 0 $padding10;
+	border-left: 3px solid #eee;
+}
+
+.dropdown-menu {
+	padding: 0;
+	border: 2px solid $borderColor;
+	border-radius: 2px;
+	border-color: $borderColor;
+	box-shadow: 0 0 0;
+	-webkit-box-shadow: 0 0 0;
+	i {
+		@include icon-size($sizeSmall);
+	}
+	li {
+		> a {
+			padding: $padding5 $padding10;
+			font-weight: 500;
+			color: $colorText;
+			font-size: $fontSize;
+			&:hover {
+				background-color: $background2Hover;
+				color: $colorText;
+			}
+			span {
+				vertical-align: top;
+				margin-left: .2em;
+			}
+		}
+	}
+	.divider {
+		display: none;
+	}
+}
+
+.col-lg-1,
+.col-lg-10,
+.col-lg-11,
+.col-lg-12,
+.col-lg-2,
+.col-lg-3,
+.col-lg-4,
+.col-lg-5,
+.col-lg-6,
+.col-lg-7,
+.col-lg-8,
+.col-lg-9,
+.col-md-1,
+.col-md-10,
+.col-md-11,
+.col-md-12,
+.col-md-2,
+.col-md-3,
+.col-md-4,
+.col-md-5,
+.col-md-6,
+.col-md-7,
+.col-md-8,
+.col-md-9,
+.col-sm-1,
+.col-sm-10,
+.col-sm-11,
+.col-sm-12,
+.col-sm-2,
+.col-sm-3,
+.col-sm-4,
+.col-sm-5,
+.col-sm-6,
+.col-sm-7,
+.col-sm-8,
+.col-sm-9,
+.col-xs-1,
+.col-xs-10,
+.col-xs-11,
+.col-xs-12,
+.col-xs-2,
+.col-xs-3,
+.col-xs-4,
+.col-xs-5,
+.col-xs-6,
+.col-xs-7,
+.col-xs-8,
+.col-xs-9 {
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+.modal-header {
+	padding: .75rem 1.5rem;
+	h3 {
+		line-height: 1.3em;
+		font-weight: 500;
+	}
+	.close {
+		margin-top: 2px;
+		text-shadow: 0 0 0;
+		border-radius: 30px;
+		padding: 0;
+		vertical-align: middle;
+		right: -1.5rem;
+		top: -1.5rem;
+		opacity: initial;
+	}
+
+	.close {
+		float: right;
+		position: absolute;
+		font-size: 2.3em;
+		line-height: 1em;
+		height: 35px;
+		width: 35px;
+		font-weight: 800;
+		background: #444;
+		color: #fff;
+		&:hover {
+			background: #444;
+			color: #fff;
+			opacity: initial;
+		}
+	}
+}
+
+.modal-backdrop,
+.modal-backdrop.fade.in,
+.modal-scrollable,
+.alert-danger,
+.alert-error {
+	background-color: rgba(0, 0, 0, .65);
+}
+
+.bootbox.bootbox-prompt input[type=text] {
+	border: 1px solid #eee;
+	background-color: #fafafa;
+}
+
+.modal {
+	&.fade.in {
+		overflow: initial !important;
+		border-radius: 4px;
+		top: 40%;
+		margin: 0 auto;
+		left: 0;
+		right: 0;
+		max-width: 550px;
+	}
+
+	border: 1px solid #777;
+	box-shadow: 0 0 0;
+
+	&.dialog-warning {
+		background: transparent;
+		border: 0;
+		box-shadow: 0 0 0;
+		color: #fff;
+		width: auto;
+		text-align: center;
+		font-size: 16px;
+	}
+
+	.alert-warning-message {
+		padding-top: $padding15;
+		vertical-align: 30px;
+		span {
+			font-size: large;
+			font-weight: 500;
+			vertical-align: 1em;
+		}
+		h2 {
+			margin-bottom: 40px;
+			font-weight: 500;
+		}
+	}
+
+	.modal-footer {
+		background-color: transparent;
+		box-shadow: 0 0 0;
+		border: 0;
+	}
+
+	.alert-warning-icon {
+		height: 100px;
+	}
+}

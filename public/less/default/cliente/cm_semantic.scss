@@ -18,6 +18,49 @@
 	}
 }
 
+i.big.big.big,
+i.big.big.big {
+	line-height: 1;
+	vertical-align: middle;
+	font-size: 2em;
+}
+
+.button {
+	font-size: 1rem;
+	border-radius: 4px;
+	padding: $padding10 20px;
+}
+
+.buttons {
+	@extend .button;
+	background-color: $projectColor2;
+	color: #fff;
+	text-shadow: none;
+	background-image: none;
+	&:hover {
+		background: $projectColor1;
+		color: #fff;
+	}
+}
+
+.btn-primary {
+	@extend .buttons;
+}
+
+.btn-danger {
+	@extend .button;
+}
+
+.btn {
+	&.btn-danger {
+		background-color: #da4f49;
+		@extend .button;
+	}
+	&.btn {
+		@extend .buttons;
+	}
+}
+
 #main {
 	/*** Estandariza font:12 para el previw editor en el sistema*/
 	#root {
@@ -29,23 +72,6 @@
 	}
 	.cke_chrome {
 		box-shadow: 0 0 0 0;
-	}
-}
-
-.button {
-	font-size: 1rem;
-	border-radius: 4px;
-	padding: $padding2 20px;
-}
-
-.ab-actions-group.compact-actions {
-	.ui.button.compact {
-		@extend .button;
-	}
-}
-.ab-status-actions {
-	.ui.button.compact.icon {
-		@extend .button;
 	}
 }
 
@@ -66,14 +92,13 @@
 	&.primary {
 		&.button,
 		&.buttons .button {
-			background-color: $projectColor2;
-			color: #fff;
-			text-shadow: none;
-			background-image: none;
-			&:hover {
-				background: $projectColor1;
-			}
+			@extend .buttons;
 		}
+	}
+
+	&.positive.button,
+	&.positive.buttons .button {
+		@extend .buttons;
 	}
 
 	&.vertical {
@@ -96,6 +121,22 @@
 				}
 			}
 		}
+	}
+
+	&.modal > .close,
+	&.inverted.dimmer > .modal > .close {
+		background: #444;
+		height: 35px;
+		width: 35px;
+		text-shadow: 0 0 0;
+		opacity: initial;
+		color: #fff;
+		border-radius: 30px;
+		right: -1.5rem;
+		top: -1.5rem;
+		padding: 0;
+		vertical-align: middle;
+		line-height: 2em;
 	}
 
 	.green {
@@ -182,6 +223,17 @@
 	}
 }
 
+.ab-actions-group.compact-actions {
+	.ui.button.compact {
+		@extend .button;
+	}
+}
+.ab-status-actions {
+	.ui.button.compact.icon {
+		@extend .button;
+	}
+}
+
 i.small.small.small.icon,
 i.small.small.small.icons {
 	line-height: 1;
@@ -199,11 +251,26 @@ i.icons {
 	font-size: $sizeSmall;
 }
 
+.modal-ab {
+	.header,
+	.modal-header {
+		background-image: none;
+		font-family: $fontFamily;
+		text-align: center;
+		font-weight: 500;
+	}
+}
+
 .ui.modal {
+	border: 1px solid #777;
+	border-radius: 4px;
+	box-shadow: 0 0 0;
+
 	> .content {
 		font-size: $fontSize;
 		line-height: 1.4;
-		padding: $padding;
+		border-radius: 4px;
+		padding: $padding15;
 		.grid {
 			&.padded {
 				.column {
@@ -227,22 +294,124 @@ i.icons {
 		}
 	}
 
+	&.modal-ab {
+		.step-content {
+			.header {
+				text-align: left;
+				font-weight: 500;
+			}
+		}
+	}
+
+	p:first-child {
+		font-size: 14px;
+	}
+
 	.ui.segment {
 		-webkit-box-shadow: 0 0 0 0;
 		box-shadow: 0 0 0 0;
-		margin: $padding2 0;
-		padding: $padding2 $padding2;
+		margin: $padding10 0;
+		padding: 0;
 		border: 1px solid $borderColor;
+		border-radius: 5px;
 	}
 
 	.cke_chrome {
 		box-shadow: 0 0 0 0;
 	}
+
+	.header {
+		background-image: none;
+		font-family: $fontFamily;
+	}
+
+	&.modal-ab {
+		@extend .modal-ab;
+	}
 }
 
-/**** Moficacion css de bootstrap */
-blockquote {
-	padding: 0 0 0 5px;
-	margin: 0 0 $padding2;
-	border-left: 3px solid #eee;
+.ui.steps {
+	.step {
+		padding: 10px;
+		.title {
+			font-weight: 600;
+			font-size: $fontSize4;
+			font-family: $fontFamily;
+			color: $colorText;
+		}
+		&.active {
+			background: $background3;
+			.title {
+				color: $projectColor2;
+			}
+		}
+	}
+}
+
+.ui.form {
+	.field > label {
+		font-size: $fontSize2;
+	}
+	.field .ui.input input,
+	.ui.form .fields .field .ui.input input {
+		width: auto;
+		box-shadow: 0 0 0;
+		border: 1px solid $borderColor;
+		background-color: $background2;
+	}
+}
+.rdl-move {
+	margin-bottom: 5px;
+	border: 1px solid $borderColor;
+	border-radius: 4px;
+	color: $colorText;
+	padding: 3px 5px;
+}
+
+.ui.dimmer {
+	background-color: rgba(0, 0, 0, .65);
+}
+
+/*********************** Not format *****************************/
+
+.ui[class*="right floated"].button,
+.ui[class*="right floated"].buttons {
+	margin-left: .5em;
+}
+
+.ui.form select {
+	padding: 0;
+}
+
+.ui.modal {
+	.ui.form .ui.grid > .relaxed.row > .column,
+	.ui.relaxed.grid > .column:not(.row),
+	.ui.relaxed.grid > .row > .column {
+		padding-left: 5px;
+		padding-right: 5px;
+		padding-top: 0;
+	}
+
+	.ui.grid > .column:not(.row),
+	.ui.grid > .row > .column {
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+
+	.ui.column.grid > [class*="ten wide"].column,
+	.ui.grid > .column.row > [class*="ten wide"].column,
+	.ui.grid > .row > [class*="ten wide"].column,
+	.ui.grid > [class*="ten wide"].column {
+		width: 100% !important;
+	}
+
+	.ui.relaxed.grid {
+		margin-left: -15px;
+		margin-right: -15px;
+	}
+}
+
+.ui.ordered.steps .step.completed:before,
+.ui.steps .step.completed > .icon:before {
+	color: $projectColor1;
 }

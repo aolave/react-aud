@@ -1,3 +1,4 @@
+@import 'variables';
 #main {
 	/*** cabmios para el plan auditoria */
 	#master_data_filters {
@@ -7,9 +8,16 @@
 	}
 
 	#sf_admin_container {
+		border: 1px solid $borderColor;
+		padding: 10px;
 		.sf_admin_form {
+			margin-top: 5px;
 			.sf_admin_form_body {
 				padding: 0;
+				.ui.grid > .column:not(.row) {
+					padding-top: 10px;
+					padding-bottom: 15px;
+				}
 			}
 		}
 	}
@@ -19,13 +27,20 @@
 		padding-bottom: 10px;
 	}
 
+	.methodology-item-head a.phase-name {
+		font-weight: 700;
+	}
+	.subphase > .methodology-item-head > a.phase-name {
+		font-weight: 600;
+	}
+
 	ul {
 		&.methodology {
 			.subphase,
 			.methodology-item-head {
 				display: table;
 				width: 100%;
-				margin-bottom: 10px;
+				margin-bottom: 7px;
 				font-size: 12px;
 				padding: 0;
 				min-height: 30px;
@@ -42,9 +57,10 @@
 						padding: .4em;
 						transform: rotate(45deg);
 						-webkit-transform: rotate(45deg);
-						top: -2px;
+						top: -1px;
 						right: -3px;
 						margin: 0;
+						font-size: 7px;
 						&:before {
 							display: none;
 						}
@@ -52,22 +68,112 @@
 				}
 
 				.handle {
-					width: 7px;
+					width: 6px;
 				}
 
 				a {
 					&.phase-name,
 					&.paso-name {
-						margin: 6px 0 0 15px;
+						margin: 5px 0 0 15px;
 						display: table-cell;
 						vertical-align: middle;
 					}
 				}
 			}
-			.paso .section-a .visita-status {
+
+			.sf_admin_td_actions {
+				.section-a {
+					&:nth-child(6) {
+						.header {
+							strong {
+								margin-top: 7px;
+							}
+						}
+					}
+				}
+			}
+			.paso {
+				margin-bottom: 7px;
+				.section-a {
+					font-size: 10px;
+					font-weight: 500;
+					text-align: center;
+
+					> div {
+						text-align: left;
+					}
+
+					.visita-status {
+						color: #999;
+						display: inline-block;
+						font-size: 9px;
+						line-height: 1em;
+						border: 0;
+						border-left: 3px solid;
+						border-radius: 0;
+						background: 0 0;
+						padding: 0 0 0 3px;
+						font-weight: 300;
+						margin-bottom: 4px;
+						text-shadow: 0 0 0;
+					}
+					.title {
+						font-size: 9px;
+						font-weight: 600;
+						+ .ui {
+							&.inline {
+								&.dropdown {
+									margin-left: 0;
+								}
+							}
+						}
+					}
+					.header {
+						text-align: left;
+					}
+
+					.unstyled {
+						text-align: left;
+					}
+					.objetivo-sigla {
+						line-height: 1em;
+						padding: 2px 5px;
+						font-weight: 500;
+						border-radius: 0;
+					}
+				}
+			}
+			.methodology-item-head {
+				background-color: $background2 !important;
+			}
+			.divider-vertical {
+				border-right: 1px solid #eee;
+				height: 20px;
+				margin-top: 5px;
 			}
 		}
 	}
 
 	/*** end cabmios para el plan auditoria */
+}
+
+/*** modal bibliotecda */
+ul.methodology {
+	.methodology-item-head {
+		border-left: 7px #0a858d solid;
+	}
+	.subphase .methodology-item-head {
+		border-left: 7px #f07336 solid;
+		position: relative;
+	}
+}
+
+/***** responsive pendiete agregar en una nueva hoja.*/
+
+@media screen and (max-width: 980px) {
+	body.sidebar-collapse #main-menu .nav li a,
+	body.sidebar-collapse .nav li a {
+		display: table-cell;
+		padding: 0;
+	}
 }

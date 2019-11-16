@@ -14247,7 +14247,7 @@ ul#button-style-inline li:has(input[type=radio]:checked) {
 .menu_principal .nav>li>a:hover,
 .ui-daterangepicker>a:hover .menu_principal li.dropdown a.dropdown-toggle:hover {
   background: #f8f8f8;
-  color: #0a858d !important
+  color: #0a858d;
 }
 
 .sidebar-collapse .menu_principal .nav-container .nav>li>a:after {

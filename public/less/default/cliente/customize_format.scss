@@ -1,0 +1,68 @@
+@import 'variables';
+
+.ui.tiny.modal {
+	max-width: 500px;
+}
+
+.ui.modal > .content {
+	padding: 20px;
+}
+
+.modals {
+	.content {
+		label {
+			margin-bottom: 10px;
+			width: 100%;
+			height: auto;
+			font-size: 12px;
+			display: inline-block;
+			vertical-align: middle;
+			line-height: 2.4em;
+			&.label-select {
+				select,
+				input {
+					width: 200px;
+					border: 1px solid #eeeeee;
+					float: right;
+					margin: 0;
+				}
+			}
+		}
+
+		.error {
+			text-align: right;
+			float: right;
+			width: 100%;
+			font-size: 10px;
+			text-transform: capitalize;
+			color: red;
+			border-bottom: 1px solid;
+			line-height: 1.4em;
+		}
+	}
+	.css-2b097c-container {
+		position: relative;
+		box-sizing: border-box;
+		width: 200px;
+		float: right;
+	}
+
+	.MuiAutocomplete-inputRoot[class*="MuiOutlinedInput-root"] {
+		padding: 0;
+		height: 30px;
+		border-radius: 3px;
+	}
+	.MuiAutocomplete-inputRoot[class*="MuiOutlinedInput-root"] .MuiAutocomplete-input {
+		padding: 8px;
+		border: 0;
+	}
+
+	.MuiAutocomplete-clearIndicator {
+		display: none;
+	}
+
+	.MuiAutocomplete-popupIndicator {
+		color: rgba(0, 0, 0, 0.54);
+		margin-top: -10px;
+	}
+}

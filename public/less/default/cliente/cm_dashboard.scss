@@ -1,0 +1,151 @@
+@import 'variables';
+
+.sidebar-collapse {
+	#main {
+		padding-right: 2px;
+	}
+}
+
+#main {
+	/*** cabmios para dashborard */
+	padding-right: 2px;
+	padding-left: 40px;
+
+	.col-main {
+		padding: 0;
+		width: 100%;
+	}
+
+	#sf_admin_container {
+		border: 0;
+		padding: $padding5 $padding10 $padding10 $padding10;
+		.sf_admin_form {
+			margin-top: 5px;
+			.sf_admin_form_body {
+				padding: 0;
+				.ui.grid > .column:not(.row) {
+					padding-top: 10px;
+					padding-bottom: 15px;
+				}
+			}
+		}
+	}
+	.card-indicator {
+		border: 1.3px solid $borderColor;
+		padding: 0 10px;
+		margin-bottom: 8px;
+		position: relative;
+		border-radius: 1px;
+		.title-indicator {
+			color: $colorText;
+			font-weight: 500;
+		}
+		.value-indicator {
+			border-left: 0;
+			font-size: 30px;
+			font-weight: 500;
+		}
+		.head-indicator {
+			color: $projectColor4;
+			border-bottom: 0;
+			margin-top: 0;
+			font-weight: 600;
+		}
+	}
+
+	.col-md-3 {
+		.card-indicator {
+			&.ful-width {
+				min-height: 194px;
+			}
+		}
+	}
+
+	.highcharts-label {
+		span {
+			div:nth-child(1) {
+				margin-top: 7px;
+				text-align: center;
+			}
+			div:nth-child(2) {
+				font-size: 9px;
+				text-shadow: 0 0 0;
+				margin-top: 10px;
+				color: $colorText;
+				text-align: center;
+			}
+		}
+	}
+
+	.convention-color {
+		font-size: $fontSize;
+		text-transform: uppercase;
+		color: #5f6368;
+		display: inline-block;
+		border: 0;
+		border-left: 4px solid;
+		border-radius: 0;
+		margin-bottom: 4px;
+		text-shadow: 0 0 0;
+		text-align: left;
+		padding: 0 0 0 4px;
+		height: auto;
+		line-height: 1.4em;
+		font-weight: 300;
+		text-transform: initial;
+		background: linear-gradient(to bottom, #fff, #fff);
+	}
+
+	#gauge-pe,
+	#gauge-ap,
+	#gauge-eo {
+		width: 100px !important;
+	}
+}
+
+#tabs {
+	.tab-nav {
+		min-height: 30px;
+		height: auto;
+		margin: 0 0 5px;
+		padding: 0;
+		display: flex;
+		.tab-nav-item {
+			margin-right: 4px;
+			margin-left: 4px;
+			a {
+				line-height: $hBarSize3;
+				font-size: $fontSize;
+				color: $colorText;
+				background: $background4;
+				border: 0;
+				text-transform: initial;
+				border-radius: 2px;
+				font-weight: 600;
+			}
+			&.tab-item-avtive a,
+			&.tab-nav-item:hover a {
+				background: $background4Hover;
+				color: $colorTextHover;
+			}
+		}
+	}
+
+	.tab-content {
+		padding: $padding5;
+	}
+}
+
+.modal-footer .btn + .btn {
+	margin-left: 10px;
+}
+
+@media screen and (max-width: 980px) {
+	body.sidebar-collapse #main {
+		padding-left: $menusizeSmall;
+		padding-right: 0;
+	}
+	#tabs .tab-content {
+		padding: $padding5 $padding5 $padding5 0;
+	}
+}

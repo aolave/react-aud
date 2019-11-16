@@ -9,12 +9,13 @@ $tablistName: 'visita' !default;
 @mixin iconsize($size, $color) {
 	font-size: $size;
 	color: $color;
+	margin: auto;
 }
 
-@mixin menuLinkDisplay($display, $margin, $padding) {
+@mixin menuLinkDisplay($display, $margin, $padding15) {
 	display: $display;
 	margin: $margin;
-	padding: $padding;
+	padding: $padding15;
 }
 
 @mixin on-event-a($context,$url, $eventParent: false) {
@@ -59,18 +60,6 @@ $tablistName: 'visita' !default;
 	margin: 0 auto;
 }
 
-.menu_principal {
-	.nav-container {
-		.nav {
-			li {
-				a {
-					color: $colorIcon;
-				}
-			}
-		}
-	}
-}
-
 /*** cambia estado del menu principal cuando esta cerrado **/
 
 @mixin menuLeft() {
@@ -86,9 +75,14 @@ $tablistName: 'visita' !default;
 			a {
 				display: block;
 				margin: 0 0 0 -.2em;
-				padding: $padding2 0;
+				padding: $padding10 0;
 			}
 		}
+	}
+
+	.ui.grid > .column:not(.row) {
+		padding-top: 10px;
+		padding-bottom: 10px;
 	}
 
 	.menu_principal {
@@ -143,7 +137,7 @@ $tablistName: 'visita' !default;
 		.nav {
 			li {
 				a {
-					@include menuLinkDisplay(block, 0 0 0 -0.2em, $padding2 0);
+					@include menuLinkDisplay(block, 0 0 0 -0.2em, $padding10 0);
 					span {
 						line-height: $sizeMedium;
 					}
@@ -155,12 +149,42 @@ $tablistName: 'visita' !default;
 		}
 		#collapse-button {
 			padding: 2px;
+			display: none;
 			.switch {
-				margin: $padding2 0 0;
+				margin: $padding10 0 0;
 				float: none;
 			}
 		}
 	}
+}
+
+body {
+	color: $colorText;
+}
+
+.menu_principal {
+	.nav-container {
+		.nav {
+			li {
+				a {
+					color: $colorIcon;
+				}
+			}
+		}
+	}
+}
+
+.ui.vertical.menu .item > i.icon,
+.ui.vertical.menu .item > i.icons {
+	@include icon-size($sizeMedium);
+}
+
+.line {
+	height: 1px;
+	background-color: $borderColor;
+	width: 80%;
+	display: block;
+	margin: 20px auto 5px auto;
 }
 
 #main-menu {
@@ -168,13 +192,13 @@ $tablistName: 'visita' !default;
 	#collapse-button {
 		height: 40px;
 		.switch {
-			margin: $padding2 0 0;
+			margin: $padding10 0 0;
 		}
 	}
 	.nav {
 		li {
 			a {
-				@include menuLinkDisplay(block, 0 0 0 -0.2em, $padding2 0);
+				@include menuLinkDisplay(block, 0 0 0 -0.2em, $padding10 0);
 				span {
 					line-height: $sizeMedium;
 				}
@@ -213,7 +237,7 @@ $tablistName: 'visita' !default;
 		.nav {
 			li {
 				a {
-					@include menuLinkDisplay(flex, 0, $padding2 20px $padding2 $padding2);
+					@include menuLinkDisplay(flex, 0, $padding10 20px $padding10 $padding10);
 					i {
 						margin: initial;
 					}
@@ -235,8 +259,21 @@ $tablistName: 'visita' !default;
 	padding-right: $menusizeSmall;
 	padding-left: $menusizeSmall;
 
+	.col-main {
+		box-shadow: 0 0 0;
+		padding: $padding10 $padding15 $padding15;
+	}
+	.page-cliente_reporte {
+		.sf_form_filter {
+			.form-inline {
+				box-shadow: 0 0 0;
+				padding: $padding10 $padding15 $padding15;
+			}
+		}
+	}
+
 	.breadcrum {
-		margin: 5px $padding 0px $padding;
+		margin: 5px $padding15 0px $padding15;
 		display: block;
 		min-height: 20px;
 	}
@@ -298,16 +335,16 @@ $tablistName: 'visita' !default;
 	}
 
 	.raw-select {
-		padding: 5px;
-		font-size: 12px;
+		padding: $padding5;
 		line-height: 1;
 		border-radius: 0;
 		height: 35px;
-		background: url(http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png) no-repeat right;
+		background: url(../../images/icons/flecha_abajo.svg) no-repeat right;
+		background-size: 14px;
 		-webkit-appearance: none;
 		background-position-x: 92%;
 		border: 1px solid rgba(34, 36, 38, .15);
-		font-size: 1rem;
+		font-size: 12px;
 		margin: 3px;
 		padding-right: 33px;
 	}
@@ -338,7 +375,7 @@ footer {
 	z-index: 1003;
 	padding-left: 0;
 	.content-footer {
-		padding: 0 $padding;
+		padding: 0 $padding15;
 	}
 }
 
@@ -351,7 +388,7 @@ footer {
 		.col-main {
 			background: transparent;
 			box-shadow: none;
-			padding: $padding2 $padding $padding !important;
+			padding: $padding10 $padding15 $padding15;
 			width: 100%;
 		}
 
@@ -427,21 +464,6 @@ footer {
 			color: $buttonHover;
 		}
 	}
-	.dropdown-menu {
-		padding: $padding2;
-		i {
-			@include icon-size($sizeSmall);
-		}
-		li {
-			> a {
-				padding: 5px;
-				span {
-					vertical-align: top;
-					margin-left: .2em;
-				}
-			}
-		}
-	}
 }
 
 @mixin right-menu-icons($name) {
@@ -462,12 +484,15 @@ footer {
 	.menu {
 		i {
 			&.icon-svg {
-				@include icon-svg($sizeMedium + 1);
+				@include icon-svg($sizeMedium);
 				@include right-menu-icons('ajustes');
 				@include right-menu-icons('hallazgos');
 				@include right-menu-icons('muestreo');
 				@include right-menu-icons('notas_de_revision');
 				@include right-menu-icons('asignar_usuario');
+				@include right-menu-icons('visitas');
+				@include right-menu-icons('horas_productivas');
+				@include right-menu-icons('pdf');
 			}
 		}
 	}
@@ -561,8 +586,8 @@ $break-large: 1200px;
 			padding: 9px 0;
 			margin: 0 0 0;
 			&.badged {
-				padding: $padding2 0;
-				margin: $padding2 0 0;
+				padding: $padding10 0;
+				margin: $padding10 0 0;
 				.label {
 					right: 35%;
 					top: -0.1em;
@@ -578,13 +603,17 @@ $break-large: 1200px;
 }
 
 .info-paso {
-	background: $background2;
+	background: #fff;
 	border: 0;
 	font-size: $fontSize;
-	margin: 0 0 $padding2 0;
+	margin: 0 0 $padding10 0;
 	justify-content: space-around;
-	padding: $padding3 $padding2;
+	padding: $padding5 $padding10;
 	min-height: 30px;
+}
+
+.info-paso .info-col.paso {
+	line-height: 2.4em;
 }
 
 ##{$tablistName}-tabs,
@@ -594,10 +623,17 @@ $break-large: 1200px;
 			.tab-nav-item {
 				.label.visita-status {
 					margin-left: .5em;
-					padding: 0.5em .44em 0.2em .44em;
 					display: inline-block;
 					font-size: .9em;
-					border-radius: .3em .3em 0 0;
+					border-left: 0 solid;
+					background: 0 0;
+					color: #fff;
+					border-radius: 0;
+					height: 10px;
+					padding: 4px 3px 13px 3px;
+					border-color: #ccc;
+					text-shadow: 0 0 0;
+					font-weight: 500;
 				}
 				i.icon,
 				i.far,
@@ -644,15 +680,232 @@ $break-large: 1200px;
 				border-bottom: 2px solid $projectColor2;
 			}
 			&.tab-add {
-				right: $padding3;
-				background: $background2;
-				border: 0;
+				background: #fff;
+				border: 2px solid $background2;
 				margin: 0;
-				width: 30px;
-				position: absolute;
-				height: 100%;
+				width: 6%;
+				height: 30px;
+				right: 0;
+				padding: 0;
+				text-align: center;
+				display: table;
+				vertical-align: middle;
+				text-align: center;
+				i.icon {
+					margin: 0;
+					display: table-cell;
+					vertical-align: middle;
+				}
 			}
 		}
 	}
 }
 /*** End barra lateral, menu derecho.*/
+
+.page-proyecto_master_data {
+	.sf_admin_list_records {
+		.sf_admin_td_actions {
+			.dropdown-modern {
+				.btn.dropdown-toggle {
+					color: $projectColor2;
+					margin-right: 3px;
+					font-size: 12pt;
+				}
+			}
+			.btn {
+				height: 30px;
+			}
+		}
+	}
+}
+
+.table {
+	.sf_admin_td_actions {
+		.btn {
+			height: 30px;
+		}
+	}
+	.dropdown-modern {
+		.btn.dropdown-toggle {
+			font-size: 12pt;
+		}
+	}
+}
+
+.bottombar,
+.topbar {
+	color: #eeeeee;
+	a {
+		&.expandall,
+		&.collapseall {
+			color: $projectColor2;
+			font-size: 12px;
+			margin-right: 5px;
+			margin-left: 5px;
+		}
+	}
+}
+.sf_admin_list_action.win-command {
+	padding-top: 7px;
+	font-size: 12px;
+	float: right;
+	margin-top: -24px;
+	color: $projectColor2;
+	span {
+		&.icon-moon-reply-2 {
+			&:before {
+				content: '\f104';
+				font-family: Icons;
+			}
+		}
+	}
+}
+
+/********cambio del select,  Nota: el componente select no se puede cambia por ser nativo de navegador.**/
+select > option {
+	padding: 5px 10px !important;
+	border: 0 solid $borderColor;
+	background: $background;
+	color: $colorText;
+}
+
+select option:hover {
+	background: $background3Hover;
+	color: $colorText;
+}
+
+select > option:hover {
+	background: $background3Hover;
+	color: $colorText;
+	cursor: pointer;
+}
+
+select:focus > option:checked {
+	background: $background3Hover;
+	color: $colorText;
+}
+
+/***********************************************
+App global
+***********************************************/
+#tabs .tab-nav {
+	height: 30px;
+	margin: 0 5px 10px 5px;
+	padding: 0;
+}
+
+/*
+$bgDefault: $backgroundHover;
+$bgHighlight: $backgroundHover;
+$colDefault: $backgroundHover;
+$colHighlight: $backgroundHover;
+$dropDown: false;
+.navbar-default {
+	background-color: $bgDefault;
+	border-color: $bgHighlight;
+	.navbar-brand {
+		color: $colDefault;
+		&:hover,
+		&:focus {
+			color: $colHighlight;
+		}
+	}
+	.navbar-text {
+		color: $colDefault;
+	}
+	.navbar-nav {
+		> li {
+			> a {
+				color: $colDefault;
+				&:hover,
+				&:focus {
+					color: $colHighlight;
+				}
+			}
+			@if $dropDown {
+				> .dropdown-menu {
+					background-color: $bgDefault;
+					> li {
+						> a {
+							color: $colDefault;
+							&:hover,
+							&:focus {
+								color: $colHighlight;
+								background-color: $bgHighlight;
+							}
+						}
+						&.divider {
+							background-color: $bgHighlight;
+						}
+					}
+				}
+			}
+		}
+		@if $dropDown {
+			.open .dropdown-menu > .active {
+				> a,
+				> a:hover,
+				> a:focus {
+					color: $colHighlight;
+					background-color: $bgHighlight;
+				}
+			}
+		}
+		> .active {
+			> a,
+			> a:hover,
+			> a:focus {
+				color: $colHighlight;
+				background-color: $bgHighlight;
+			}
+		}
+		> .open {
+			> a,
+			> a:hover,
+			> a:focus {
+				color: $colHighlight;
+				background-color: $bgHighlight;
+			}
+		}
+	}
+	.navbar-toggle {
+		border-color: $bgHighlight;
+		&:hover,
+		&:focus {
+			background-color: $bgHighlight;
+		}
+		.icon-bar {
+			background-color: $colDefault;
+		}
+	}
+	.navbar-collapse,
+	.navbar-form {
+		border-color: $colDefault;
+	}
+	.navbar-link {
+		color: $colDefault;
+		&:hover {
+			color: $colHighlight;
+		}
+	}
+}
+@media (max-width: 767px) {
+	.navbar-default .navbar-nav .open .dropdown-menu {
+		> li > a {
+			color: $colDefault;
+			&:hover,
+			&:focus {
+				color: $colHighlight;
+			}
+		}
+		> .active {
+			> a,
+			> a:hover,
+			> a:focus {
+				color: $colHighlight;
+				background-color: $bgHighlight;
+			}
+		}
+	}
+}
+*/

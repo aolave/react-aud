@@ -1,0 +1,905 @@
+
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="es"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8 ie7" lang="es"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9 ie8" lang="es"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="es">
+<!--<![endif]-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-Ua-Compatible" content="IE=edge,chrome=1" />
+<meta name="title" content="Plan de Auditoria" />
+<meta name="charset" content="utf-8" />
+<meta name="viewport"
+	content="minimum-scale=1, initial-scale=1, shrink-to-fit=no, width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+<link rel="shortcut icon" href="https://app.auditbrain.com/favicon.ico" />
+<title>Audit Brain | Plan de Auditoria</title>
+<link rel="stylesheet" type="text/css" media="all"
+	href="/css/default/app_cliente-global.min.css" />
+<link rel="stylesheet" type="text/css" media="all"
+	href="/css/reset.min.css?v=20191107054510" data-file="app-reset" />
+<link rel="stylesheet" type="text/css" media="all"
+	href="/css/jquery-ui.bootstrap.min.css?v=20191107054510"
+	data-file="app-jquery-ui.bootstrap" />
+<link rel="stylesheet" type="text/css" media="all"
+	href="/css/bootstrap/bootstrap-app_cliente.min.css?v=20191107054510"
+	data-file="bootstrap-bootstrap-app_cliente" />
+<link rel="stylesheet" type="text/css" media="all"
+	href="/css/bootstrap/bootstrap-responsive.min.css?v=20191107054510"
+	data-file="bootstrap-bootstrap-responsive" />
+<link rel="stylesheet" type="text/css" media="all"
+	href="/css/bootstrap/font-awesome.min.css?v=20191107054510"
+	data-file="bootstrap-font-awesome" />
+<!--[if IE 7]><link rel="stylesheet" type="text/css" media="all" href="/css/bootstrap/font-awesome-ie7.min.css?v=20191107054510" data-file="bootstrap-font-awesome-ie7" /><![endif]-->
+<link rel="stylesheet" type="text/css" media="all"
+	href="/css/plugins/jquery.qtip.min.css?v=20191107054510"
+	data-file="plugins-jquery.qtip" />
+<link rel="stylesheet" type="text/css" media="all"
+	href="/css/animate.min.css?v=20191107054510" data-file="app-animate" />
+<link rel="stylesheet" type="text/css" media="all"
+	href="/css/default/app_cliente_ext.min.css?v=20191107054510"
+	data-file="default-app_cliente_ext" />
+<link rel="stylesheet" type="text/css" media="all"
+	href="/css/../webapps/semantic/dist/semantic.min.css?v=20191107054510"
+	data-file="../webapps/semantic/dist-semantic" />
+<link rel="stylesheet" type="text/css" media="all"
+	href="/css/default/app_cliente-masterdata_admin.min.css?v=20191107054510"
+	data-file="default-app_cliente-masterdata_admin" />
+<link rel="stylesheet" type="text/css" media="all"
+	href="/css/plugins/jquery.contextMenu.css?v=20191107054510"
+	data-file="plugins-jquery.contextMenu" />
+<link rel="stylesheet" type="text/css" media="all"
+	href="/css/plugins/react-dual-listbox.css?v=20191107054510"
+	data-file="plugins-react-dual-listbox" />
+<link rel="stylesheet" type="text/css" media="all"
+	href="/css/plugins/draganddrop.css?v=20191107054510"
+	data-file="plugins-draganddrop" />
+<link rel="stylesheet" type="text/css" media="all"
+	href="/css/default.min.css?v=20191107054510" data-file="app-default" />
+<link rel="stylesheet" type="text/css" media="all"
+	href="/css/default/app_cliente.min.css?v=20191107054510"
+	data-file="default-app_cliente" />
+<!--[if ie]><link rel="stylesheet" type="text/css" media="all" href="/css/default/app_cliente-ie.min.css?v=20191107054510" data-file="default-app_cliente-ie" /><![endif]-->
+<link rel="stylesheet" type="text/css" media="all"
+	href="/css/default/app_cliente-proyecto_plan_auditoria.min.css?v=20191107054510"
+	data-file="default-app_cliente-proyecto_plan_auditoria" />
+
+<!--[if IE]><link rel="stylesheet" type="text/css" media="all" href="/css/ie-fix.min.css?v=20191107054510" /><![endif]-->
+
+
+<!-- change add  library fontawesome -->
+<script src="https://kit.fontawesome.com/92e66407b8.js"
+	crossorigin="anonymous"></script>
+
+
+<!-- change add  styles custom -->
+<link href="css/default/app_cliente-cm_cliente.min.css" rel="stylesheet" type="text/css" />
+<link href="css/default/app_cliente-cm_semantic.min.css" rel="stylesheet" type="text/css" />
+<link href="css/default/app_cliente-cm_bootstrap.min.css" rel="stylesheet" type="text/css" />
+<link href="css/default/app_cliente-cm_masterdata.min.css" rel="stylesheet" type="text/css" />
+<link href="css/default/app_cliente-cm_plan_auditoria.min.css" rel="stylesheet" type="text/css" />
+<!-- end change add  styles custom -->
+
+
+<script type="text/javascript" src="/js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="/js/modernizr.min.js?v="></script>
+<script type="text/javascript"
+	src="/js/plugins/jquery.blockUI.min.js?v="></script>
+<script type="text/javascript" src="/js/plugins/pace.min.js?v="></script>
+<script type="text/javascript">
+//<![CDATA[
+var app = app || {};
+app.vars = app.vars || {};
+//]]>
+</script>
+<!-- start Mixpanel -->
+<script type="text/javascript">(function(e,a){if(!a.__SV){var b=window;try{var c,l,i,j=b.location,g=j.hash;c=function(a,b){return(l=a.match(RegExp(b+"=([^&]*)")))?l[1]:null};g&&c(g,"state")&&(i=JSON.parse(decodeURIComponent(c(g,"state"))),"mpeditor"===i.action&&(b.sessionStorage.setItem("_mpcehash",g),history.replaceState(i.desiredHash||"",e.title,j.pathname+j.search)))}catch(m){}var k,h;window.mixpanel=a;a._i=[];a.init=function(b,c,f){function e(b,a){var c=a.split(".");2==c.length&&(b=b[c[0]],a=c[1]);b[a]=function(){b.push([a].concat(Array.prototype.slice.call(arguments,
+0)))}}var d=a;"undefined"!==typeof f?d=a[f]=[]:f="mixpanel";d.people=d.people||[];d.toString=function(b){var a="mixpanel";"mixpanel"!==f&&(a+="."+f);b||(a+=" (stub)");return a};d.people.toString=function(){return d.toString(1)+".people (stub)"};k="disable time_event track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config reset opt_in_tracking opt_out_tracking has_opted_in_tracking has_opted_out_tracking clear_opt_in_out_tracking people.set people.set_once people.unset people.increment people.append people.union people.track_charge people.clear_charges people.delete_user".split(" ");
+for(h=0;h<k.length;h++)e(d,k[h]);a._i.push([b,c,f])};a.__SV=1.2;b=e.createElement("script");b.type="text/javascript";b.async=!0;b.src="undefined"!==typeof MIXPANEL_CUSTOM_LIB_URL?MIXPANEL_CUSTOM_LIB_URL:"file:"===e.location.protocol&&"//cdn4.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//)?"https://cdn4.mxpnl.com/libs/mixpanel-2-latest.min.js":"//cdn4.mxpnl.com/libs/mixpanel-2-latest.min.js";c=e.getElementsByTagName("script")[0];c.parentNode.insertBefore(b,c)}})(document,window.mixpanel||[]);
+mixpanel.init('e939f3ba801e7fcdae80bba1bf611840');
+mixpanel.identify(806);
+mixpanel.track('Pagina visitada', {'App ModuleName' : 'Proyecto:MasterData', 'App ActionName' : 'index', 'Proyecto ID' : '2288' });
+</script>
+<!-- end Mixpanel -->
+
+<script src="https://wchat.freshchat.com/js/widget.js"></script>
+</head>
+<body
+	class="theme-default page-proyecto-master_data-index page-proyecto_master_data    ">
+	<style type="text/css">
+</style>
+	<script type="text/javascript">
+  jQuery.blockUI({'message': '<div class="ajax-loader-snake-32 _a-center" style="padding: 5px"></div>', 'overlayCSS': {'backgroundColor': '#fff', 'opacity':0.2}});
+</script>
+
+	<div id="page">
+
+
+		<header class="header main-header" id="pageheader"> </header>
+
+
+		<nav role="menu" id="main-menu"
+			class="navbar menu menu_principal navbar-fixed-top">
+
+			<div class="nav-container">
+				<div class='navbar-inner'>
+					<div class='container-fluid'>
+
+
+						<a class='btn btn-navbar' data-toggle='collapse'
+							data-target='.nav-collapse'> <span class='icon-bar'></span> <span
+							class='icon-bar'></span> <span class='icon-bar'></span>
+						</a> <img src="/images/logo.png?v=20191104023741" class="large-logo">
+						<img src="/images/logo1.png?v=20191104023741" class="small-logo">
+						<div class='nav-collapse pull-left'>
+							<ul id='main-menuitems' class='nav '>
+								<li class='divider-vertical brand-divider'></li>
+								<li class='menuesconder  nav-menu-item'><span
+									id="collapse-button"> <span class="menuitem-label">Contraer
+											menú</span> <label class="switch"> <input type="checkbox">
+											<span class="slider round"></span>
+									</label>
+								</span> <script type="text/javascript">
+                    $('body').addClass('sidebar-collapse')
+                  </script></li>
+								<li class='  nav-menu-item'><a title="Dashboard"
+									class="menu-link-module-home" href="/index.php/"> <!-- change icon:  <span class="menu-icon icon- flaticon-interface"></span>  -->
+										<i class="fas fa-indent"></i> <span class="menuitem-label">Dashboard</span>
+
+								</a></li>
+								<li class='  nav-menu-item'><a title="CRM"
+									class="menu-link-module-cliente_prospecto"
+									href="/index.php/cliente_prospecto"> <!-- change icon: <span class="menu-icon icon- flaticon-shapes"></span> -->
+										<i class="far fa-building"></i> <span class="menuitem-label">CRM</span>
+								</a></li>
+								<li class=' active nav-menu-item'><a title="Proyectos"
+									class="menu-link-module-proyecto_admin"
+									href="/index.php/proyecto"> <!-- change icon: <span class="menu-icon icon- flaticon-people"></span> -->
+										<i class="icon-svg project"></i> <span class="menuitem-label">Proyectos</span>
+								</a></li>
+								<li class='  nav-menu-item'><a title="Tareas"
+									class="menu-link-module-usuario_tarea_admin"
+									href="/index.php/usuario_tarea"> <!-- change icon: <span class="menu-icon icon- flaticon-check"></span> -->
+										<i class="fas fa-tasks"></i> <span class="menuitem-label">Tareas</span>
+								</a></li>
+
+								<li class='  nav-menu-item'><a title="Informe de Tiempo"
+									class="menu-link-module-tiempo_admin"
+									href="/index.php/informe-tiempo"> <!-- change icon:  <span class="menu-icon icon- flaticon-clock"></span> -->
+										<!--   <i class="fas fa-history"></i>  --> <i
+										class="icon-svg history"></i> <span class="menuitem-label">Informe
+											de Tiempo</span>
+								</a></li>
+
+
+								<li class="  nav-menu-item"><a
+									class="menu-link-module-config" href="#Config"
+									oldtitle="Configuración" title=""
+									aria-describedby="ui-tooltip-4"> <!-- add icon: --> <i
+										class="fas fa-cog"></i> <span class="menuitem-label">
+											Configuración </span>
+								</a></li>
+
+							</ul>
+							<!-- //#main-menuitems -->
+
+						</div>
+						<!-- //.nav-collapse -->
+						<!-- RIGHT ITEMS -->
+						<div class='btn-toolbar pull-right nav-user-toolbar'></div>
+						<!-- //RIGHT ITEMS -->
+					</div>
+					<!-- //container-->
+				</div>
+				<!-- //navbar-inner-->
+
+				<div>
+					<div class="_clear"></div>
+		</nav>
+
+
+
+	  <div class="user-profile floating pull-right">
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true" title="Adrian Robledo Olave">
+					
+				<!-- change icon<img class="img-circle" src="/images/avatar_default.jpg" />  -->  
+				<i class="fas fa-user-circle">   </i>
+	
+				</a>
+				<ul class="dropdown-menu user-profile-menu pull-right">
+					<li>  
+						<a href="/index.php/my/edit">
+							<!-- change icon:  <span class='link-icon icon-moon-user'></span>  -->
+							<i class="far fa-user-circle"></i>
+							
+							<span class='link-text'>Mi perfil</span>
+						</a> 
+						</li>
+					<li class="last">
+						<a href="/index.php/guard/logout">
+							
+							 <!-- change icon:  <span class='link-icon icon-moon-logout'></span>  -->
+							 <i class="far fa-arrow-alt-circle-right"></i>
+	
+							<span class='link-text'>Cerrar sesión</span></a> 
+	
+							</li>
+				</ul>
+			</div>
+
+		<script>
+
+  $(document).ready(function() {
+    $("#sidebar-menu > li.embed-item").on("click", function(){
+      $("#sidebar-menu > li.embed-item").removeClass("item-active")
+      $(this).toggleClass("item-active")
+
+      $("#sidebar-right").addClass("sidebar-open")
+
+      $('#sidebar-content').html('<div class="ajax-loader"><div class="ajax-loader-snake-32"></div></div>')
+      $('#sidebar-content').load($(this).children('a').attr("href"))
+    })
+    $(".sidebar-close").on("click", function(){
+      $("#sidebar-menu > li").removeClass("item-active")
+      $("#sidebar-right").removeClass("sidebar-open")
+    })
+
+    $("#sidebar-menu > li.embed-item a").on('click', function(ev){
+      ev.preventDefault()
+    })
+  })
+
+</script>
+
+
+
+
+
+		<style>
+#alert-licencia-about-expire {
+	margin-left: 40px;
+	margin-right: 30px;
+	background-color: #DD0000;
+	color: white;
+	text-shadow: none
+}
+
+#alert-licencia-about-expire code {
+	white-space: pre
+}
+
+#alert-licencia-about-expire .badge {
+	color: #008088;
+	background-color: white
+}
+
+.sidebar-collapse #alert-licencia-about-expire {
+	margin-left: 205px;
+}
+
+.user-profile.floating {
+	z-index: 1001;
+}
+</style>
+
+		<div id="main" class="container-fluid page-container" role="main">
+
+			<div class="row-fluid" id="sf_main_top_block">
+				<div class="ab-breadcrumb breadcrum">
+					<a href="/index.php/">Dashboard</a> <span class="icon-arrow"></span>
+					<a href="/index.php/proyecto">Proyectos</a> <span
+						class="icon-arrow"></span> <a class="project-name"
+						title="&lt;b&gt;Cliente:&lt;/b&gt; diseño &lt;br&gt;&lt;b&gt;Proyecto:&lt;/b&gt; diseño2"
+						href="/index.php/proyecto/2288">diseño2</a> <span
+						class="icon-arrow"></span> Plan de Auditoría
+				</div>
+			</div>
+
+			<div class="row-fluid">
+
+
+
+				<div class="col-main">
+
+
+
+
+
+
+
+
+
+					<div id="sf_admin_container">
+
+						<div id="sf_admin_content">
+
+
+
+
+
+							<div class="sf_admin_form">
+
+
+
+
+
+
+								<div class="sf_admin_flashes"></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+								<div class="sf_admin_form_body">
+									<div id="roott">
+
+
+										<div class="app-body">
+											<div class="topbar sticky-scroll-box">
+												<div class="ui grid">
+													<div class="five wide column">
+														<a
+															href="https://app.auditbrain.com/index.php/proyecto/2288/master_data#"
+															class="expandall">Expandir todo</a>|<a
+															href="https://app.auditbrain.com/index.php/proyecto/2288/master_data#"
+															class="collapseall">Contraer todo</a>
+													</div>
+													<div class="eleven wide column">
+														<div id="master_data_filters" class="pull-right">
+															<span class="lb">Filtrar por: </span><select
+																class="raw-select input-medium"
+																id="master_data_filters_visita"
+																style="max-width: 150px;"><option value="">-
+																	Visita -</option>
+																<option value="8182">Planeacion</option>
+																<option value="8183">Prefinal</option>
+																<option value="8184">Final</option></select><select
+																class="raw-select input-medium"
+																id="master_data_filters_status"><option
+																	value="">- Estado -</option>
+																<option value="1">Sin asignar</option>
+																<option value="2">Asignado</option>
+																<option value="3">En proceso</option>
+																<option value="4">Completado</option>
+																<option value="5">Revisado</option>
+																<option value="6">Notas Revisión</option></select><select
+																class="raw-select input-medium"
+																id="master_data_filters_asignado"
+																style="max-width: 150px;"><option value="">-
+																	Asignado a -</option>
+																<option value="803">Maria Paula Riveros</option>
+																<option value="806">Adrian Robledo Olave</option></select>
+														</div>
+													</div>
+												</div>
+												<div id="app-right-sidebar"
+													class="ui compact vertical icon right fixed visita-sidebar right-sidebar menu">
+
+                           <div class="line"></div>
+
+													<div class="menu">
+														<a title="Crear Fase" class="link item">
+                             <!-- change icon: 
+															<i class="large icons">
+																<i class="list icon"></i>
+																<i class="plus corner icon"></i>
+															</i>
+															-->
+
+															<i class="far plus icon olive"></i>
+
+													</a>
+													</div>
+													<div class="menu">
+														<a
+															href="https://app.auditbrain.com/index.php/proyecto/2288/master_data#"
+															class="link item" title="Administrar Visitas">
+															<!--change icon: 
+															<i class="large icons">
+																<i class="calendar alternate outline icon"></i>
+																<i class="pencil alternate corner icon"></i>
+															</i> -->
+															<i class="icon-svg visitas"></i>
+
+														</a>
+													</div>
+													<div class="menu">
+														<a class="link item" title="Asignar Responsables">
+														<!--change icon: 
+															<i class="large icons">
+																<i class="user icon"></i>
+																<i class="pencil alternate corner icon"></i>
+															</i>
+														-->
+														<i class="icon-svg asignar_usuario"></i>
+
+															</a>
+													</div>
+													<div class="menu">
+														<a
+															href="https://app.auditbrain.com/index.php/proyecto/2288/horas_productivas"
+															target="_blank" title="Distribución de Horas Productivas"
+															class="item">
+														 <!--change icon: 
+															<i class="large icons">
+																<i class="table icon"></i>
+																<i class="clock outline corner icon"></i>
+															</i> 	-->
+															<i class="icon-svg horas_productivas"></i>
+
+														</a>
+													</div>
+													<div class="menu">
+														<a
+															href="https://app.auditbrain.com/index.php/proyecto/2288/master_data?sf_format=pdf"
+															target="_blank" title="Exportar como PDF" class="item">
+														 <!--change icon: 
+															<img src="./auditoria_files/exportar_pdf.svg" class="ui large image">
+																</i> 	-->
+															<i class="icon-svg pdf"></i>
+														
+														</a>
+													</div>
+												</div>
+											</div>
+										
+										<ul class="methodology methodology-all methodology-sortable nav nav-stacked sf_admin_list_records ui-sortable" id="methodology-accordion"><li class="methodology-item phase has-rubros" id="fase55477"><div class="methodology-item-head"><span class="handle handle-dragdrop phase-handle"></span><a class="phase-name" href="#"><span class="fase-iteration">01</span>-COMPROMISO PREVIO</a><div class="pull-right sf_admin_td_actions"><div class="btn-group dropdown-modern"><a class="btn btn-mini dropdown-toggle" data-toggle="dropdown" href="#"><span class="icon-tc-ellipsis-v"></span></a><ul class="dropdown-menu pull-right"><li><a href="#">Editar</a></li><li><a href="#">Crear Rubro</a></li><li class="divider"></li><li><a href="#">Eliminar</a></li></ul></div></div><div class="clearfix"></div></div><ul class="methodology methodology-rubro-list ui-sortable"></ul></li><li class="methodology-item phase has-rubros" id="fase55478"><div class="methodology-item-head"><span class="handle handle-dragdrop phase-handle"></span><a class="phase-name" href="#"><span class="fase-iteration">02</span>-PLANEACION</a><div class="pull-right sf_admin_td_actions"><div class="btn-group dropdown-modern"><a class="btn btn-mini dropdown-toggle" data-toggle="dropdown" href="#"><span class="icon-tc-ellipsis-v"></span></a><ul class="dropdown-menu pull-right"><li><a href="#">Editar</a></li><li><a href="#">Crear Rubro</a></li><li class="divider"></li><li><a href="#">Eliminar</a></li></ul></div></div><div class="clearfix"></div></div><ul class="methodology methodology-rubro-list ui-sortable"></ul></li><li class="methodology-item phase has-rubros" id="fase55479"><div class="methodology-item-head"><span class="handle handle-dragdrop phase-handle"></span><a class="phase-name" href="#"><span class="fase-iteration">03</span>-EJECUCION</a><div class="pull-right sf_admin_td_actions"><div class="btn-group dropdown-modern"><a class="btn btn-mini dropdown-toggle" data-toggle="dropdown" href="#"><span class="icon-tc-ellipsis-v"></span></a><ul class="dropdown-menu pull-right"><li><a href="#">Editar</a></li><li><a href="#">Crear Rubro</a></li><li class="divider"></li><li><a href="#">Eliminar</a></li></ul></div></div><div class="clearfix"></div></div><ul class="methodology methodology-rubro-list ui-sortable"></ul></li><li class="methodology-item phase has-rubros" id="fase55480"><div class="methodology-item-head"><span class="handle handle-dragdrop phase-handle"></span><a class="phase-name" href="#"><span class="fase-iteration">04</span>-FINALIZACION</a><div class="pull-right sf_admin_td_actions"><div class="btn-group dropdown-modern"><a class="btn btn-mini dropdown-toggle" data-toggle="dropdown" href="#"><span class="icon-tc-ellipsis-v"></span></a><ul class="dropdown-menu pull-right"><li><a href="#">Editar</a></li><li><a href="#">Crear Rubro</a></li><li class="divider"></li><li><a href="#">Eliminar</a></li></ul></div></div><div class="clearfix"></div></div><ul class="methodology methodology-rubro-list ui-sortable"></ul></li></ul>
+										
+										
+											<div class="bottombar">
+												<a
+													href="https://app.auditbrain.com/index.php/proyecto/2288/master_data#"
+													class="expandall">Expandir todo</a>|<a
+													href="https://app.auditbrain.com/index.php/proyecto/2288/master_data#"
+													class="collapseall">Contraer todo</a>
+											</div>
+										</div>
+
+
+
+									</div>
+								</div>
+
+								<script>
+  app.vars.idproyecto = 2288
+  app.vars.plan_auditoria = {
+    'proyecto' : {
+      id: '2288',
+      name: 'diseño2',
+      isOpen:  true,
+      status: 'ABIERTO',
+      id_parent: null,
+      version: '2'
+    },
+    'objetivos': [{"id":"1","id_master_data_objetivo":"1","name":"Existencia \/ Ocurrencia","code":"E\/O","description":"Existencia: Los activos, pasivos y el patrimonio neto existen.\r\nOcurrencia: Las transacciones y hechos registrados han ocurrido y corresponden a la entidad."},{"id":"3","id_master_data_objetivo":"3","name":"Presentaci\u00f3n \/ Revelaci\u00f3n","code":"P\/R","description":"Presentaci\u00f3n y Revelaci\u00f3n: La informaci\u00f3n financiera se presenta y describe\r\nadecuadamente, y la informaci\u00f3n a revelar se expresa con claridad."},{"id":"4","id_master_data_objetivo":"4","name":"Valuacion \/ Exactitud","code":"V\/E","description":"Valuaci\u00f3n:  Los activos, pasivos y patrimonio se incluyen en los estados financieros a los montos adecuados.\r\nExactitud:  los montos y otros datos relacionados con las transacciones y eventos registrados han sido registrados con exactitud."},{"id":"5","id_master_data_objetivo":"5","name":"Integridad","code":"In","description":"Integridad:  todas las transacciones y eventos que debieron ser registrados han sido registrados"},{"id":"6","id_master_data_objetivo":"6","name":"Corte","code":"Co","description":"Corte: Las transacciones y hechos se han registrado en el periodo correcto."},{"id":"7","id_master_data_objetivo":"7","name":"Derechos \/ Obligaciones","code":"D\/O","description":"Derechos y obligaciones:  La entidad posee o controla el derecho sobre los activos y los pasivos son las obligaciones de la entidad."}],
+    'visitas': [{"id":"8182","id_proyecto_visita":"8182","name":"Planeacion","sumaria_periodo_actual":null,"position":"1"},{"id":"8183","id_proyecto_visita":"8183","name":"Prefinal","sumaria_periodo_actual":null,"position":"2"},{"id":"8184","id_proyecto_visita":"8184","name":"Final","sumaria_periodo_actual":null,"position":"3"}],
+    'equipo': {"803":{"sigla":"MR","fullname":"Maria Paula Riveros","name":"Maria Paula Riveros (Gerente)","user_id":"803","id":"5614","rol":{"id":"75","type":"PM","name":"Gerente"}},"806":{"sigla":"AR","fullname":"Adrian Robledo Olave","name":"Adrian Robledo Olave (Gerente)","user_id":"806","id":"5969","rol":{"id":"75","type":"PM","name":"Gerente"}}},
+    'paso_estados': [{"id":"1","id_proyecto_paso_estado":"1","name":"Sin asignar","description":null,"is_active":true,"color":"#ed4138","calificacion":"0","position":"0","created_at":"2017-05-02 07:54:34","updated_at":"2019-06-06 16:46:44","created_by":"1","updated_by":"13"},{"id":"2","id_proyecto_paso_estado":"2","name":"Asignado","description":null,"is_active":true,"color":"#ffae39","calificacion":"0","position":"1","created_at":"2017-05-02 07:54:34","updated_at":"2017-12-13 22:13:31","created_by":"1","updated_by":"13"},{"id":"3","id_proyecto_paso_estado":"3","name":"En proceso","description":null,"is_active":true,"color":"#ffe543","calificacion":"40","position":"2","created_at":"2017-05-02 07:54:34","updated_at":"2017-12-13 22:14:34","created_by":"1","updated_by":"1"},{"id":"4","id_proyecto_paso_estado":"4","name":"Completado","description":null,"is_active":true,"color":"#00a750","calificacion":"85","position":"3","created_at":"2017-05-02 07:54:35","updated_at":"2017-12-13 22:14:53","created_by":"1","updated_by":"13"},{"id":"5","id_proyecto_paso_estado":"5","name":"Revisado","description":null,"is_active":true,"color":"#56aaff","calificacion":"100","position":"4","created_at":"2017-05-02 07:54:35","updated_at":"2019-02-27 23:25:44","created_by":"1","updated_by":"13"},{"id":"6","id_proyecto_paso_estado":"6","name":"Notas Revisi\u00f3n","description":null,"is_active":true,"color":"#a87e51","calificacion":"85","position":"5","created_at":"2017-05-02 07:54:35","updated_at":"2017-12-13 22:19:27","created_by":"1","updated_by":"13"}],
+    'paso_hallazgos': {"205375":"1","205376":"10"},
+    'paso_riesgos': {},
+    'settings' : {
+      'filters': [],
+      'ejecucion_fase_id': '55479',
+      'default_open': {
+                'element': null, 'value':  null
+              }
+    }
+  };
+
+  function public_path(url, relative) {
+     var public_path = relative ? '/' :  window.location.origin + '/' ;
+    return public_path  + url
+  }
+
+  $(function(){
+    accounting.settings.currency.decimal = ','
+    accounting.settings.currency.thousand = '.'
+    accounting.settings.currency.format = '%s %v'
+    accounting.settings.currency.precision = 0
+
+    bootbox.setBtnClasses({ 'OK': 'btn-primary', 'CONFIRM': 'btn-primary', 'CANCEL': 'btn-danger' })
+  })
+</script>
+
+								<script>
+  app.vars.user = {"id":"806","name":"Adrian Robledo Olave","sigla":"AR","email":"desarrollo1@auditbrain.com","is_admin":false,"role":{"name":"Gerente","type":"PM"}};
+
+  function user_has_role(roles) {
+    if(!$.isArray(roles)){
+      return user_has_role([roles])
+    }
+
+    return _.includes(roles, app.vars.user.role.type)
+  }
+
+
+  function user_has_role_permission(permissions) {
+    if(permissions === true || permissions === null || typeof permissions === 'undefined') {
+      return true
+    }
+
+    
+    if(!$.isArray(permissions)){
+      return user_has_role_permission([permissions])
+    }
+
+    var roles_permissions = {"edit":["PM"],"close":["PM"],"cancel":["PM"],"diagnostico":["PM","SR"],"equipo_asignar":["PM","SR"],"equipo_add":["PM","SR"],"equipo_edit":["PM","SR"],"equipo_delete":["PM","SR"],"fase_create":["PM","SR"],"fase_edit":["PM","SR"],"fase_delete":["PM","SR"],"subfase_create":["PM","SR","JR"],"subfase_edit":["PM","SR","JR"],"subfase_delete":["PM","SR"],"paso_edit":["PM","SR","JR"],"paso_delete":["PM","SR"],"paso_objetivo_edit":["PM","SR","JR"],"visita_create":["PM","SR"],"visita_edit":["PM","SR"],"visita_delete":["PM","SR"],"visita_unlink":["PM","SR"],"paso_asignar_usuario":["PM","SR"],"paso_asociar_visita":["PM","SR","JR"],"paso_completado":["PM","SR","JR"],"paso_revisado":["PM","SR"],"instruccion_create":["PM","SR"],"instruccion_edit":["PM","SR"],"instruccion_delete":["PM","SR"],"hoja_trabajo_edit":["PM","SR","JR"],"hoja_trabajo_export":["PM","SR","JR","RO"],"adjunto_revisado":["PM","SR"],"ajustes_edit":["PM","SR","JR"],"ajustes_revisado":["PM","SR"],"ajustes_reporte":["PM","SR","JR"],"revision":["PM","SR","JR","RO"],"revision_revisado":["PM","SR"],"revision_edit":["PM","SR","JR"],"revision_delete":["PM","SR"],"hallazgo_create":["PM","SR","JR"],"hallazgo_edit":["PM","SR","JR"],"hallazgo_delete":["PM","SR"],"hallazgo_completado":["PM","SR","JR"],"hallazgo_revisado":["PM","SR"],"hallazgo_reporte":["PM","SR","JR"],"reporte_financiero":["PM","SR"],"cifras_edit":["PM","SR","JR"],"cifras_revision":["PM","SR","JR","RO"],"cifras_revision_revisado":["PM","SR"],"cifras_settings":["PM","SR"],"materialidad_edit":["PM","SR","JR"],"riesgos_edit":["PM","SR","JR"],"riesgos_delete":["PM","SR","JR"],"riesgos_revision":["PM","SR","JR","RO"],"riesgos_revision_edit":["PM","SR","JR"],"riesgo_revision_revisado":["PM","SR"],"riesgos_settings":["PM","SR"],"riesgos_hallazgo_edit":["PM","SR","JR"],"riesgo_proceso_create":["PM","SR","JR"],"riesgo_proceso_edit":["PM","SR","JR"],"riesgo_proceso_delete":["PM","SR","JR"]};
+
+    var roles = []
+    _.forEach(permissions, function(permission){
+      if(typeof roles_permissions[permission] == 'undefined') {
+        return false;
+      }
+
+      roles = _.union(roles, roles_permissions[permission])
+    })
+
+    if(roles.length == 0){
+      return true
+    }
+
+    return user_has_role(roles);
+  }
+</script>
+
+
+								<a class='win-command sf_admin_list_action'
+									href='/index.php/proyecto/2288'><span
+									class='icon-moon-reply-2'></span> <span
+									class='win-label-horizontal'>Volver</span></a>
+
+
+
+							</div>
+
+						</div>
+					</div>
+
+
+
+
+
+				</div>
+
+
+				<script type="text/javascript">
+  var _3Creatives =  {"current_user":{"id":"806","email":"desarrollo1@auditbrain.com"},"app":{"module":"Proyecto:MasterData","action":"index"},"ROOT_URL":"\/index.php\/","UPDATE_USER_PREFERENCE_URL":"https:\/\/app.auditbrain.com\/index.php\/guard\/sfGuardUserPreferences\/updatePreference","CSRF_TOKEN":"8a6ae3bae001cd899903c423d91e96f7"};
+  var App = App || {}
+</script>
+				<script type="text/javascript">
+      
+</script>
+				<style type="text/css">
+#ie-message.active {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	z-index: 9999999999;
+	background: url(https://app.auditbrain.com/images/obsolete_bg.png)
+}
+
+#ie-message.active .mjs {
+	border: 2px solid #FCECDD;
+	background: #FCFAEC;
+	margin: 100px auto;
+	padding: 15px;
+	color: #757575;
+	width: 600px;
+	text-align: center;
+	font-family: helvetica;
+	font-size: 16px
+}
+</style>
+
+				<div id="ie-message" style="display: none">
+					<div class="mjs">
+						<a href="#" class="close-ie-message" style="float: right">Cerrar</a><br>
+						<img src="/images/obsolete_navegadores.png" /><br> Para una
+						mejor experiencia en este sitio web, <br>por favor utilice
+						Google Chrome o Firefox como navegador.
+					</div>
+				</div>
+
+				<script>
+  var isValidBrowser = (typeof window.chrome === "object" && navigator.appVersion.indexOf('Edge') === -1) || (navigator.userAgent.toString().toLowerCase().indexOf("firefox") != -1);
+
+  if (!isValidBrowser) {
+    $('html,body').css({'position':'relative','margin':0, 'overflow':'hidden'});
+    $('#ie-message').addClass('active').show();
+    console.log('TEXT')
+  }
+
+
+  $('.close-ie-message').on('click', function(ev) {
+    ev.preventDefault()
+    $('#ie-message').remove()
+  });
+</script>
+			</div>
+		</div>
+
+
+		<footer>
+
+			<div
+				style="text-align: right; color: #999; padding-right: 210px; float: right;">
+				0B (0%) ocupados de 5GB.</div>
+
+
+			<script async data-cfasync="false"
+				src="https://d29l98y0pmei9d.cloudfront.net/js/widget.min.js?k=Y2xpZW50SWQ9Mjc2MCZob3N0TmFtZT1jaWIuc3VwcG9ydGhlcm8uaW8="></script>
+
+			<script async>
+ (function(){
+
+  class FreshChat {
+    restoreId = null;
+
+    constructor() {
+        var restoreId = localStorage.getItem("freshchat__restoreid")
+        if(restoreId){
+          var restoreIdParts = restoreId.split(":");
+          if(new Date().toDateString() == new Date(restoreIdParts[0]).toDateString()){
+            this.restoreId = restoreIdParts[1];
+          }else{
+            localStorage.removeItem("freshchat__restoreid")
+          }
+        }
+    }
+
+    chat(){
+        window.fcWidget.init({
+            token: "0d472d89-9d33-4f38-8850-2c2ec6c60b33",
+            host: "https://wchat.freshchat.com",
+            externalId: "desarrollo1@auditbrain.com",
+            locale: "es",
+            restoreId: this.restoreId  ? this.restoreId : null, //Have the widget open on load by default by setting the below value to true
+            open: localStorage.getItem("freshchat__open") ? true : false,
+            config:{
+                //Disable Events Tracking
+                disableEvents: false,
+                cssNames: {
+                    widget: 'fc_frame', open: 'fc_open', expanded: 'fc_expanded'
+                },
+                showFAQOnOpen: false,
+                hideFAQ: true,
+                agent: {
+                    hideName: true,
+                    hidePic: true,
+                    hideBio: true
+                },
+                headerProperty: {
+                    appName: "AuditBrain",
+                    appLogo: "https://app.auditbrain.com/images/logo1.png",
+                    backgroundColor: '#0a858d',
+                    foregroundColor: '#ffffff',
+                    hideChatButton: false, //Set Widget to be left to right.
+                    //direction: 'ltr'
+                },
+                content: {
+                  placeholders: {
+                    search_field: 'Buscar',
+                    reply_field: 'Escriba aquí',
+                    csat_reply: 'Escriba sus comentarios aquí'
+                  },
+                  headers: {
+                    chat: 'Chat de Soporte',
+                    chat_help: 'Reach out to us if you have any questions'
+                  }
+                }
+            }
+        })
+
+        window.fcWidget.user.get(function(resp) {
+            let status =  resp.status;
+            if (status !==200) {
+                window.fcWidget.user.setProperties( {
+                    firstName: "Adrian",
+                    lastName: "Robledo Olave",
+                    email: "desarrollo1@auditbrain.com",
+                    plan: "usuariodemostracion2"
+                });
+
+                window.fcWidget.on('user:created', function(resp) {
+                    let status=resp.status;
+                    let data=resp.data;
+                    if (status===200) {
+                        if (data.restoreId) {
+                            localStorage.setItem("freshchat__restoreid", new Date().getTime()+":"+data.restoreId)
+                        }
+                    }
+                });
+            }
+        });
+
+        window.fcWidget.on("widget:opened", function(resp) {
+          localStorage.setItem("freshchat__open", 1)
+        });
+
+        window.fcWidget.on("widget:closed", function(resp) {
+          localStorage.removeItem("freshchat__open")
+        });
+
+        window.fcWidget.track("app_page__visit", {
+          "module": "Proyecto:MasterData",
+          "action": "index",
+          "url": location.href
+        })
+    }
+  }
+
+  var initpreshchat = new FreshChat();
+  initpreshchat.chat();
+
+ })()
+
+</script>
+
+			<div class="container-fluid">
+				<div class="row-fluid">
+					<div class="content-footer">
+						<p class="">&copy; Todos los derechos reservados - 2019</p>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+
+		<script type="text/javascript" src="/js/sugar.min.js?v=20191107054510"
+			data-file="app-sugar"></script>
+		<script type="text/javascript"
+			src="/js/lodash.min.js?v=20191107054510" data-file="app-lodash"></script>
+		<script type="text/javascript"
+			src="/js/3c/commons.min.js?v=20191107054510" data-file="3c-commons"></script>
+		<script type="text/javascript"
+			src="/js/3c/default.min.js?v=20191107054510" data-file="3c-default"></script>
+		<!--[if (gte IE 6)&(lte IE 8)]><script type="text/javascript" src="/js/selectivizr.min.js?v=20191107054510" data-file="app-selectivizr"></script><![endif]-->
+		<!--[if IE]><script type="text/javascript" src="/js/respond.min.js?v=20191107054510" data-file="app-respond"></script><![endif]-->
+		<script type="text/javascript"
+			src="/js/plugins/jquery.pnotify.min.js?v=20191107054510"
+			data-file="plugins-jquery.pnotify"></script>
+		<script type="text/javascript"
+			src="/js/plugins/jquery.uitotop.min.js?v=20191107054510"
+			data-file="plugins-jquery.uitotop"></script>
+		<script type="text/javascript"
+			src="/js/plugins/jquery.select2.min.js?v=20191107054510"
+			data-file="plugins-jquery.select2"></script>
+		<script type="text/javascript"
+			src="/js/plugins/jquery.validate.min.js?v=20191107054510"
+			data-file="plugins-jquery.validate"></script>
+		<script type="text/javascript"
+			src="/js/plugins/jquery.qtip.min.js?v=20191107054510"
+			data-file="plugins-jquery.qtip"></script>
+		<script type="text/javascript"
+			src="/js/bootstrap/bootstrap.min.js?v=20191107054510"
+			data-file="bootstrap-bootstrap"></script>
+		<script type="text/javascript"
+			src="/js/i18n/base-es.min.js?v=20191107054510"
+			data-file="i18n-base-es"></script>
+		<script type="text/javascript"
+			src="/js/plugins/jquery.ui.widget.min.js?v=20191107054510"
+			data-file="plugins-jquery.ui.widget"></script>
+		<script type="text/javascript"
+			src="/js/plugins/jquery.contextMenu.js?v=20191107054510"
+			data-file="plugins-jquery.contextMenu"></script>
+		<script type="text/javascript"
+			src="/js/plugins/jquery.ui.core.min.js?v=20191107054510"
+			data-file="plugins-jquery.ui.core"></script>
+		<script type="text/javascript"
+			src="/js/plugins/jquery.ui.mouse.min.js?v=20191107054510"
+			data-file="plugins-jquery.ui.mouse"></script>
+		<script type="text/javascript"
+			src="/js/plugins/jquery.ui.sortable.min.js?v=20191107054510"
+			data-file="plugins-jquery.ui.sortable"></script>
+		<script type="text/javascript"
+			src="/js/plugins/accounting.min.js?v=20191107054510"
+			data-file="plugins-accounting"></script>
+		<script type="text/javascript" src="/js/react.min.js?v=20191107054510"
+			data-file="app-react"></script>
+		<script type="text/javascript"
+			src="/js/react-dom.min.js?v=20191107054510" data-file="app-react-dom"></script>
+		<script type="text/javascript"
+			src="/js/plugins/epilgrim.sessionTimeoutHandler.min.js?v=20191107054510"
+			data-file="plugins-epilgrim.sessionTimeoutHandler"></script>
+		<script type="text/javascript"
+			src="/js/3c/main.min.js?v=20191107054510" data-file="3c-main"></script>
+		<script type="text/javascript" src="/js/apps/main.js?v=20191107054510"
+			data-file="apps-main"></script>
+		<script type="text/javascript"
+			src="/js/apps/cliente.min.js?v=20191107054510"
+			data-file="apps-cliente"></script>
+		<script type="text/javascript"
+			src="/js/../webapps/dist/vendors~proyecto__plan_auditoria.js?v=20191107054510"
+			data-file="../webapps/dist-vendors~proyecto__plan_auditoria"></script>
+		<script type="text/javascript"
+			src="/js/../webapps/dist/proyecto__plan_auditoria.js?v=20191107054510"
+			data-file="../webapps/dist-proyecto__plan_auditoria"></script>
+		<script type="text/javascript">
+//<![CDATA[
+  if(typeof jQuery.fn.block != 'undefined'){
+    if(navigator.userAgent.toLowerCase().indexOf('msie') != -1){
+      $(function(){jQuery.unblockUI();});
+    }else{
+      jQuery(window).on('load', function(){ jQuery.unblockUI()});
+    }
+  }
+
+  jQuery(function(){
+    $('body').sessionTimeoutHandler({
+        title :                  'Caducidad de la sesión',
+        message :                'Su sesión está a punto de expirar.',
+        keepAliveUrl :           '/index.php/guard/ping',
+        retrieveTimeLeftUrl :    '/index.php/guard/sessionLeft',
+        redirUrl :               '/index.php/guard/login',
+        logoutUrl :              '/index.php/guard/logout',
+        defaultSessionTime:       36000000,
+        warnWhenLeft :            60000,
+        checkTimeBeforeRedirect:  true,
+        errorGettingSessionTimeLeft:  __tr('There was an error retrieving session information from the server. Session could be timed out'),
+        modalId:                 'sessionTimeout-dialog',
+    });
+  });
+//]]>
+</script>
+
+
+
+	</div>
+	
+	
+	
+	<div class="ui page modals dimmer transition visible active" style="display: flex !important;"><div class="ui scrolling modal transition visible active modal-ab modal-pasocopyfrom"><i aria-hidden="true" class="close icon"></i><div class="header">Copiar paso desde... Biblioteca de Pasos</div><div class="content"><p><strong>Rubro:</strong> Aceptación y Continuación del encargo (NIA 210)</p><div class="step-content step-content-2 step-content-2-masterdata"><h4 class="ui centered header">Seleccione los pasos que desea copiar a su Plan de Auditoría?</h4><div style=""><ul class="methodology checkbox-list methodology-all nav nav-stacked"><li class="methodology-item phase"><div class="methodology-item-head"><a href="#"><span class="item-name">COMPROMISO PREVIO</span></a></div><ul class="methodology collapse hide"><li class="methodology-item subphase"><div class="methodology-item-head"><a href="#"><span class="item-name">Aceptación y Continuación del encargo (NIA 210)</span></a></div><ul class="methodology collapse hide"><li class="methodology-item paso ui-state-disabled"><div class="methodology-item-head"><label for="tree-paso-84299"><input type="checkbox" id="tree-paso-84299" class="checkbox"><span class="item-name">Trabajo requerido (NIA 210)<span class="label label-important" style="margin-left: 5px;">Agregado</span></span></label></div></li><li class="methodology-item paso ui-state-disabled"><div class="methodology-item-head"><label for="tree-paso-84300"><input type="checkbox" id="tree-paso-84300" class="checkbox"><span class="item-name">Capacidad de la firma para prestar el servicio (NIA 210)<span class="label label-important" style="margin-left: 5px;">Agregado</span></span></label></div></li><li class="methodology-item paso ui-state-disabled"><div class="methodology-item-head"><label for="tree-paso-84301"><input type="checkbox" id="tree-paso-84301" class="checkbox"><span class="item-name">Independencia de la firma (NIA 200, 220)<span class="label label-important" style="margin-left: 5px;">Agregado</span></span></label></div></li><li class="methodology-item paso ui-state-disabled"><div class="methodology-item-head"><label for="tree-paso-84302"><input type="checkbox" id="tree-paso-84302" class="checkbox"><span class="item-name">Aceptacion de los riesgos (NIA 210)<span class="label label-important" style="margin-left: 5px;">Agregado</span></span></label></div></li><li class="methodology-item paso ui-state-disabled"><div class="methodology-item-head"><label for="tree-paso-84303"><input type="checkbox" id="tree-paso-84303" class="checkbox"><span class="item-name">Confianza en el cliente (NIA 210)<span class="label label-important" style="margin-left: 5px;">Agregado</span></span></label></div></li><li class="methodology-item paso ui-state-disabled"><div class="methodology-item-head"><label for="tree-paso-84304"><input type="checkbox" id="tree-paso-84304" class="checkbox"><span class="item-name">Condiciones previas de la auditoria (NIA 210)<span class="label label-important" style="margin-left: 5px;">Agregado</span></span></label></div></li><li class="methodology-item paso ui-state-disabled"><div class="methodology-item-head"><label for="tree-paso-84305"><input type="checkbox" id="tree-paso-84305" class="checkbox"><span class="item-name">Continuación del cliente (NIA 210)<span class="label label-important" style="margin-left: 5px;">Agregado</span></span></label></div></li><li class="methodology-item paso ui-state-disabled"><div class="methodology-item-head"><label for="tree-paso-84306"><input type="checkbox" id="tree-paso-84306" class="checkbox"><span class="item-name">Condiciones del compromiso (NIA 210)<span class="label label-important" style="margin-left: 5px;">Agregado</span></span></label></div></li><li class="methodology-item paso ui-state-disabled"><div class="methodology-item-head"><label for="tree-paso-84307"><input type="checkbox" id="tree-paso-84307" class="checkbox"><span class="item-name">Contratos y cartas del encargo (NIA 210)<span class="label label-important" style="margin-left: 5px;">Agregado</span></span></label></div></li><li class="methodology-item paso ui-state-disabled"><div class="methodology-item-head"><label for="tree-paso-84308"><input type="checkbox" id="tree-paso-84308" class="checkbox"><span class="item-name">Aceptación del cliente (NIA 220)<span class="label label-important" style="margin-left: 5px;">Agregado</span></span></label></div></li></ul></li></ul></li><li class="methodology-item phase"><div class="methodology-item-head"><a href="#"><span class="item-name">PLANEACION</span></a></div><ul class="methodology collapse in"><li class="methodology-item subphase"><div class="methodology-item-head"><a href="#"><span class="item-name">Estrategia de Auditoria y Planeación</span></a></div><ul class="methodology collapse hide"><li class="methodology-item paso ui-state-disabled"><div class="methodology-item-head"><label for="tree-paso-84309"><input type="checkbox" id="tree-paso-84309" class="checkbox"><span class="item-name">Conocimiento del negocio (NIA 300, 315)<span class="label label-important" style="margin-left: 5px;">Agregado</span></span></label></div></li><li class="methodology-item paso ui-state-disabled"><div class="methodology-item-head"><label for="tree-paso-84310"><input type="checkbox" id="tree-paso-84310" class="checkbox"><span class="item-name">Leyes y regulaciones (NIA 250)<span class="label label-important" style="margin-left: 5px;">Agregado</span></span></label></div></li><li class="methodology-item paso ui-state-disabled"><div class="methodology-item-head"><label for="tree-paso-84311"><input type="checkbox" id="tree-paso-84311" class="checkbox"><span class="item-name">Componentes del Control interno  (NIA 315)<span class="label label-important" style="margin-left: 5px;">Agregado</span></span></label></div></li><li class="methodology-item paso ui-state-disabled"><div class="methodology-item-head"><label for="tree-paso-84312"><input type="checkbox" id="tree-paso-84312" class="checkbox"><span class="item-name">Fraude en informacion financiera (NIA 240)<span class="label label-important" style="margin-left: 5px;">Agregado</span></span></label></div></li><li class="methodology-item paso ui-state-disabled"><div class="methodology-item-head"><label for="tree-paso-84313"><input type="checkbox" id="tree-paso-84313" class="checkbox"><span class="item-name">Complejidad del ambiente de Tecnología de la Información (NIA 315)<span class="label label-important" style="margin-left: 5px;">Agregado</span></span></label></div></li><li class="methodology-item paso ui-state-disabled"><div class="methodology-item-head"><label for="tree-paso-84314"><input type="checkbox" id="tree-paso-84314" class="checkbox"><span class="item-name">Revisiones analíticas iniciales (NIA 315, 520)<span class="label label-important" style="margin-left: 5px;">Agregado</span></span></label></div></li><li class="methodology-item paso ui-state-disabled"><div class="methodology-item-head"><label for="tree-paso-84315"><input type="checkbox" id="tree-paso-84315" class="checkbox"><span class="item-name">Reuniones con miembros claves del cliente<span class="label label-important" style="margin-left: 5px;">Agregado</span></span></label></div></li><li class="methodology-item paso ui-state-disabled"><div class="methodology-item-head"><label for="tree-paso-84316"><input type="checkbox" id="tree-paso-84316" class="checkbox"><span class="item-name">Actas y contratos (NIA 501)<span class="label label-important" style="margin-left: 5px;">Agregado</span></span></label></div></li><li class="methodology-item paso ui-state-disabled"><div class="methodology-item-head"><label for="tree-paso-84317"><input type="checkbox" id="tree-paso-84317" class="checkbox"><span class="item-name">Importancia relativa, Materialidad  (NIA 320)<span class="label label-important" style="margin-left: 5px;">Agregado</span></span></label></div></li><li class="methodology-item paso ui-state-disabled"><div class="methodology-item-head"><label for="tree-paso-84318"><input type="checkbox" id="tree-paso-84318" class="checkbox"><span class="item-name">Uso del trabajo de Auditores Internos (NIA 610)<span class="label label-important" style="margin-left: 5px;">Agregado</span></span></label></div></li><li class="methodology-item paso ui-state-disabled"><div class="methodology-item-head"><label for="tree-paso-84319"><input type="checkbox" id="tree-paso-84319" class="checkbox"><span class="item-name">Uso del trabajo de un experto (NIA 620)<span class="label label-important" style="margin-left: 5px;">Agregado</span></span></label></div></li><li class="methodology-item paso ui-state-disabled"><div class="methodology-item-head"><label for="tree-paso-84320"><input type="checkbox" id="tree-paso-84320" class="checkbox"><span class="item-name">Uso de las Organizaciones de Servicios (NIA 402)<span class="label label-important" style="margin-left: 5px;">Agregado</span></span></label></div></li><li class="methodology-item paso ui-state-disabled"><div class="methodology-item-head"><label for="tree-paso-84321"><input type="checkbox" id="tree-paso-84321" class="checkbox"><span class="item-name">Memorando de estrategia de auditoria (NIA 300)<span class="label label-important" style="margin-left: 5px;">Agregado</span></span></label></div></li></ul></li></ul></li><li class="methodology-item phase"><div class="methodology-item-head"><a href="#"><span class="item-name">EJECUCION</span></a></div><ul class="methodology collapse hide"><li class="methodology-item subphase"><div class="methodology-item-head"><a href="#"><span class="item-name">Efectivo y Equivalentes</span></a></div><ul class="methodology collapse hide"><li class="methodology-item paso ui-state-disabled"><div class="methodology-item-head"><label for="tree-paso-84322"><input type="checkbox" id="tree-paso-84322" class="checkbox"><span class="item-name">Procedimientos primordiales de efectivo<span class="label label-important" style="margin-left: 5px;">Agregado</span></span></label></div></li><li class="methodology-item paso ui-state-disabled"><div class="methodology-item-head"><label for="tree-paso-84323"><input type="checkbox" id="tree-paso-84323" class="checkbox"><span class="item-name">Conciliaciones bancarias<span class="label label-important" style="margin-left: 5px;">Agregado</span></span></label></div></li><li class="methodology-item paso ui-state-disabled"><div class="methodology-item-head"><label for="tree-paso-84324"><input type="checkbox" id="tree-paso-84324" class="checkbox"><span class="item-name">Confirmación de bancos (NIA 505)<span class="label label-important" style="margin-left: 5px;">Agregado</span></span></label></div></li><li class="methodology-item paso ui-state-disabled"><div class="methodology-item-head"><label for="tree-paso-84325"><input type="checkbox" id="tree-paso-84325" class="checkbox"><span class="item-name">Seguimiento confirmación de bancos<span class="label label-important" style="margin-left: 5px;">Agregado</span></span></label></div></li><li class="methodology-item paso ui-state-disabled"><div class="methodology-item-head"><label for="tree-paso-84326"><input type="checkbox" id="tree-paso-84326" class="checkbox"><span class="item-name">Arqueo de caja<span class="label label-important" style="margin-left: 5px;">Agregado</span></span></label></div></li><li class="methodology-item paso ui-state-disabled"><div class="methodology-item-head"><label for="tree-paso-84327"><input type="checkbox" id="tree-paso-84327" class="checkbox"><span class="item-name">Corte de efectivo<span class="label label-important" style="margin-left: 5px;">Agregado</span></span></label></div></li></ul></li><li class="methodology-item subphase"><div class="methodology-item-head"><a href="#"><span class="item-name">Inversiones</span></a></div><ul class="methodology collapse hide"><li class="methodology-item paso ui-state-disabled"><div class="methodology-item-head"><label for="tree-paso-84328"><input type="checkbox" id="tree-paso-84328" class="checkbox"><span class="item-name">Procedimientos primordiales de inversiones<span class="label label-important" style="margin-left: 5px;">Agregado</span></span></label></div></li><li class="methodology-item paso ui-state-disabled"><div class="methodology-item-head"><label for="tree-paso-84329"><input type="checkbox" id="tree-paso-84329" class="checkbox"><span class="item-name">Arqueo de inversiones<span class="label label-important" style="margin-left: 5px;">Agregado</span></span></label></div></li><li class="methodology-item paso ui-state-disabled"><div class="methodology-item-head"><label for="tree-paso-84330"><input type="checkbox" id="tree-paso-84330" class="checkbox"><span class="item-name">Adiciones y retiros de inversiones<span class="label label-important" style="margin-left: 5px;">Agregado</span></span></label></div></li><li class="methodology-item paso ui-state-disabled"><div class="methodology-item-head"><label for="tree-paso-84331"><input type="checkbox" id="tree-paso-84331" class="checkbox"><span class="item-name">Valoración de inversiones<span class="label label-important" style="margin-left: 5px;">Agregado</span></span></label></div></li><li class="methodology-item paso ui-state-disabled"><div class="methodology-item-head"><label for="tree-paso-84332"><input type="checkbox" id="tree-paso-84332" class="checkbox"><span class="item-name">Confirmación de inversiones<span class="label label-important" style="margin-left: 5px;">Agregado</span></span></label></div></li><li class="methodology-item paso ui-state-disabled"><div class="methodology-item-head"><label for="tree-paso-84333"><input type="checkbox" id="tree-paso-84333" class="checkbox"><span class="item-name">Seguimiento confirmación de inversiones<span class="label label-important" style="margin-left: 5px;">Agregado</span></span></label></div></li></ul></li><li class="methodology-item subphase"><div class="methodology-item-head"><a href="#"><span class="item-name">Deudores Comerciales y otras Cuentas por Cobrar</span></a></div><ul class="methodology collapse hide"><li class="methodology-item paso ui-state-disabled"><div class="methodology-item-head"><label for="tree-paso-84334"><input type="checkbox" id="tree-paso-84334" class="checkbox"><span class="item-name">Procedimientos primordiales de deudores<span class="label label-important" style="margin-left: 5px;">Agregado</span></span></label></div></li><li class="methodology-item paso ui-state-disabled"><div class="methodology-item-head"><label for="tree-paso-84335"><input type="checkbox" id="tree-paso-84335" class="checkbox"><span class="item-name">Deterioro de cartera<span class="label label-important" style="margin-left: 5px;">Agregado</span></span></label></div></li><li class="methodology-item paso ui-state-disabled"><div class="methodology-item-head"><label for="tree-paso-84336"><input type="checkbox" id="tree-paso-84336" class="checkbox"><span class="item-name">Confirmación de deudores (NIA 505)<span class="label label-important" style="margin-left: 5px;">Agregado</span></span></label></div></li><li class="methodology-item paso ui-state-disabled"><div class="methodology-item-head"><label for="tree-paso-84337"><input type="checkbox" id="tree-paso-84337" class="checkbox"><span class="item-name">Seguimiento confirmación de deudores (NIA 505)<span class="label label-important" style="margin-left: 5px;">Agregado</span></span></label></div></li><li class="methodology-item paso ui-state-disabled"><div class="methodology-item-head"><label for="tree-paso-84338"><input type="checkbox" id="tree-paso-84338" class="checkbox"><span class="item-name">Corte de documentos deudores<span class="label label-important" style="margin-left: 5px;">Agregado</span></span></label></div></li></ul></li><li class="methodology-item subphase"><div class="methodology-item-head"><a href="#"><span class="item-name">Inventarios</span></a></div><ul class="methodology collapse hide"><li class="methodology-item paso ui-state-disabled"><div class="methodology-item-head"><label for="tree-paso-84339"><input type="checkbox" id="tree-paso-84339" class="checkbox"><span class="item-name">Procedimientos primordiales de inventarios<span class="label label-important" style="margin-left: 5px;">Agregado</span></span></label></div></li><li class="methodology-item paso ui-state-disabled"><div class="methodology-item-head"><label for="tree-paso-84340"><input type="checkbox" id="tree-paso-84340" class="checkbox"><span class="item-name">Valuacion de inventarios<span class="label label-important" style="margin-left: 5px;">Agregado</span></span></label></div></li><li class="methodology-item paso ui-state-disabled"><div class="methodology-item-head"><label for="tree-paso-84341"><input type="checkbox" id="tree-paso-84341" class="checkbox"><span class="item-name">Provision de inventarios obsoletos, dañados o baja rotación<span class="label label-important" style="margin-left: 5px;">Agregado</span></span></label></div></li><li class="methodology-item paso ui-state-disabled"><div class="methodology-item-head"><label for="tree-paso-84342"><input type="checkbox" id="tree-paso-84342" class="checkbox"><span class="item-name">Toma fisica de inventarios (NIA 501)<span class="label label-important" style="margin-left: 5px;">Agregado</span></span></label></div></li><li class="methodology-item paso ui-state-disabled"><div class="methodology-item-head"><label for="tree-paso-84343"><input type="checkbox" id="tree-paso-84343" class="checkbox"><span class="item-name">Confirmación de inventarios en poder de terceros (NIA 505)<span class="label label-important" style="margin-left: 5px;">Agregado</span></span></label></div></li><li class="methodology-item paso ui-state-disabled"><div class="methodology-item-head"><label for="tree-paso-84344"><input type="checkbox" id="tree-paso-84344" class="checkbox"><span class="item-name">Seguimiento a confirmación de inventarios<span class="label label-important" style="margin-left: 5px;">Agregado</span></span></label></div></li><li class="methodology-item paso ui-state-disabled"><div class="methodology-item-head"><label for="tree-paso-84345"><input type="checkbox" id="tree-paso-84345" class="checkbox"><span class="item-name">Corte de documentos<span class="label label-important" style="margin-left: 5px;">Agregado</span></span></label></div></li></ul></li><li class="methodology-item subphase"><div class="methodology-item-head"><a href="#"><span class="item-name">Propiedad Planta y Equipos</span></a></div><ul class="methodology collapse hide"><li class="methodology-item paso ui-state-disabled"><div class="methodology-item-head"><label for="tree-paso-84346"><input type="checkbox" id="tree-paso-84346" class="checkbox"><span class="item-name">Procedimientos primordiales de PPE<span class="label label-important" style="margin-left: 5px;">Agregado</span></span></label></div></li><li class="methodology-item paso ui-state-disabled"><div class="methodology-item-head"><label for="tree-paso-84347"><input type="checkbox" id="tree-paso-84347" class="checkbox"><span class="item-name">Revisión de adiciones y retiros<span class="label label-important" style="margin-left: 5px;">Agregado</span></span></label></div></li><li class="methodology-item paso ui-state-disabled"><div class="methodology-item-head"><label for="tree-paso-84348"><input type="checkbox" id="tree-paso-84348" class="checkbox"><span class="item-name">Calculo global de depreciación<span class="label label-important" style="margin-left: 5px;">Agregado</span></span></label></div></li><li class="methodology-item paso ui-state-disabled"><div class="methodology-item-head"><label for="tree-paso-84349"><input type="checkbox" id="tree-paso-84349" class="checkbox"><span class="item-name">Deterioro propiedad planta y equipos<span class="label label-important" style="margin-left: 5px;">Agregado</span></span></label></div></li><li class="methodology-item paso ui-state-disabled"><div class="methodology-item-head"><label for="tree-paso-84350"><input type="checkbox" id="tree-paso-84350" class="checkbox"><span class="item-name">&nbsp;Confirmación compañías de seguros<span class="label label-important" style="margin-left: 5px;">Agregado</span></span></label></div></li><li class="methodology-item paso ui-state-disabled"><div class="methodology-item-head"><label for="tree-paso-84351"><input type="checkbox" id="tree-paso-84351" class="checkbox"><span class="item-name">Seguimiento confirmación de seguros<span class="label label-important" style="margin-left: 5px;">Agregado</span></span></label></div></li></ul></li><li class="methodology-item subphase"><div class="methodology-item-head"><a href="#"><span class="item-name">Cargos Diferidos y Activos Intangibles</span></a></div><ul class="methodology collapse hide"><li class="methodology-item paso ui-state-disabled"><div class="methodology-item-head"><label for="tree-paso-84352"><input type="checkbox" id="tree-paso-84352" class="checkbox"><span class="item-name">Procedimientos primordiales de intangibles<span class="label label-important" style="margin-left: 5px;">Agregado</span></span></label></div></li><li class="methodology-item paso ui-state-disabled"><div class="methodology-item-head"><label for="tree-paso-84353"><input type="checkbox" id="tree-paso-84353" class="checkbox"><span class="item-name">Adiciones y retiros<span class="label label-important" style="margin-left: 5px;">Agregado</span></span></label></div></li><li class="methodology-item paso ui-state-disabled"><div class="methodology-item-head"><label for="tree-paso-84354"><input type="checkbox" id="tree-paso-84354" class="checkbox"><span class="item-name">Calculo global de amortización<span class="label label-important" style="margin-left: 5px;">Agregado</span></span></label></div></li><li class="methodology-item paso ui-state-disabled"><div class="methodology-item-head"><label for="tree-paso-84355"><input type="checkbox" id="tree-paso-84355" class="checkbox"><span class="item-name">Deterioro de activos intangibles<span class="label label-important" style="margin-left: 5px;">Agregado</span></span></label></div></li></ul></li><li class="methodology-item subphase"><div class="methodology-item-head"><a href="#"><span class="item-name">Prestamos Bancarios</span></a></div><ul class="methodology collapse hide"><li class="methodology-item paso ui-state-disabled"><div class="methodology-item-head"><label for="tree-paso-84356"><input type="checkbox" id="tree-paso-84356" class="checkbox"><span class="item-name">Procedimientos primordiales de prestamos bancarios<span class="label label-important" style="margin-left: 5px;">Agregado</span></span></label></div></li><li class="methodology-item paso ui-state-disabled"><div class="methodology-item-head"><label for="tree-paso-84357"><input type="checkbox" id="tree-paso-84357" class="checkbox"><span class="item-name">Cálculo global de la razonabilidad del gasto por intereses.<span class="label label-important" style="margin-left: 5px;">Agregado</span></span></label></div></li><li class="methodology-item paso ui-state-disabled"><div class="methodology-item-head"><label for="tree-paso-84358"><input type="checkbox" id="tree-paso-84358" class="checkbox"><span class="item-name">Inspección de contratos<span class="label label-important" style="margin-left: 5px;">Agregado</span></span></label></div></li><li class="methodology-item paso ui-state-disabled"><div class="methodology-item-head"><label for="tree-paso-84359"><input type="checkbox" id="tree-paso-84359" class="checkbox"><span class="item-name">Confirmación de prestamos bancarios<span class="label label-important" style="margin-left: 5px;">Agregado</span></span></label></div></li><li class="methodology-item paso ui-state-disabled"><div class="methodology-item-head"><label for="tree-paso-84360"><input type="checkbox" id="tree-paso-84360" class="checkbox"><span class="item-name">Seguimiento confirmación de prestamos bancarios<span class="label label-important" style="margin-left: 5px;">Agregado</span></span></label></div></li></ul></li><li class="methodology-item subphase"><div class="methodology-item-head"><a href="#"><span class="item-name">Cuentas por Pagar Comerciales y Otras Cuentas por Pagar</span></a></div><ul class="methodology collapse hide"><li class="methodology-item paso ui-state-disabled"><div class="methodology-item-head"><label for="tree-paso-84361"><input type="checkbox" id="tree-paso-84361" class="checkbox"><span class="item-name">Procedimientos primordiales de cuentas por pagar y otras cuentas por pagar<span class="label label-important" style="margin-left: 5px;">Agregado</span></span></label></div></li><li class="methodology-item paso ui-state-disabled"><div class="methodology-item-head"><label for="tree-paso-84362"><input type="checkbox" id="tree-paso-84362" class="checkbox"><span class="item-name">Prueba de desembolsos<span class="label label-important" style="margin-left: 5px;">Agregado</span></span></label></div></li><li class="methodology-item paso ui-state-disabled"><div class="methodology-item-head"><label for="tree-paso-84363"><input type="checkbox" id="tree-paso-84363" class="checkbox"><span class="item-name">Pasivos no registrados y pagos posteriores<span class="label label-important" style="margin-left: 5px;">Agregado</span></span></label></div></li><li class="methodology-item paso ui-state-disabled"><div class="methodology-item-head"><label for="tree-paso-84364"><input type="checkbox" id="tree-paso-84364" class="checkbox"><span class="item-name">Confirmarción de cuentas por pagar<span class="label label-important" style="margin-left: 5px;">Agregado</span></span></label></div></li><li class="methodology-item paso ui-state-disabled"><div class="methodology-item-head"><label for="tree-paso-84365"><input type="checkbox" id="tree-paso-84365" class="checkbox"><span class="item-name">Seguimiento a la confirmaciòn<span class="label label-important" style="margin-left: 5px;">Agregado</span></span></label></div></li><li class="methodology-item paso ui-state-disabled"><div class="methodology-item-head"><label for="tree-paso-84366"><input type="checkbox" id="tree-paso-84366" class="checkbox"><span class="item-name">Corte de cuentas por pagar<span class="label label-important" style="margin-left: 5px;">Agregado</span></span></label></div></li></ul></li><li class="methodology-item subphase"><div class="methodology-item-head"><a href="#"><span class="item-name">Obligaciones por Beneficios a Empleados</span></a></div><ul class="methodology collapse hide"><li class="methodology-item paso ui-state-disabled"><div class="methodology-item-head"><label for="tree-paso-84367"><input type="checkbox" id="tree-paso-84367" class="checkbox"><span class="item-name">Procedimientos primordiales beneficios a empleados<span class="label label-important" style="margin-left: 5px;">Agregado</span></span></label></div></li><li class="methodology-item paso ui-state-disabled"><div class="methodology-item-head"><label for="tree-paso-84368"><input type="checkbox" id="tree-paso-84368" class="checkbox"><span class="item-name">Prueba de nómina<span class="label label-important" style="margin-left: 5px;">Agregado</span></span></label></div></li></ul></li><li class="methodology-item subphase"><div class="methodology-item-head"><a href="#"><span class="item-name">Impuestos</span></a></div><ul class="methodology collapse hide"><li class="methodology-item paso ui-state-disabled"><div class="methodology-item-head"><label for="tree-paso-84369"><input type="checkbox" id="tree-paso-84369" class="checkbox"><span class="item-name">Impuestos sobre utilidades<span class="label label-important" style="margin-left: 5px;">Agregado</span></span></label></div></li><li class="methodology-item paso ui-state-disabled"><div class="methodology-item-head"><label for="tree-paso-84370"><input type="checkbox" id="tree-paso-84370" class="checkbox"><span class="item-name">Impuesto diferido<span class="label label-important" style="margin-left: 5px;">Agregado</span></span></label></div></li></ul></li><li class="methodology-item subphase"><div class="methodology-item-head"><a href="#"><span class="item-name">Provisiones y Contingencias</span></a></div><ul class="methodology collapse hide"><li class="methodology-item paso ui-state-disabled"><div class="methodology-item-head"><label for="tree-paso-84371"><input type="checkbox" id="tree-paso-84371" class="checkbox"><span class="item-name">Procedimientos primordiales Provisiones<span class="label label-important" style="margin-left: 5px;">Agregado</span></span></label></div></li><li class="methodology-item paso ui-state-disabled"><div class="methodology-item-head"><label for="tree-paso-84372"><input type="checkbox" id="tree-paso-84372" class="checkbox"><span class="item-name">Procedimientos primordiales Contingencias<span class="label label-important" style="margin-left: 5px;">Agregado</span></span></label></div></li><li class="methodology-item paso ui-state-disabled"><div class="methodology-item-head"><label for="tree-paso-84373"><input type="checkbox" id="tree-paso-84373" class="checkbox"><span class="item-name">Cartas a los abogados<span class="label label-important" style="margin-left: 5px;">Agregado</span></span></label></div></li><li class="methodology-item paso ui-state-disabled"><div class="methodology-item-head"><label for="tree-paso-84374"><input type="checkbox" id="tree-paso-84374" class="checkbox"><span class="item-name">Seguimiento a confirmación de abogados<span class="label label-important" style="margin-left: 5px;">Agregado</span></span></label></div></li></ul></li><li class="methodology-item subphase"><div class="methodology-item-head"><a href="#"><span class="item-name">Patrimonio</span></a></div><ul class="methodology collapse hide"><li class="methodology-item paso ui-state-disabled"><div class="methodology-item-head"><label for="tree-paso-84375"><input type="checkbox" id="tree-paso-84375" class="checkbox"><span class="item-name">Procedimientos primordiales Patrimonio<span class="label label-important" style="margin-left: 5px;">Agregado</span></span></label></div></li></ul></li><li class="methodology-item subphase"><div class="methodology-item-head"><a href="#"><span class="item-name">Ingresos</span></a></div><ul class="methodology collapse hide"><li class="methodology-item paso ui-state-disabled"><div class="methodology-item-head"><label for="tree-paso-84376"><input type="checkbox" id="tree-paso-84376" class="checkbox"><span class="item-name">Procedimientos primordiales Ingresos por Ventas<span class="label label-important" style="margin-left: 5px;">Agregado</span></span></label></div></li><li class="methodology-item paso ui-state-disabled"><div class="methodology-item-head"><label for="tree-paso-84377"><input type="checkbox" id="tree-paso-84377" class="checkbox"><span class="item-name">Prueba de facturación<span class="label label-important" style="margin-left: 5px;">Agregado</span></span></label></div></li><li class="methodology-item paso ui-state-disabled"><div class="methodology-item-head"><label for="tree-paso-84378"><input type="checkbox" id="tree-paso-84378" class="checkbox"><span class="item-name">Revisión analítica de ingresos<span class="label label-important" style="margin-left: 5px;">Agregado</span></span></label></div></li></ul></li><li class="methodology-item subphase"><div class="methodology-item-head"><a href="#"><span class="item-name">Gastos y Costos</span></a></div><ul class="methodology collapse hide"><li class="methodology-item paso ui-state-disabled"><div class="methodology-item-head"><label for="tree-paso-84379"><input type="checkbox" id="tree-paso-84379" class="checkbox"><span class="item-name">Procedimientos primordiales de Gastos<span class="label label-important" style="margin-left: 5px;">Agregado</span></span></label></div></li><li class="methodology-item paso ui-state-disabled"><div class="methodology-item-head"><label for="tree-paso-84380"><input type="checkbox" id="tree-paso-84380" class="checkbox"><span class="item-name">Procedimientos primordiales Costos<span class="label label-important" style="margin-left: 5px;">Agregado</span></span></label></div></li></ul></li><li class="methodology-item subphase"><div class="methodology-item-head"><a href="#"><span class="item-name">Vinculados Economicos (NIA 550)</span></a></div><ul class="methodology collapse hide"><li class="methodology-item paso ui-state-disabled"><div class="methodology-item-head"><label for="tree-paso-84381"><input type="checkbox" id="tree-paso-84381" class="checkbox"><span class="item-name">Vinculados economicos (NIA 550)<span class="label label-important" style="margin-left: 5px;">Agregado</span></span></label></div></li></ul></li></ul></li><li class="methodology-item phase"><div class="methodology-item-head"><a href="#"><span class="item-name">FINALIZACION</span></a></div><ul class="methodology collapse in"><li class="methodology-item subphase"><div class="methodology-item-head"><a href="#"><span class="item-name">Procedimientos de finalizacion</span></a></div><ul class="methodology collapse in"><li class="methodology-item paso selected"><div class="methodology-item-head"><label for="tree-paso-84382"><input type="checkbox" id="tree-paso-84382" class="checkbox"><span class="item-name">Empresa en marcha (NIA 570)<span class="label label-important" style="margin-left: 5px;">Agregado</span></span></label></div></li><li class="methodology-item paso ui-state-disabled"><div class="methodology-item-head"><label for="tree-paso-84383"><input type="checkbox" id="tree-paso-84383" class="checkbox"><span class="item-name">&nbsp;Hechos posteriores (NIA 560)<span class="label label-important" style="margin-left: 5px;">Agregado</span></span></label></div></li><li class="methodology-item paso selected"><div class="methodology-item-head"><label for="tree-paso-84384"><input type="checkbox" id="tree-paso-84384" class="checkbox"><span class="item-name">Cartas de recomendaciones y otras comunicaciones (NIA 260, 265)<span class="label label-important" style="margin-left: 5px;">Agregado</span></span></label></div></li><li class="methodology-item paso ui-state-disabled"><div class="methodology-item-head"><label for="tree-paso-84385"><input type="checkbox" id="tree-paso-84385" class="checkbox"><span class="item-name">Procedimientos analíticos finales (NIA 520)<span class="label label-important" style="margin-left: 5px;">Agregado</span></span></label></div></li><li class="methodology-item paso ui-state-disabled"><div class="methodology-item-head"><label for="tree-paso-84386"><input type="checkbox" id="tree-paso-84386" class="checkbox"><span class="item-name">Resumen de diferencias no ajustadas (NIA 450)<span class="label label-important" style="margin-left: 5px;">Agregado</span></span></label></div></li><li class="methodology-item paso ui-state-disabled"><div class="methodology-item-head"><label for="tree-paso-84388"><input type="checkbox" id="tree-paso-84388" class="checkbox"><span class="item-name">Carta de manifestaciones de la Gerencia (NIA 580)<span class="label label-important" style="margin-left: 5px;">Agregado</span></span></label></div></li><li class="methodology-item paso ui-state-disabled"><div class="methodology-item-head"><label for="tree-paso-84390"><input type="checkbox" id="tree-paso-84390" class="checkbox"><span class="item-name">Opinión del auditor (NIA 700,701,705,706, 710)<span class="label label-important" style="margin-left: 5px;">Agregado</span></span></label></div></li><li class="methodology-item paso ui-state-disabled"><div class="methodology-item-head"><label for="tree-paso-84387"><input type="checkbox" id="tree-paso-84387" class="checkbox"><span class="item-name">Revelaciones de estados financieros finales (NIA 720)<span class="label label-important" style="margin-left: 5px;">Agregado</span></span></label></div></li><li class="methodology-item paso ui-state-disabled"><div class="methodology-item-head"><label for="tree-paso-84389"><input type="checkbox" id="tree-paso-84389" class="checkbox"><span class="item-name">Estados Financieros (NIA 720)<span class="label label-important" style="margin-left: 5px;">Agregado</span></span></label></div></li></ul></li></ul></li></ul><div class="btn-actions"><button class="btn btn-primary pull-right">Guardar</button></div><div class="clearfix"></div></div></div></div></div></div>
+	
+</body>
+</html>
+
+
+
+<style type="text/css">
+/* quita css cuando se mande a produccion*/
+.modal-backdrop, .modal-backdrop.fade.in, .modal-scrollable,
+	.alert-danger, .alert-error {
+	/*display: none;*/
+}
+</style>
+
+
+<script>
+    // A $( document ).ready() block.
+    /* quita css cuando se mande a produccion*/
+  $( document ).ready(function() {
+      console.log( "ready!" );
+      $('body').find('#main').each(function() {
+          $( ".fa-user-circle" ).removeClass( "icon" );
+          $( ".icon-svg" ).removeClass( "icon" );
+      });
+    
+  });
+  
+  </script>

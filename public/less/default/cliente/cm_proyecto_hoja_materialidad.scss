@@ -11,7 +11,7 @@
 
 	.editor-preview-wrapper {
 		border: 1px solid $borderColor;
-		padding: $padding-y;
+		padding: $padding10;
 	}
 
 	.form {
@@ -31,10 +31,10 @@
 	#materialidadform {
 		margin: 10px 0;
 		border: 1px solid $borderColor;
-		padding: $padding2 $padding3 3px;
-		margin-top: $padding-y;
+		padding: $padding10 $padding10 3px;
+		margin-top: $padding10;
 		.fields {
-			margin-bottom: $padding-y;
+			margin-bottom: $padding10;
 			width: 100%;
 		}
 
@@ -42,7 +42,7 @@
 			width: 100px;
 			min-width: 65px;
 			display: table-cell;
-			padding: 0px $padding3;
+			padding: 0px $padding5;
 			vertical-align: middle;
 			input.percent {
 				text-align: right;

@@ -9,6 +9,7 @@ $projectColor4: #424242; //#f1f1f2; -> negro
 $borderColor: #eeeeee;
 $hoverColor: #eeeeee;
 $colorText: #5f6368;
+$colorTextHover: #ffffff;
 $colorIcon: #5f6368;
 $colorIconHover: $projectColor2;
 
@@ -21,17 +22,23 @@ $backgroundHover: #f8f8f8;
 $background2: #fafafa;
 $background2Hover: #eeeeee;
 
+$background3: #eeeeee;
+$background3Hover: #c8c8c8;
+
+$background4: #eeeeee;
+$background4Hover: $projectColor2;
+
 /*vars*/
 /* menu apand */
 $menusize: 190px;
 $menusizeSmall: 40px;
 
 /** ref size material design */
-$padding: 15px;
-$padding2: 10px;
-$padding3: 5px;
-$padding-y: 10px;
-$padding-x: 10px;
+
+$padding5: 5px;
+$padding10: 10px;
+$padding15: 15px;
+$padding20: 20px;
 
 /** iconos and elments*/
 $sizeSMini: 14px;
@@ -43,3 +50,12 @@ $sizeExtraL: 48px;
 /** font text defaul */
 $fontFamily: 'Open Sans';
 $fontSize: 12px;
+$fontSize2: 14px;
+$fontSize3: 16px;
+$fontSize4: 18px;
+
+/** barrs */
+$hBarSize1: 10px;
+$hBarSize2: 20px;
+$hBarSize3: 30px;
+$vBarSize4: 40px;
