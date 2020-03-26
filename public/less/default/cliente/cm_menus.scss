@@ -1,0 +1,717 @@
+@import 'variables';
+$tablistName: 'visita' !default;
+//@import 'breadcrum.less';
+//@import 'tabs.less';
+//@import 'alert.less';
+//@import 'iconsvg.less';
+
+/*mixin*/
+@mixin iconsize($size, $color) {
+	font-size: $size;
+	color: $color;
+	margin: auto;
+}
+
+@mixin menuLinkDisplay($display, $margin, $padding15) {
+	display: $display;
+	margin: $margin;
+	padding: $padding15;
+}
+
+@mixin on-event-a($context,$url, $eventParent: false) {
+	&.active,
+	&:hover,
+	&:active,
+	&:focus {
+		@if $eventParent {
+			i {
+				&.icon-svg {
+					&.#{$context} {
+						background-image: $url;
+					}
+				}
+			}
+		} @else {
+			background-image: $url;
+		}
+	}
+}
+
+@mixin icon-size($size) {
+	&.icon,
+	&.icons,
+	&.far,
+	&.fa,
+	&.fas {
+		font-size: $size;
+		width: $size;
+		height: $size;
+		text-align: center;
+		float: none;
+		margin: 0;
+	}
+}
+
+@mixin icon-svg($ize) {
+	background-repeat: no-repeat;
+	display: block;
+	width: $ize;
+	height: $ize;
+	margin: 0 auto;
+}
+
+/*** cambia estado del menu principal cuando esta cerrado **/
+
+@mixin menuLeft() {
+	#main {
+		/*** cambia el lado izquierdo y derecho a 40px cuando el menu princpal izquierdo esta cerrado*/
+		padding-left: $menusizeSmall;
+		padding-right: $menusizeSmall;
+	}
+
+	.nav {
+		li {
+			float: left;
+			a {
+				display: block;
+				margin: 0 0 0 -.2em;
+				padding: $padding10 0;
+			}
+		}
+	}
+
+	.ui.grid > .column:not(.row) {
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
+
+	.menu_principal {
+		width: $menusizeSmall;
+		&.sidebar-collapse {
+			width: $menusizeSmall;
+		}
+		.nav {
+			li {
+				a {
+					i {
+						margin: 0 auto;
+					}
+				}
+				.dropdown {
+					> .dropdown-toggle {
+						.caret {
+							display: none;
+						}
+					}
+				}
+			}
+			.menuitem-label {
+				display: none;
+			}
+			.nav-menu-item {
+				text-align: center;
+				.menuitem-label {
+					display: none;
+				}
+			}
+		}
+		.large-logo {
+			display: none;
+		}
+		.small-logo {
+			display: block;
+		}
+
+		.nav-container {
+			.nav {
+				> li {
+					> a:after {
+						display: none;
+					}
+				}
+			}
+		}
+	}
+
+	#main-menu {
+		.nav {
+			li {
+				a {
+					@include menuLinkDisplay(block, 0 0 0 -0.2em, $padding10 0);
+					span {
+						line-height: $sizeMedium;
+					}
+				}
+				i {
+					margin: 0 auto;
+				}
+			}
+		}
+		#collapse-button {
+			padding: 2px;
+			display: none;
+			.switch {
+				margin: $padding10 0 0;
+				float: none;
+			}
+		}
+	}
+}
+
+body {
+	color: $colorText;
+}
+
+.menu_principal {
+	.nav-container {
+		.nav {
+			li {
+				a {
+					color: $colorIcon;
+				}
+			}
+		}
+	}
+}
+
+.ui.vertical.menu .item > i.icon,
+.ui.vertical.menu .item > i.icons {
+	@include icon-size($sizeMedium);
+}
+
+.line {
+	height: 1px;
+	background-color: $borderColor;
+	width: 80%;
+	display: block;
+	margin: 20px auto 5px auto;
+}
+
+#main-menu {
+	@include menuLeft();
+	#collapse-button {
+		height: 40px;
+		.switch {
+			margin: $padding10 0 0;
+		}
+	}
+	.nav {
+		li {
+			a {
+				@include menuLinkDisplay(block, 0 0 0 -0.2em, $padding10 0);
+				span {
+					line-height: $sizeMedium;
+				}
+				i {
+					/*** deja iconos con medida estándar barra lateral izquierda */
+					@include icon-size($sizeMedium);
+					margin: 0 auto;
+					/*** icono customizado en svg, con medida 30x30 estándar barra lateral izquierda */
+					&.icon-svg {
+						margin: 0 auto;
+						@include icon-svg($sizeMedium);
+						&.project {
+							background-image: url(../../images/icons/project.svg);
+						}
+						&.history {
+							background-image: url(../../images/icons/history.svg);
+						}
+					}
+				}
+			}
+			/*** icono customizado en svg, se realiza el over desde el padre li */
+			@include on-event-a ('project', url(../../images/icons/project_hover.svg), $eventParent: true);
+			@include on-event-a ('history', url(../../images/icons/history_hover.svg), $eventParent: true);
+		}
+	}
+}
+
+/*** cambia principal iquierdo, cuando esta abierto  **/
+.sidebar-collapse {
+	#main-menu {
+		#collapse-button {
+			.switch {
+				margin: 4.1px 0 0;
+			}
+		}
+		.nav {
+			li {
+				a {
+					@include menuLinkDisplay(flex, 0, $padding10 20px $padding10 $padding10);
+					i {
+						margin: initial;
+					}
+				}
+				.menuitem-label {
+					margin-left: 0.4em;
+				}
+				&.menuesconder {
+					.menuitem-label {
+						margin-left: 0;
+					}
+				}
+			}
+		}
+	}
+}
+
+#main {
+	padding-right: $menusizeSmall;
+	padding-left: $menusizeSmall;
+
+	.col-main {
+		box-shadow: 0 0 0;
+		padding: $padding10 $padding15 $padding15;
+	}
+	.page-cliente_reporte {
+		.sf_form_filter {
+			.form-inline {
+				box-shadow: 0 0 0;
+				padding: $padding10 $padding15 $padding15;
+			}
+		}
+	}
+
+	.breadcrum {
+		margin: 5px $padding15 0px $padding15;
+		display: block;
+		min-height: 20px;
+	}
+
+	#sf_main_top_block .breadcrum {
+		font-size: $fontSize;
+	}
+
+	.ui {
+		&.menu {
+			/*** cliente hoja de trabajo **/
+			&.visita-sidebar {
+				padding-top: 25px;
+				& > .menu {
+					& > .item {
+						width: $menusizeSmall;
+						&:hover {
+							background-color: $backgroundHover;
+						}
+					}
+				}
+			}
+			/*** end cliente hoja de trabajo **/
+		}
+	}
+
+	.dropdown {
+		&.icon {
+			border: solid $colorIcon;
+			border-width: 0 2px 2px 0;
+			display: inline-block;
+			padding: .4em;
+			transform: rotate(45deg);
+			-webkit-transform: rotate(45deg);
+			top: 1.49em;
+			right: 2.2em;
+			margin: -.78571429em;
+			&:before {
+				display: none;
+			}
+		}
+	}
+
+	&.selection {
+		&.dropdown {
+			border-radius: 4px;
+			color: $colorIcon;
+			& > .dropdown {
+				&.icon {
+					@extend .dropdown;
+				}
+			}
+			&:not(.button) {
+				& > .default.text {
+					color: $colorIcon;
+				}
+			}
+		}
+	}
+
+	.raw-select {
+		padding: $padding5;
+		line-height: 1;
+		border-radius: 0;
+		height: 35px;
+		background: url(../../images/icons/flecha_abajo.svg) no-repeat right;
+		background-size: 14px;
+		-webkit-appearance: none;
+		background-position-x: 92%;
+		border: 1px solid rgba(34, 36, 38, .15);
+		font-size: 12px;
+		margin: 3px;
+		padding-right: 33px;
+	}
+}
+
+.author-icon-log,
+.lb-status-wrapper {
+	margin: 0 3px 1px 3px;
+	.lb-status {
+		&.lb-status-nuevo {
+			vertical-align: middle;
+			padding: 3px;
+			border-radius: 0;
+		}
+	}
+}
+
+/*** sobrepone el footer  y Quita del footer el padding de 40px cuando el menu esta cerrado*/
+
+.navbar {
+	&.user-info-navbar {
+		padding-left: $menusize;
+	}
+}
+
+footer {
+	padding-left: $menusize;
+	z-index: 1003;
+	padding-left: 0;
+	.content-footer {
+		padding: 0 $padding15;
+	}
+}
+
+.sidebar-collapse {
+	#main {
+		/*** cambia el lado izquierdo del main a 190 de ancho cuando el menu esta abierto*/
+		padding-left: $menusize;
+		padding-right: $menusizeSmall;
+
+		.col-main {
+			background: transparent;
+			box-shadow: none;
+			padding: $padding10 $padding15 $padding15;
+			width: 100%;
+		}
+
+		.ui {
+			&.menu {
+				/*** cliente hoja de trabajo **/
+				&.visita-sidebar {
+					padding-top: 25px;
+
+					& > .menu {
+						& > .item {
+							width: $menusizeSmall;
+						}
+					}
+				}
+				/*** end cliente hoja de trabajo **/
+			}
+		}
+
+		i.icons,
+		i.icons {
+			@include iconsize($sizeMedium, $colorIcon);
+			:hover {
+				color: $colorIconHover;
+			}
+		}
+
+		button {
+			i.icons,
+			i.icons {
+				@include iconsize($sizeMedium, #ffffff);
+			}
+		}
+	}
+
+	/*** Quita del footer el 190 cuando el menu esta abierto*/
+	footer {
+		@extend footer;
+	}
+}
+
+/*** corrige el resposive de la barra de progreso*/
+.visita-progress-container {
+	.progress.visita-progress {
+		max-width: 100%;
+		margin-right: 34px;
+	}
+}
+
+/**** styles semantic */
+.menu_principal {
+	overflow-y: auto;
+	-webkit-box-shadow: 0 0 0;
+	box-shadow: 0 0 0;
+	border: 1px solid $borderColor;
+	width: $menusizeSmall;
+	&.sidebar-collapse {
+		width: $menusize;
+	}
+}
+.ui.vertical.menu {
+	border: 1px solid $borderColor;
+	-webkit-box-shadow: 0 0 0;
+	box-shadow: 0 0 0;
+}
+
+/*** cambia los inconos del menu de la barra lateral izquierda */
+.user-profile {
+	i {
+		@include icon-size($sizeMedium);
+		color: $colorIcon;
+		&:hover {
+			color: $buttonHover;
+		}
+	}
+}
+
+@mixin right-menu-icons($name) {
+	&.#{$name} {
+		background-image: url(../../images/sidebar_right/new/#{$name}.svg);
+		@include on-event-a ($name, url(../../images/sidebar_right/new/#{$name}_hover.svg));
+	}
+}
+
+@mixin content-icons($name) {
+	&.#{$name} {
+		background-image: url(../../images/icons/#{$name}.svg);
+		@include on-event-a ($name, url(../../images/icons/#{$name}_hover.svg));
+	}
+}
+
+.right-sidebar {
+	.menu {
+		i {
+			&.icon-svg {
+				@include icon-svg($sizeMedium);
+				@include right-menu-icons('ajustes');
+				@include right-menu-icons('hallazgos');
+				@include right-menu-icons('muestreo');
+				@include right-menu-icons('notas_de_revision');
+				@include right-menu-icons('asignar_usuario');
+				@include right-menu-icons('visitas');
+				@include right-menu-icons('horas_productivas');
+				@include right-menu-icons('pdf');
+			}
+		}
+	}
+}
+
+i {
+	&.icon-svg {
+		@include icon-svg($sizeSmall);
+		@include content-icons('editar');
+	}
+}
+
+/*** end cambia los inconos del menu de la barra lateral izquierda */
+
+.description-text {
+	font-size: 12px;
+}
+
+.btn-group > .btn-large,
+.panel-title {
+	font-size: 1em;
+}
+
+.editor-preview-modal {
+	.loading {
+		height: 5px;
+		text-align: right;
+		font-size: 9px;
+	}
+}
+
+/*** pediente crear responsive.scss responsive menu */
+$break-small: 320px;
+$break-medium: 980px;
+$break-large: 1200px;
+
+@media screen and (max-width: $break-medium) {
+	body {
+		.navbar {
+			.btn-navbar {
+				display: none;
+			}
+		}
+		&.sidebar-collapse {
+			@include menuLeft();
+			.navbar {
+				.btn-navbar {
+					display: none;
+				}
+			}
+		}
+		.nav-collapse {
+			&.collapse {
+				height: auto !important;
+			}
+		}
+		.nav-collapse,
+		.nav-collapse.collapse {
+			overflow: visible;
+			height: auto;
+		}
+		.navbar-fixed-bottom,
+		.navbar-fixed-top {
+			position: fixed;
+		}
+	}
+}
+
+.ui.orange.button,
+.ui.orange.buttons .button {
+	font-size: 1rem;
+	border-radius: 4px;
+	padding: 10px 20px;
+}
+
+/*** icon user profile */
+#page {
+	.user-profile.floating {
+		z-index: 1003;
+		margin: 0;
+		right: 7px;
+		top: 5px;
+		position: fixed;
+	}
+}
+
+/*** barra lateral, menu derecho.*/
+.ui.menu.visita-sidebar {
+	& > .menu {
+		& > .item {
+			padding: 9px 0;
+			margin: 0 0 0;
+			&.badged {
+				padding: $padding10 0;
+				margin: $padding10 0 0;
+				.label {
+					right: 35%;
+					top: -0.1em;
+				}
+			}
+			img.ui.image {
+				width: $sizeMedium + 1;
+				height: $sizeMedium + 1;
+				margin: 0 auto;
+			}
+		}
+	}
+}
+
+.info-paso {
+	background: #fff;
+	border: 0;
+	font-size: $fontSize;
+	margin: 0 0 $padding10 0;
+	justify-content: space-around;
+	padding: $padding5 $padding10;
+	min-height: 30px;
+}
+
+.info-paso .info-col.paso {
+	line-height: 2.4em;
+}
+
+##{$tablistName}-tabs,
+.ab-tabs {
+	.ui.menu {
+		&.tabular {
+			.tab-nav-item {
+				.label.visita-status {
+					margin-left: .5em;
+					display: inline-block;
+					font-size: .9em;
+					border-left: 0 solid;
+					background: 0 0;
+					color: #fff;
+					border-radius: 0;
+					height: 10px;
+					padding: 4px 3px 13px 3px;
+					border-color: #ccc;
+					text-shadow: 0 0 0;
+					font-weight: 500;
+				}
+				i.icon,
+				i.far,
+				i.icons {
+					font-size: $sizeSmall;
+				}
+			}
+		}
+		.active {
+			&.item {
+				color: $colorText;
+				&:hover {
+					color: $projectColor2;
+				}
+			}
+		}
+	}
+
+	.ui.tab {
+		padding: 0;
+		border: 0;
+	}
+	.ui.menu.tabular {
+		justify-content: inherit;
+		position: relative;
+		overflow: hidden;
+		.tab-nav-item {
+			@extend .info-paso;
+			margin: 0;
+			padding: .4em;
+			min-height: auto;
+			border: 0px solid $borderColor;
+			background: transparent;
+			border-radius: 4px 4px 0 0;
+			&:hover {
+				background: $background2Hover;
+				border-bottom: 2px solid $borderColor;
+			}
+
+			&.tab-add {
+				right: 50px;
+			}
+			&.active {
+				border-bottom: 2px solid $projectColor2;
+			}
+			&.tab-add {
+				background: #fff;
+				border: 2px solid $background2;
+				margin: 0;
+				width: 6%;
+				height: 30px;
+				right: 0;
+				padding: 0;
+				text-align: center;
+				display: table;
+				vertical-align: middle;
+				text-align: center;
+				i.icon {
+					margin: 0;
+					display: table-cell;
+					vertical-align: middle;
+				}
+			}
+		}
+	}
+}
+/*** End barra lateral, menu derecho.*/
+
+.bottombar,
+.topbar {
+	color: #eeeeee;
+	a {
+		&.expandall,
+		&.collapseall {
+			color: $projectColor2;
+			font-size: 12px;
+			margin-right: 5px;
+			margin-left: 5px;
+		}
+	}
+}

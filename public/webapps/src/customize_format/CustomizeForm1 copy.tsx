@@ -6,13 +6,13 @@ import { UseAccounting } from './UseAccounting';
 export const CustomizeForm = (props: any) => {
 	/*** cargando(extrear) optios en los select  */
 	const {
-		optnSimboloDecimal,
+		//  optnSimboloDecimal,
 		optnDigitosDespuesDecimal,
-		optnSimboloAgrupacionDigitos,
+		//	optnSimboloAgrupacionDigitos,
 		optnAgrupacionDigitos,
 		optnFormatoNumeroNegativo,
 		optnMostrarCerosIzquierda,
-		optnSeparadorLista,
+		// optnSeparadorLista,
 		optnSistemaMedida,
 		optnUseDigitosNativos
 	} = props.data.options;
@@ -41,7 +41,7 @@ export const CustomizeForm = (props: any) => {
 	};
 
 	const onSubmit = (data: any) => {
-		//closeModal();
+		//closeModal(); // cerrar modal al guardar
 		setGetData(data);
 	};
 
@@ -74,18 +74,21 @@ export const CustomizeForm = (props: any) => {
 					<h4> Ejemplo: </h4> <UseAccounting data={getData} />
 				</div>
 				<p />
-				<form onSubmit={handleSubmit(onSubmit)} onChange={handleSubmit(onChange)}>
+				<form onSubmit={handleSubmit(onSubmit)} onChange={handleSubmit(onChange)} className='form-normal'>
 					<label>
 						Símbolo decimal:
-						<select
+						<input
+							type='text'
 							name='simboloDecimal'
 							value={simboloDecimal}
 							onChange={(e: any) => setSimboloDecimal(String(e.target.value))}
-							ref={register({ required: true })}
-						>
-							{createOptions(optnSimboloDecimal)}
-						</select>
+							ref={register({ required: true, pattern: /[,.']{1}/i })}
+							//{createOptions(optnSimboloDecimal)} para crear el auto complete
+						/>
+						<span className='error'> Simbolos permitidos: ,. </span>
+						{errors.simboloDecimal && <span className='error'> Formato incorrecto. </span>}
 					</label>
+
 					<label>
 						Números, de dígitos después del decimal:
 						<select
@@ -97,16 +100,18 @@ export const CustomizeForm = (props: any) => {
 							{createOptions(optnDigitosDespuesDecimal)}
 						</select>
 					</label>
+
 					<label>
 						Símbolo de agrupación de dígitos:
-						<select
+						<input
+							type='text'
 							name='simboloAgrupacionDigitos'
 							value={simboloAgrupacionDigitos}
 							onChange={(e: any) => setSimboloAgrupacionDigitos(String(e.target.value))}
-							ref={register({ required: true })}
-						>
-							{createOptions(optnSimboloAgrupacionDigitos)}
-						</select>
+							ref={register({ required: true, pattern: /[,.']{1}/i })}
+							//{createOptions(optnSimboloAgrupacionDigitos)} para crear el auto complete
+						/>
+						{errors.simboloAgrupacionDigitos && <span className='error'> Formato incorrecto. </span>}
 					</label>
 
 					<label>
@@ -159,14 +164,15 @@ export const CustomizeForm = (props: any) => {
 
 					<label>
 						Separador de lista:
-						<select
+						<input
+							type='text'
 							name='separadorLista'
 							value={separadorLista}
 							onChange={(e: any) => setSeparadorLista(String(e.target.value))}
-							ref={register({ required: true })}
-						>
-							{createOptions(optnSeparadorLista)}
-						</select>
+							ref={register({ required: true, pattern: /[,;]{1}/i })}
+							//{createOptions(optnSeparadorLista)} para crear el auto complete
+						/>
+						{errors.separadorLista && <span className='error'> Formato incorrecto. </span>}
 					</label>
 
 					<label>
@@ -224,7 +230,7 @@ export const CustomizeForm = (props: any) => {
 							}
 							content='Para guardar los cambios debe seleccionar una opción.'
 							position='bottom center'
-							disabled={bottonDisabled ? false : true}
+							disabled={!false}
 						/>
 					</div>
 				</form>

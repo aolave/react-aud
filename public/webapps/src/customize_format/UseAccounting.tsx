@@ -1,43 +1,59 @@
 import React, { Fragment } from 'react';
 
-export const UseAccounting = (props: any) => {
+declare var accounting: any;
+
+type Props = {
+	data: Content;
+};
+
+type Content = {
+	currencySymbol: string;
+	positiveCurrencyFormat: string;
+	negativeCurrencyFormat: string;
+	decimalSymbol: string;
+	noDigitsAfterDecimal: number;
+	digitGroupingSymbol: string;
+};
+
+export const UseAccounting = (props: Props) => {
 	const {
-		simboloDecimal,
-		digitosDespuesDecimal,
-		simboloAgrupacionDigitos,
-		//agrupacionDigitos,
-		simboloSignoNegativo
-		//mostrarCerosIzquierda,
-		//formatoNumeroNegativo,
-		//separadorLista,
-		//sistemaMedida,
-		//digitosEstandar,
-		//useDigitosNativos
+		currencySymbol,
+		positiveCurrencyFormat,
+		negativeCurrencyFormat,
+		decimalSymbol,
+		noDigitsAfterDecimal,
+		digitGroupingSymbol
 	} = props.data;
 
-	const saveFormatNumbers = () => {
-		console.log(props.data);
-	};
 	// formato (símbolo personalizado y separadores), también podría usar el objeto de opciones como segundo parámetro:
-	let customNumberPositive = accounting.formatNumber(
-		125478963,
-		digitosDespuesDecimal,
-		'' + simboloAgrupacionDigitos + '',
-		'' + simboloDecimal + ''
-	);
+	let customNumberPositive = accounting.formatMoney(5318008, {
+		symbol: '' + currencySymbol + '',
+		decimal: '' + decimalSymbol + '',
+		precision: noDigitsAfterDecimal,
+		thousand: '' + digitGroupingSymbol + '',
+		format: {
+			pos: '' + positiveCurrencyFormat + ''
+		}
+	});
 
-	let customNumberNegative = accounting.formatNumber(
-		125478963,
-		digitosDespuesDecimal,
-		'' + simboloAgrupacionDigitos + '',
-		'' + simboloDecimal + ''
-	);
+	let customNumberNegative = accounting.formatMoney(5318008, {
+		symbol: '' + currencySymbol + '',
+		decimal: '' + decimalSymbol + '',
+		precision: noDigitsAfterDecimal,
+		thousand: '' + digitGroupingSymbol + '',
+		format: {
+			pos: '' + negativeCurrencyFormat + ''
+		}
+	});
 
 	return (
 		<Fragment>
-			<span className='content'>{customNumberPositive}</span> |{' '}
 			<span className='content'>
-				{simboloSignoNegativo} {customNumberNegative}
+				<b>Positivo:</b> {customNumberPositive}
+			</span>
+			{' | '}
+			<span className='content'>
+				<b>Negativo:</b> {customNumberNegative}
 			</span>
 		</Fragment>
 	);

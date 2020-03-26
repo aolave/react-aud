@@ -19,7 +19,7 @@ export const CustomizeForm = (props: any) => {
 
 	/** Inicializar y state de los datos */
 	/** estado del modal y boton */
-	const [ getDataInitial, setGetDataInitial ] = useState(props.data.content);
+	//const [ getDataInitial, setGetDataInitial ] = useState(props.data.content);
 	const [ getData, setGetData ] = useState(props.data.contentSet);
 
 	const [ openModal, setOpentModal ] = useState(true);

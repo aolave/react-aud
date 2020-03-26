@@ -10,4 +10,4 @@ accounting.settings.number.decimal = ',';
 */
 
 $.unblockUI();
-render(<App data={app.vars.customize} />, document.getElementById('root'));
+render(<App data={app.vars.customize.content} />, document.getElementById('root'));

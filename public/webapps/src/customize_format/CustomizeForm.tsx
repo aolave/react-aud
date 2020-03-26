@@ -1,64 +1,70 @@
 import React, { useState } from 'react';
 import useForm from 'react-hook-form';
-import { Modal, Button, Popup } from 'semantic-ui-react';
+import { Button, Popup } from 'semantic-ui-react';
 import { UseAccounting } from './UseAccounting';
 
-import TextField from '@material-ui/core/TextField';
-import Autocomplete from '@material-ui/lab/Autocomplete';
+type Props = {
+	data: Content;
+	dataCallback: any;
+};
 
-// Top 100 films as rated by IMDb users. http://www.imdb.com/chart/top
-const top100Films = [
-	{ title: 'The Shawshank Redemption', year: 1994 },
-	{ title: 'The Godfather', year: 1972 },
-	{ title: 'The Godfather: Part II', year: 1974 },
-	{ title: 'The Dark Knight', year: 2008 }
-];
+type Content = {
+	currencySymbol: string;
+	positiveCurrencyFormat: string;
+	negativeCurrencyFormat: string;
+	decimalSymbol: string;
+	noDigitsAfterDecimal: number;
+	digitGroupingSymbol: string;
+};
 
-export const CustomizeForm = (props: any) => {
-	/*** cargando(extrear) optios en los select  */
-	const {
-		optnSimboloDecimal,
-		optnDigitosDespuesDecimal,
-		optnSimboloAgrupacionDigitos,
-		optnAgrupacionDigitos,
-		optnFormatoNumeroNegativo,
-		optnMostrarCerosIzquierda,
-		optnSeparadorLista,
-		optnSistemaMedida,
-		optnUseDigitosNativos
-	} = props.data.options;
-
+export const CustomizeForm = (props: Props) => {
 	/** Inicialiar y state de los datos */
-	const [ getData, setGetData ] = useState(props.data.content);
-
+	const [ getData, setGetData ] = useState(props.data);
 	const { register, handleSubmit, errors } = useForm();
-	const [ openModal, setOpentModal ] = useState(true);
-	const [ bottonDisabled, setBottonDisabled ] = useState(true);
+	const [ bottonDisabled, setBottonDisabled ] = useState(false);
 
-	const [ simboloDecimal, setSimboloDecimal ] = useState(getData.simboloDecimal);
-	const [ digitosDespuesDecimal, setDigitosDespuesDecimal ] = useState(getData.digitosDespuesDecimal);
-	const [ simboloAgrupacionDigitos, setSimboloAgrupacionDigitos ] = useState(getData.simboloAgrupacionDigitos);
-	const [ agrupacionDigitos, setAgrupacionDigitos ] = useState(getData.agrupacionDigitos);
-	const [ simboloSignoNegativo, setSimboloSignoNegativo ] = useState(getData.simboloSignoNegativo);
-	const [ mostrarCerosIzquierda, setMostrarCerosIzquierda ] = useState(getData.mostrarCerosIzquierda);
-	const [ formatoNumeroNegativo, setFormatoNumeroNegativo ] = useState(getData.formatoNumeroNegativo);
-	const [ separadorLista, setSeparadorLista ] = useState(getData.separadorLista);
-	const [ sistemaMedida, setSistemaMedida ] = useState(getData.sistemaMedida);
-	const [ digitosEstandar, setDigitosEstandar ] = useState(getData.digitosEstandar);
-	const [ useDigitosNativos, setUseDigitosNativos ] = useState(getData.useDigitosNativos);
+	const [ currencySymbol, setCurrencySymbol ] = useState(getData.currencySymbol);
+	const [ positiveCurrencyFormat, setPositiveCurrencyFormat ] = useState(getData.positiveCurrencyFormat);
+	const [ negativeCurrencyFormat, setNegativeCurrencyFormat ] = useState(getData.negativeCurrencyFormat);
+	const [ decimalSymbol, setDecimalSymbol ] = useState(getData.decimalSymbol);
+	const [ noDigitsAfterDecimal, setNoDigitsAfterDecimal ] = useState(getData.noDigitsAfterDecimal);
+	const [ digitGroupingSymbol, setDigitGroupingSymbol ] = useState(getData.digitGroupingSymbol);
 
-	const closeModal = () => {
-		setOpentModal(false);
-	};
+	/*** cargando(load) optios en los select  */
+	const optnPositiveCurrencyFormat = [
+		{ value: '%s %v', label: '' + currencySymbol + ' 1' },
+		{ value: '%s%v', label: '' + currencySymbol + '1' },
+		{ value: '%v %s', label: '1 ' + currencySymbol + '' },
+		{ value: '%v%s', label: '1' + currencySymbol + '' }
+	];
+
+	const optnNegativeCurrencyFormat = [
+		{ value: '%s (%v)', label: '' + currencySymbol + ' (1)' },
+		{ value: '%s(%v)', label: '' + currencySymbol + '(1)' },
+		{ value: '(%v) %s', label: '(1) ' + currencySymbol + '' },
+		{ value: '(%v)%s', label: '(1)' + currencySymbol + '' }
+	];
+
+	const optnNoDigitsAfterDecimal = [
+		{ value: 0, label: 0 },
+		{ value: 1, label: 1 },
+		{ value: 2, label: 2 },
+		{ value: 3, label: 3 },
+		{ value: 4, label: 4 }
+	];
 
 	const onSubmit = (data: any) => {
-		//closeModal();
 		setGetData(data);
+		props.dataCallback(data);
 	};
 
 	const onChange = (data: any) => {
 		setBottonDisabled(false);
-		setGetData(data);
+		props.dataCallback(data);
+	};
+
+	const onCancel = () => {
+		return false;
 	};
 
 	const createOptions = (dataCustomize: any) => {
@@ -69,185 +75,115 @@ export const CustomizeForm = (props: any) => {
 		));
 	};
 
-	const handleSimboloSignoNegativoChange = (e: any) => {
-		setSimboloSignoNegativo(e.target.value);
-	};
-
-	const handleDigitosEstandarChange = (e: any) => {
-		setDigitosEstandar(e.target.value);
-	};
-
 	return (
-		<Modal size='tiny' open={openModal} closeIcon>
-			<Modal.Header> PERSONALIZAR FORMATO </Modal.Header>
-			<Modal.Content>
-				<div>
-					<h4> Ejemplo: </h4> <UseAccounting data={getData} />
-				</div>
-				<p />
-				<form onSubmit={handleSubmit(onSubmit)} onChange={handleSubmit(onChange)}>
-					<Autocomplete
-						id='combo-box-demo'
-						options={top100Films}
-						getOptionLabel={(option) => option.title}
-						style={{ width: 200 }}
-						renderInput={(params) => <TextField {...params} label='' variant='outlined' fullWidth />}
-					/>
+		<form onSubmit={handleSubmit(onSubmit)} onChange={handleSubmit(onChange)} className='form-normal'>
+			<div>
+				<h4> Ejemplo: </h4> <UseAccounting data={getData} />
+			</div>
+			<p />
 
-					<label className='label-select'>
-						Símbolo decimal:
-						<select
-							name='simboloDecimal'
-							value={simboloDecimal}
-							onChange={(e: any) => setSimboloDecimal(String(e.target.value))}
-							ref={register({ required: true })}
-						>
-							{createOptions(optnSimboloDecimal)}
-						</select>
-					</label>
-					<label className='label-select'>
-						Números, de dígitos después del decimal:
-						<select
-							name='digitosDespuesDecimal'
-							value={digitosDespuesDecimal}
-							onChange={(e: any) => setDigitosDespuesDecimal(Number(e.target.value))}
-							ref={register({ required: true })}
-						>
-							{createOptions(optnDigitosDespuesDecimal)}
-						</select>
-					</label>
-					<label className='label-select'>
-						Símbolo de agrupación de dígitos:
-						<select
-							name='simboloAgrupacionDigitos'
-							value={simboloAgrupacionDigitos}
-							onChange={(e: any) => setSimboloAgrupacionDigitos(String(e.target.value))}
-							ref={register({ required: true })}
-						>
-							{createOptions(optnSimboloAgrupacionDigitos)}
-						</select>
-					</label>
+			<label>
+				Símbolo de la moneda
+				<input
+					type='text'
+					name='currencySymbol'
+					value={currencySymbol}
+					onChange={(e: any) => setCurrencySymbol(String(e.target.value))}
+					ref={register({ required: true, max: 1, min: 1, maxLength: 1 })}
+				/>
+				{errors.currencySymbol && (
+					<span className='error'>Formato incorrecto solo se permite un símbolo de moneda Ej: $</span>
+				)}
+			</label>
 
-					<label className='label-select'>
-						Agrupación de dígitos:
-						<select
-							name='agrupacionDigitos'
-							value={agrupacionDigitos}
-							onChange={(e: any) => setAgrupacionDigitos(String(e.target.value))}
-							ref={register({ required: true })}
-						>
-							{createOptions(optnAgrupacionDigitos)}
-						</select>
-					</label>
+			<label>
+				Formato de número positivo:
+				<select
+					name='positiveCurrencyFormat'
+					value={positiveCurrencyFormat}
+					onChange={(e: any) => setPositiveCurrencyFormat(String(e.target.value))}
+					ref={register({ required: true })}
+				>
+					{createOptions(optnPositiveCurrencyFormat)}
+				</select>
+			</label>
 
-					<label className='label-select'>
-						Símbolo de signo negativo:
-						<input
-							type='text'
-							name='simboloSignoNegativo'
-							value={simboloSignoNegativo}
-							onChange={handleSimboloSignoNegativoChange}
-							ref={register({ required: true, max: 1, min: 1, maxLength: 1, pattern: /-{1}/i })}
-						/>
-						{errors.simboloSignoNegativo && <span className='error'> Formato incorrecto. </span>}
-					</label>
+			<label>
+				Formato de número negativo:
+				<select
+					name='negativeCurrencyFormat'
+					value={negativeCurrencyFormat}
+					onChange={(e: any) => setNegativeCurrencyFormat(String(e.target.value))}
+					ref={register({ required: true })}
+				>
+					{createOptions(optnNegativeCurrencyFormat)}
+				</select>
+			</label>
 
-					<label className='label-select'>
-						Formato de número negativo:
-						<select
-							name='formatoNumeroNegativo'
-							value={formatoNumeroNegativo}
-							onChange={(e: any) => setFormatoNumeroNegativo(String(e.target.value))}
-							ref={register({ required: true })}
-						>
-							{createOptions(optnFormatoNumeroNegativo)}
-						</select>
-					</label>
+			<label>
+				Símbolo decimal:
+				<input
+					type='text'
+					name='decimalSymbol'
+					value={decimalSymbol}
+					onChange={(e: any) => setDecimalSymbol(String(e.target.value))}
+					ref={register({ required: true, max: 1, min: 1, maxLength: 1, pattern: /[,.']{1}/i })}
+				/>
+				<span>
+					Permitidos: <b>,. </b>
+				</span>
+				{errors.decimalSymbol && <span className='error'> Formato incorrecto, solo se permite: . , </span>}
+			</label>
 
-					<label className='label-select'>
-						Mostrar ceros a la izquierda:
-						<select
-							name='mostrarCerosIzquierda'
-							value={mostrarCerosIzquierda}
-							onChange={(e: any) => setMostrarCerosIzquierda(String(e.target.value))}
-							ref={register({ required: true })}
-						>
-							{createOptions(optnMostrarCerosIzquierda)}
-						</select>
-					</label>
+			<label>
+				Números, de dígitos después del decimal:
+				<select
+					name='noDigitsAfterDecimal'
+					value={noDigitsAfterDecimal}
+					onChange={(e: any) => setNoDigitsAfterDecimal(Number(e.target.value))}
+					ref={register({ required: true })}
+				>
+					{createOptions(optnNoDigitsAfterDecimal)}
+				</select>
+			</label>
 
-					<label className='label-select'>
-						Separador de lista:
-						<select
-							name='separadorLista'
-							value={separadorLista}
-							onChange={(e: any) => setSeparadorLista(String(e.target.value))}
-							ref={register({ required: true })}
-						>
-							{createOptions(optnSeparadorLista)}
-						</select>
-					</label>
+			<label>
+				Símbolo de dígitos:
+				<input
+					type='text'
+					name='digitGroupingSymbol'
+					value={digitGroupingSymbol}
+					onChange={(e: any) => setDigitGroupingSymbol(String(e.target.value))}
+					ref={register({ required: true, max: 1, min: 1, maxLength: 1, pattern: /[,.']{1}/i })}
+				/>
+				<span>
+					Permitidos: <b>,. </b>
+				</span>
+				{errors.digitGroupingSymbol && <span className='error'>Formato incorrecto, solo se permite: . , </span>}
+			</label>
 
-					<label className='label-select'>
-						Sistema de medida:
-						<select
-							name='sistemaMedida'
-							value={sistemaMedida}
-							onChange={(e: any) => setSistemaMedida(e.target.value)}
-							ref={register({ required: true })}
-						>
-							{createOptions(optnSistemaMedida)}
-						</select>
-					</label>
+			<div className='actions ab-status-actions'>
+				<Button onClick={onCancel} className='ui compact primary center button'>
+					Cancelar
+				</Button>
 
-					<label className='label-select'>
-						Dígitos estándar:
-						<input
-							type='text'
-							name='digitosEstandar'
-							value={digitosEstandar}
-							onChange={handleDigitosEstandarChange}
-							ref={register({ required: true, max: 9, min: 9, maxLength: 9, pattern: /[0-9]{9}/i })}
-						/>
-						{errors.digitosEstandar && <span className='error'> Formato incorrecto. </span>}
-					</label>
-
-					<label className='label-select'>
-						Use dígitos nativos:
-						<select
-							name='useDigitosNativos'
-							value={useDigitosNativos}
-							onChange={(e: any) => setUseDigitosNativos(e.target.value)}
-							ref={register({ required: true })}
-						>
-							{createOptions(optnUseDigitosNativos)}
-						</select>
-					</label>
-
-					<div className='actions ab-status-actions'>
-						<Button onClick={closeModal} className='ui compact primary center button'>
-							Cancelar
-						</Button>
-
-						<Popup
-							trigger={
-								<span>
-									<Button
-										disabled={bottonDisabled}
-										className='ui compact primary center button'
-										type='submit'
-									>
-										Guardar
-									</Button>
-								</span>
-							}
-							content='Para guardar los cambios debe seleccionar una opción.'
-							position='bottom center'
-							disabled={bottonDisabled ? false : true}
-						/>
-					</div>
-				</form>
-			</Modal.Content>
-		</Modal>
+				<Popup
+					trigger={
+						<span>
+							<Button
+								disabled={bottonDisabled}
+								className='ui compact primary center button'
+								type='submit'
+							>
+								Guardar
+							</Button>
+						</span>
+					}
+					content='Para guardar los cambios debe seleccionar una opción.'
+					position='bottom center'
+					disabled={!bottonDisabled}
+				/>
+			</div>
+		</form>
 	);
 };

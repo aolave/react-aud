@@ -179,17 +179,11 @@ var _semanticUiReact = __webpack_require__(/*! semantic-ui-react */ "./node_modu
 
 var _UseAccounting = __webpack_require__(/*! ./UseAccounting */ "./src/customize_format/UseAccounting.tsx");
 
-var _TextField = _interopRequireDefault(__webpack_require__(/*! @material-ui/core/TextField */ "./node_modules/@material-ui/core/esm/TextField/index.js"));
-
-var _Autocomplete = _interopRequireDefault(__webpack_require__(/*! @material-ui/lab/Autocomplete */ "./node_modules/@material-ui/lab/esm/Autocomplete/index.js"));
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function _getRequireWildcardCache() { return cache; }; return cache; }
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; if (obj != null) { var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj["default"] = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
-
-function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
 
@@ -199,33 +193,8 @@ function _iterableToArrayLimit(arr, i) { if (!(Symbol.iterator in Object(arr) ||
 
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
-var top100Films = [{
-  title: 'The Shawshank Redemption',
-  year: 1994
-}, {
-  title: 'The Godfather',
-  year: 1972
-}, {
-  title: 'The Godfather: Part II',
-  year: 1974
-}, {
-  title: 'The Dark Knight',
-  year: 2008
-}];
-
 var CustomizeForm = function CustomizeForm(props) {
-  var _props$data$options = props.data.options,
-      optnSimboloDecimal = _props$data$options.optnSimboloDecimal,
-      optnDigitosDespuesDecimal = _props$data$options.optnDigitosDespuesDecimal,
-      optnSimboloAgrupacionDigitos = _props$data$options.optnSimboloAgrupacionDigitos,
-      optnAgrupacionDigitos = _props$data$options.optnAgrupacionDigitos,
-      optnFormatoNumeroNegativo = _props$data$options.optnFormatoNumeroNegativo,
-      optnMostrarCerosIzquierda = _props$data$options.optnMostrarCerosIzquierda,
-      optnSeparadorLista = _props$data$options.optnSeparadorLista,
-      optnSistemaMedida = _props$data$options.optnSistemaMedida,
-      optnUseDigitosNativos = _props$data$options.optnUseDigitosNativos;
-
-  var _useState = (0, _react.useState)(props.data.content),
+  var _useState = (0, _react.useState)(props.data),
       _useState2 = _slicedToArray(_useState, 2),
       getData = _useState2[0],
       setGetData = _useState2[1];
@@ -235,82 +204,96 @@ var CustomizeForm = function CustomizeForm(props) {
       handleSubmit = _useForm.handleSubmit,
       errors = _useForm.errors;
 
-  var _useState3 = (0, _react.useState)(true),
+  var _useState3 = (0, _react.useState)(false),
       _useState4 = _slicedToArray(_useState3, 2),
-      openModal = _useState4[0],
-      setOpentModal = _useState4[1];
+      bottonDisabled = _useState4[0],
+      setBottonDisabled = _useState4[1];
 
-  var _useState5 = (0, _react.useState)(true),
+  var _useState5 = (0, _react.useState)(getData.currencySymbol),
       _useState6 = _slicedToArray(_useState5, 2),
-      bottonDisabled = _useState6[0],
-      setBottonDisabled = _useState6[1];
+      currencySymbol = _useState6[0],
+      setCurrencySymbol = _useState6[1];
 
-  var _useState7 = (0, _react.useState)(getData.simboloDecimal),
+  var _useState7 = (0, _react.useState)(getData.positiveCurrencyFormat),
       _useState8 = _slicedToArray(_useState7, 2),
-      simboloDecimal = _useState8[0],
-      setSimboloDecimal = _useState8[1];
+      positiveCurrencyFormat = _useState8[0],
+      setPositiveCurrencyFormat = _useState8[1];
 
-  var _useState9 = (0, _react.useState)(getData.digitosDespuesDecimal),
+  var _useState9 = (0, _react.useState)(getData.negativeCurrencyFormat),
       _useState10 = _slicedToArray(_useState9, 2),
-      digitosDespuesDecimal = _useState10[0],
-      setDigitosDespuesDecimal = _useState10[1];
+      negativeCurrencyFormat = _useState10[0],
+      setNegativeCurrencyFormat = _useState10[1];
 
-  var _useState11 = (0, _react.useState)(getData.simboloAgrupacionDigitos),
+  var _useState11 = (0, _react.useState)(getData.decimalSymbol),
       _useState12 = _slicedToArray(_useState11, 2),
-      simboloAgrupacionDigitos = _useState12[0],
-      setSimboloAgrupacionDigitos = _useState12[1];
+      decimalSymbol = _useState12[0],
+      setDecimalSymbol = _useState12[1];
 
-  var _useState13 = (0, _react.useState)(getData.agrupacionDigitos),
+  var _useState13 = (0, _react.useState)(getData.noDigitsAfterDecimal),
       _useState14 = _slicedToArray(_useState13, 2),
-      agrupacionDigitos = _useState14[0],
-      setAgrupacionDigitos = _useState14[1];
+      noDigitsAfterDecimal = _useState14[0],
+      setNoDigitsAfterDecimal = _useState14[1];
 
-  var _useState15 = (0, _react.useState)(getData.simboloSignoNegativo),
+  var _useState15 = (0, _react.useState)(getData.digitGroupingSymbol),
       _useState16 = _slicedToArray(_useState15, 2),
-      simboloSignoNegativo = _useState16[0],
-      setSimboloSignoNegativo = _useState16[1];
+      digitGroupingSymbol = _useState16[0],
+      setDigitGroupingSymbol = _useState16[1];
 
-  var _useState17 = (0, _react.useState)(getData.mostrarCerosIzquierda),
-      _useState18 = _slicedToArray(_useState17, 2),
-      mostrarCerosIzquierda = _useState18[0],
-      setMostrarCerosIzquierda = _useState18[1];
-
-  var _useState19 = (0, _react.useState)(getData.formatoNumeroNegativo),
-      _useState20 = _slicedToArray(_useState19, 2),
-      formatoNumeroNegativo = _useState20[0],
-      setFormatoNumeroNegativo = _useState20[1];
-
-  var _useState21 = (0, _react.useState)(getData.separadorLista),
-      _useState22 = _slicedToArray(_useState21, 2),
-      separadorLista = _useState22[0],
-      setSeparadorLista = _useState22[1];
-
-  var _useState23 = (0, _react.useState)(getData.sistemaMedida),
-      _useState24 = _slicedToArray(_useState23, 2),
-      sistemaMedida = _useState24[0],
-      setSistemaMedida = _useState24[1];
-
-  var _useState25 = (0, _react.useState)(getData.digitosEstandar),
-      _useState26 = _slicedToArray(_useState25, 2),
-      digitosEstandar = _useState26[0],
-      setDigitosEstandar = _useState26[1];
-
-  var _useState27 = (0, _react.useState)(getData.useDigitosNativos),
-      _useState28 = _slicedToArray(_useState27, 2),
-      useDigitosNativos = _useState28[0],
-      setUseDigitosNativos = _useState28[1];
-
-  var closeModal = function closeModal() {
-    setOpentModal(false);
-  };
+  var optnPositiveCurrencyFormat = [{
+    value: '%s %v',
+    label: '' + currencySymbol + ' 1'
+  }, {
+    value: '%s%v',
+    label: '' + currencySymbol + '1'
+  }, {
+    value: '%v %s',
+    label: '1 ' + currencySymbol + ''
+  }, {
+    value: '%v%s',
+    label: '1' + currencySymbol + ''
+  }];
+  var optnNegativeCurrencyFormat = [{
+    value: '%s (%v)',
+    label: '' + currencySymbol + ' (1)'
+  }, {
+    value: '%s(%v)',
+    label: '' + currencySymbol + '(1)'
+  }, {
+    value: '(%v) %s',
+    label: '(1) ' + currencySymbol + ''
+  }, {
+    value: '(%v)%s',
+    label: '(1)' + currencySymbol + ''
+  }];
+  var optnNoDigitsAfterDecimal = [{
+    value: 0,
+    label: 0
+  }, {
+    value: 1,
+    label: 1
+  }, {
+    value: 2,
+    label: 2
+  }, {
+    value: 3,
+    label: 3
+  }, {
+    value: 4,
+    label: 4
+  }];
 
   var onSubmit = function onSubmit(data) {
     setGetData(data);
+    props.dataCallback(data);
   };
 
   var onChange = function onChange(data) {
     setBottonDisabled(false);
-    setGetData(data);
+    props.dataCallback(data);
+  };
+
+  var onCancel = function onCancel() {
+    return false;
   };
 
   var createOptions = function createOptions(dataCustomize) {
@@ -322,174 +305,90 @@ var CustomizeForm = function CustomizeForm(props) {
     });
   };
 
-  var handleSimboloSignoNegativoChange = function handleSimboloSignoNegativoChange(e) {
-    setSimboloSignoNegativo(e.target.value);
-  };
-
-  var handleDigitosEstandarChange = function handleDigitosEstandarChange(e) {
-    setDigitosEstandar(e.target.value);
-  };
-
-  return _react["default"].createElement(_semanticUiReact.Modal, {
-    size: "tiny",
-    open: openModal,
-    closeIcon: true
-  }, _react["default"].createElement(_semanticUiReact.Modal.Header, null, " PERSONALIZAR FORMATO "), _react["default"].createElement(_semanticUiReact.Modal.Content, null, _react["default"].createElement("div", null, _react["default"].createElement("h4", null, " Ejemplo: "), " ", _react["default"].createElement(_UseAccounting.UseAccounting, {
-    data: getData
-  })), _react["default"].createElement("p", null), _react["default"].createElement("form", {
+  return _react["default"].createElement("form", {
     onSubmit: handleSubmit(onSubmit),
-    onChange: handleSubmit(onChange)
-  }, _react["default"].createElement(_Autocomplete["default"], {
-    id: "combo-box-demo",
-    options: top100Films,
-    getOptionLabel: function getOptionLabel(option) {
-      return option.title;
-    },
-    style: {
-      width: 200
-    },
-    renderInput: function renderInput(params) {
-      return _react["default"].createElement(_TextField["default"], _extends({}, params, {
-        label: "",
-        variant: "outlined",
-        fullWidth: true
-      }));
-    }
-  }), _react["default"].createElement("label", {
-    className: "label-select"
-  }, "S\xEDmbolo decimal:", _react["default"].createElement("select", {
-    name: "simboloDecimal",
-    value: simboloDecimal,
-    onChange: function onChange(e) {
-      return setSimboloDecimal(String(e.target.value));
-    },
-    ref: register({
-      required: true
-    })
-  }, createOptions(optnSimboloDecimal))), _react["default"].createElement("label", {
-    className: "label-select"
-  }, "N\xFAmeros, de d\xEDgitos despu\xE9s del decimal:", _react["default"].createElement("select", {
-    name: "digitosDespuesDecimal",
-    value: digitosDespuesDecimal,
-    onChange: function onChange(e) {
-      return setDigitosDespuesDecimal(Number(e.target.value));
-    },
-    ref: register({
-      required: true
-    })
-  }, createOptions(optnDigitosDespuesDecimal))), _react["default"].createElement("label", {
-    className: "label-select"
-  }, "S\xEDmbolo de agrupaci\xF3n de d\xEDgitos:", _react["default"].createElement("select", {
-    name: "simboloAgrupacionDigitos",
-    value: simboloAgrupacionDigitos,
-    onChange: function onChange(e) {
-      return setSimboloAgrupacionDigitos(String(e.target.value));
-    },
-    ref: register({
-      required: true
-    })
-  }, createOptions(optnSimboloAgrupacionDigitos))), _react["default"].createElement("label", {
-    className: "label-select"
-  }, "Agrupaci\xF3n de d\xEDgitos:", _react["default"].createElement("select", {
-    name: "agrupacionDigitos",
-    value: agrupacionDigitos,
-    onChange: function onChange(e) {
-      return setAgrupacionDigitos(String(e.target.value));
-    },
-    ref: register({
-      required: true
-    })
-  }, createOptions(optnAgrupacionDigitos))), _react["default"].createElement("label", {
-    className: "label-select"
-  }, "S\xEDmbolo de signo negativo:", _react["default"].createElement("input", {
+    onChange: handleSubmit(onChange),
+    className: "form-normal"
+  }, _react["default"].createElement("div", null, _react["default"].createElement("h4", null, " Ejemplo: "), " ", _react["default"].createElement(_UseAccounting.UseAccounting, {
+    data: getData
+  })), _react["default"].createElement("p", null), _react["default"].createElement("label", null, "S\xEDmbolo de la moneda", _react["default"].createElement("input", {
     type: "text",
-    name: "simboloSignoNegativo",
-    value: simboloSignoNegativo,
-    onChange: handleSimboloSignoNegativoChange,
+    name: "currencySymbol",
+    value: currencySymbol,
+    onChange: function onChange(e) {
+      return setCurrencySymbol(String(e.target.value));
+    },
+    ref: register({
+      required: true,
+      max: 1,
+      min: 1,
+      maxLength: 1
+    })
+  }), errors.currencySymbol && _react["default"].createElement("span", {
+    className: "error"
+  }, "Formato incorrecto solo se permite un s\xEDmbolo de moneda Ej: $")), _react["default"].createElement("label", null, "Formato de n\xFAmero positivo:", _react["default"].createElement("select", {
+    name: "positiveCurrencyFormat",
+    value: positiveCurrencyFormat,
+    onChange: function onChange(e) {
+      return setPositiveCurrencyFormat(String(e.target.value));
+    },
+    ref: register({
+      required: true
+    })
+  }, createOptions(optnPositiveCurrencyFormat))), _react["default"].createElement("label", null, "Formato de n\xFAmero negativo:", _react["default"].createElement("select", {
+    name: "negativeCurrencyFormat",
+    value: negativeCurrencyFormat,
+    onChange: function onChange(e) {
+      return setNegativeCurrencyFormat(String(e.target.value));
+    },
+    ref: register({
+      required: true
+    })
+  }, createOptions(optnNegativeCurrencyFormat))), _react["default"].createElement("label", null, "S\xEDmbolo decimal:", _react["default"].createElement("input", {
+    type: "text",
+    name: "decimalSymbol",
+    value: decimalSymbol,
+    onChange: function onChange(e) {
+      return setDecimalSymbol(String(e.target.value));
+    },
     ref: register({
       required: true,
       max: 1,
       min: 1,
       maxLength: 1,
-      pattern: /-{1}/i
+      pattern: /[,.']{1}/i
     })
-  }), errors.simboloSignoNegativo && _react["default"].createElement("span", {
+  }), _react["default"].createElement("span", null, "Permitidos: ", _react["default"].createElement("b", null, ",. ")), errors.decimalSymbol && _react["default"].createElement("span", {
     className: "error"
-  }, " Formato incorrecto. ")), _react["default"].createElement("label", {
-    className: "label-select"
-  }, "Formato de n\xFAmero negativo:", _react["default"].createElement("select", {
-    name: "formatoNumeroNegativo",
-    value: formatoNumeroNegativo,
+  }, " Formato incorrecto, solo se permite: . , ")), _react["default"].createElement("label", null, "N\xFAmeros, de d\xEDgitos despu\xE9s del decimal:", _react["default"].createElement("select", {
+    name: "noDigitsAfterDecimal",
+    value: noDigitsAfterDecimal,
     onChange: function onChange(e) {
-      return setFormatoNumeroNegativo(String(e.target.value));
+      return setNoDigitsAfterDecimal(Number(e.target.value));
     },
     ref: register({
       required: true
     })
-  }, createOptions(optnFormatoNumeroNegativo))), _react["default"].createElement("label", {
-    className: "label-select"
-  }, "Mostrar ceros a la izquierda:", _react["default"].createElement("select", {
-    name: "mostrarCerosIzquierda",
-    value: mostrarCerosIzquierda,
-    onChange: function onChange(e) {
-      return setMostrarCerosIzquierda(String(e.target.value));
-    },
-    ref: register({
-      required: true
-    })
-  }, createOptions(optnMostrarCerosIzquierda))), _react["default"].createElement("label", {
-    className: "label-select"
-  }, "Separador de lista:", _react["default"].createElement("select", {
-    name: "separadorLista",
-    value: separadorLista,
-    onChange: function onChange(e) {
-      return setSeparadorLista(String(e.target.value));
-    },
-    ref: register({
-      required: true
-    })
-  }, createOptions(optnSeparadorLista))), _react["default"].createElement("label", {
-    className: "label-select"
-  }, "Sistema de medida:", _react["default"].createElement("select", {
-    name: "sistemaMedida",
-    value: sistemaMedida,
-    onChange: function onChange(e) {
-      return setSistemaMedida(e.target.value);
-    },
-    ref: register({
-      required: true
-    })
-  }, createOptions(optnSistemaMedida))), _react["default"].createElement("label", {
-    className: "label-select"
-  }, "D\xEDgitos est\xE1ndar:", _react["default"].createElement("input", {
+  }, createOptions(optnNoDigitsAfterDecimal))), _react["default"].createElement("label", null, "S\xEDmbolo de d\xEDgitos:", _react["default"].createElement("input", {
     type: "text",
-    name: "digitosEstandar",
-    value: digitosEstandar,
-    onChange: handleDigitosEstandarChange,
+    name: "digitGroupingSymbol",
+    value: digitGroupingSymbol,
+    onChange: function onChange(e) {
+      return setDigitGroupingSymbol(String(e.target.value));
+    },
     ref: register({
       required: true,
-      max: 9,
-      min: 9,
-      maxLength: 9,
-      pattern: /[0-9]{9}/i
+      max: 1,
+      min: 1,
+      maxLength: 1,
+      pattern: /[,.']{1}/i
     })
-  }), errors.digitosEstandar && _react["default"].createElement("span", {
+  }), _react["default"].createElement("span", null, "Permitidos: ", _react["default"].createElement("b", null, ",. ")), errors.digitGroupingSymbol && _react["default"].createElement("span", {
     className: "error"
-  }, " Formato incorrecto. ")), _react["default"].createElement("label", {
-    className: "label-select"
-  }, "Use d\xEDgitos nativos:", _react["default"].createElement("select", {
-    name: "useDigitosNativos",
-    value: useDigitosNativos,
-    onChange: function onChange(e) {
-      return setUseDigitosNativos(e.target.value);
-    },
-    ref: register({
-      required: true
-    })
-  }, createOptions(optnUseDigitosNativos))), _react["default"].createElement("div", {
+  }, "Formato incorrecto, solo se permite: . , ")), _react["default"].createElement("div", {
     className: "actions ab-status-actions"
   }, _react["default"].createElement(_semanticUiReact.Button, {
-    onClick: closeModal,
+    onClick: onCancel,
     className: "ui compact primary center button"
   }, "Cancelar"), _react["default"].createElement(_semanticUiReact.Popup, {
     trigger: _react["default"].createElement("span", null, _react["default"].createElement(_semanticUiReact.Button, {
@@ -499,8 +398,8 @@ var CustomizeForm = function CustomizeForm(props) {
     }, "Guardar")),
     content: "Para guardar los cambios debe seleccionar una opci\xF3n.",
     position: "bottom center",
-    disabled: bottonDisabled ? false : true
-  })))));
+    disabled: !bottonDisabled
+  })));
 };
 
 exports.CustomizeForm = CustomizeForm;
@@ -530,22 +429,35 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 
 var UseAccounting = function UseAccounting(props) {
   var _props$data = props.data,
-      simboloDecimal = _props$data.simboloDecimal,
-      digitosDespuesDecimal = _props$data.digitosDespuesDecimal,
-      simboloAgrupacionDigitos = _props$data.simboloAgrupacionDigitos,
-      simboloSignoNegativo = _props$data.simboloSignoNegativo;
-
-  var saveFormatNumbers = function saveFormatNumbers() {
-    console.log(props.data);
-  };
-
-  var customNumberPositive = accounting.formatNumber(125478963, digitosDespuesDecimal, '' + simboloAgrupacionDigitos + '', '' + simboloDecimal + '');
-  var customNumberNegative = accounting.formatNumber(125478963, digitosDespuesDecimal, '' + simboloAgrupacionDigitos + '', '' + simboloDecimal + '');
+      currencySymbol = _props$data.currencySymbol,
+      positiveCurrencyFormat = _props$data.positiveCurrencyFormat,
+      negativeCurrencyFormat = _props$data.negativeCurrencyFormat,
+      decimalSymbol = _props$data.decimalSymbol,
+      noDigitsAfterDecimal = _props$data.noDigitsAfterDecimal,
+      digitGroupingSymbol = _props$data.digitGroupingSymbol;
+  var customNumberPositive = accounting.formatMoney(5318008, {
+    symbol: '' + currencySymbol + '',
+    decimal: '' + decimalSymbol + '',
+    precision: noDigitsAfterDecimal,
+    thousand: '' + digitGroupingSymbol + '',
+    format: {
+      pos: '' + positiveCurrencyFormat + ''
+    }
+  });
+  var customNumberNegative = accounting.formatMoney(5318008, {
+    symbol: '' + currencySymbol + '',
+    decimal: '' + decimalSymbol + '',
+    precision: noDigitsAfterDecimal,
+    thousand: '' + digitGroupingSymbol + '',
+    format: {
+      pos: '' + negativeCurrencyFormat + ''
+    }
+  });
   return _react["default"].createElement(_react.Fragment, null, _react["default"].createElement("span", {
     className: "content"
-  }, customNumberPositive), " |", ' ', _react["default"].createElement("span", {
+  }, _react["default"].createElement("b", null, "Positivo:"), " ", customNumberPositive), ' | ', _react["default"].createElement("span", {
     className: "content"
-  }, simboloSignoNegativo, " ", customNumberNegative));
+  }, _react["default"].createElement("b", null, "Negativo:"), " ", customNumberNegative));
 };
 
 exports.UseAccounting = UseAccounting;
@@ -594,24 +506,50 @@ var App =
 function (_PureComponent) {
   _inherits(App, _PureComponent);
 
-  function App(props, appState) {
+  function App(props) {
     var _this;
 
     _classCallCheck(this, App);
 
     _this = _possibleConstructorReturn(this, _getPrototypeOf(App).call(this, props));
-    _this.state = {};
+
+    _this.closeModal = function () {
+      _this.setState({
+        openModal: false
+      });
+    };
+
+    _this.dataSettignsCallback = function (data) {
+      var settings = {
+        currency: {
+          symbol: '' + data.currencySymbol + '',
+          format: {
+            pos: '' + data.positiveCurrencyFormat + '',
+            neg: '' + data.negativeCurrencyFormat + ''
+          },
+          decimal: '' + data.decimalSymbol + '',
+          thousand: '' + data.digitGroupingSymbol + '',
+          precision: data.noDigitsAfterDecimal
+        }
+      };
+      console.log(settings);
+    };
+
+    _this.state = {
+      data: _this.props.data
+    };
     return _this;
   }
 
   _createClass(App, [{
     key: "render",
     value: function render() {
-      return React.createElement(_react.Fragment, null, React.createElement("div", {
+      return React.createElement("div", {
         className: "form"
       }, React.createElement(_CustomizeForm.CustomizeForm, {
-        data: this.props.data
-      })));
+        data: this.props.data,
+        dataCallback: this.dataSettignsCallback
+      }));
     }
   }]);
 
@@ -640,7 +578,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "d
 
 $.unblockUI();
 (0, _reactDom.render)(React.createElement(_app["default"], {
-  data: app.vars.customize
+  data: app.vars.customize.content
 }), document.getElementById('root'));
 
 /***/ }),
